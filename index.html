@@ -25,7 +25,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_d39fa681c003504f8d724eda1edef417 {
+                #map_eccb10d67ffc8bd2d5860189d8042279 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -60,17 +60,17 @@
 <body>
     
     
-            <div class="folium-map" id="map_d39fa681c003504f8d724eda1edef417" ></div>
+            <div class="folium-map" id="map_eccb10d67ffc8bd2d5860189d8042279" ></div>
         
     <a href='#' id='export'>Export</a>
 </body>
 <script>
     
     
-            var map_d39fa681c003504f8d724eda1edef417 = L.map(
-                "map_d39fa681c003504f8d724eda1edef417",
+            var map_eccb10d67ffc8bd2d5860189d8042279 = L.map(
+                "map_eccb10d67ffc8bd2d5860189d8042279",
                 {
-                    center: [24.348206176218394, 121.23529052082922],
+                    center: [24.742583129528008, 121.47447827931222],
                     crs: L.CRS.EPSG3857,
                     ...{
   "zoom": 12,
@@ -85,7 +85,7 @@
 
         
     
-            var tile_layer_5430c49f982f779d766440761d1c3981 = L.tileLayer(
+            var tile_layer_590ee5bccddc2bfd119e488834f15ed7 = L.tileLayer(
                 "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {
   "minZoom": 0,
@@ -102,7 +102,7 @@
             );
         
     
-            tile_layer_5430c49f982f779d766440761d1c3981.addTo(map_d39fa681c003504f8d724eda1edef417);
+            tile_layer_590ee5bccddc2bfd119e488834f15ed7.addTo(map_eccb10d67ffc8bd2d5860189d8042279);
         
     
             var options = {
@@ -111,16 +111,16 @@
               edit: {},
             }
                 // FeatureGroup is to store editable layers.
-                var drawnItems_draw_control_52e7782b4783637dfcf76b42f6c9a40b =
+                var drawnItems_draw_control_573024c998b2bb1ffa8289bfd53a5fab =
                     new L.featureGroup().addTo(
-                        map_d39fa681c003504f8d724eda1edef417
+                        map_eccb10d67ffc8bd2d5860189d8042279
                     );
 
-            options.edit.featureGroup = drawnItems_draw_control_52e7782b4783637dfcf76b42f6c9a40b;
-            var draw_control_52e7782b4783637dfcf76b42f6c9a40b = new L.Control.Draw(
+            options.edit.featureGroup = drawnItems_draw_control_573024c998b2bb1ffa8289bfd53a5fab;
+            var draw_control_573024c998b2bb1ffa8289bfd53a5fab = new L.Control.Draw(
                 options
-            ).addTo( map_d39fa681c003504f8d724eda1edef417 );
-            map_d39fa681c003504f8d724eda1edef417.on(L.Draw.Event.CREATED, function(e) {
+            ).addTo( map_eccb10d67ffc8bd2d5860189d8042279 );
+            map_eccb10d67ffc8bd2d5860189d8042279.on(L.Draw.Event.CREATED, function(e) {
                 var layer = e.layer,
                     type = e.layerType;
                 var coords = JSON.stringify(layer.toGeoJSON());
@@ -128,15 +128,15 @@
                     alert(coords);
                     console.log(coords);
                 });
-                drawnItems_draw_control_52e7782b4783637dfcf76b42f6c9a40b.addLayer(layer);
+                drawnItems_draw_control_573024c998b2bb1ffa8289bfd53a5fab.addLayer(layer);
             });
-            map_d39fa681c003504f8d724eda1edef417.on('draw:created', function(e) {
-                drawnItems_draw_control_52e7782b4783637dfcf76b42f6c9a40b.addLayer(e.layer);
+            map_eccb10d67ffc8bd2d5860189d8042279.on('draw:created', function(e) {
+                drawnItems_draw_control_573024c998b2bb1ffa8289bfd53a5fab.addLayer(e.layer);
             });
 
             
             document.getElementById('export').onclick = function(e) {
-                var data = drawnItems_draw_control_52e7782b4783637dfcf76b42f6c9a40b.toGeoJSON();
+                var data = drawnItems_draw_control_573024c998b2bb1ffa8289bfd53a5fab.toGeoJSON();
                 var convertedData = 'text/json;charset=utf-8,'
                     + encodeURIComponent(JSON.stringify(data));
                 document.getElementById('export').setAttribute(
@@ -149,104 +149,38 @@
             
         
     
-            var feature_group_25bff9f3b667a13820b2b84abe7d2e22 = L.featureGroup(
+            var feature_group_ce8e61f26d4e6bd15062b65197d43f7c = L.featureGroup(
                 {
 }
             );
         
     
-            var polygon_3cf5003c60dddfc6696c65a512b82f72 = L.polygon(
-                [[25.075828815037923, 121.5707679700116], [25.037240149960887, 121.57058457397018], [25.032695648562456, 121.64857784770528], [25.09994921107739, 121.6491719570021], [25.101657948445162, 121.5838366981605], [25.075906555959673, 121.58372840397156], [25.075828815037923, 121.5707679700116]],
-                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
-            ).addTo(feature_group_25bff9f3b667a13820b2b84abe7d2e22);
-        
-    
-        var popup_34a9830b0d3c376dfe439b7282b30f38 = L.popup({
-  "maxWidth": 300,
-});
-
-        
-            
-                var html_6558b806f39d3beaf54d3efdd4be611b = $(`<div id="html_6558b806f39d3beaf54d3efdd4be611b" style="width: 100.0%; height: 100.0%;">                       <div style="font-family: Arial, sans-serif; min-width: 200px;">                           <h4 style="margin-bottom: 5px;">台北市內湖區南港區</h4>                           <p><b>申請案號:</b> AB2503180001</p>                           <p><b>有效期限:</b> 2025/04/12 ~ 2025/06/11</p>                           <p><b>高度:</b> 0-2000ft</p>                       </div>                       </div>`)[0];
-                popup_34a9830b0d3c376dfe439b7282b30f38.setContent(html_6558b806f39d3beaf54d3efdd4be611b);
-            
-        
-
-        polygon_3cf5003c60dddfc6696c65a512b82f72.bindPopup(popup_34a9830b0d3c376dfe439b7282b30f38)
-        ;
-
-        
-    
-    
-            polygon_3cf5003c60dddfc6696c65a512b82f72.bindTooltip(
-                `<div>
-                     台北市內湖區南港區 - AB2503180001 - 0-2000ft
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-            var polygon_fa538976d37e22c64fb095a416c8fd5c = L.polygon(
-                [[24.81215042221816, 120.94036167825259], [24.803156188968963, 120.92720058153193], [24.78437769031376, 120.9480574388316], [24.810686147637835, 120.99173184822106], [24.824230065346534, 120.96877968276604], [24.809696310741824, 120.95186299050872], [24.81215042221816, 120.94036167825259]],
-                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
-            ).addTo(feature_group_25bff9f3b667a13820b2b84abe7d2e22);
-        
-    
-        var popup_a24baddea4b58f11f9e590ecd7927815 = L.popup({
-  "maxWidth": 300,
-});
-
-        
-            
-                var html_62a330bd54e8df286927e8fe1a9ce637 = $(`<div id="html_62a330bd54e8df286927e8fe1a9ce637" style="width: 100.0%; height: 100.0%;">                       <div style="font-family: Arial, sans-serif; min-width: 200px;">                           <h4 style="margin-bottom: 5px;">新竹市北區</h4>                           <p><b>申請案號:</b> AB2503180001</p>                           <p><b>有效期限:</b> 2025/04/12 ~ 2025/06/11</p>                           <p><b>高度:</b> 0-1000ft</p>                       </div>                       </div>`)[0];
-                popup_a24baddea4b58f11f9e590ecd7927815.setContent(html_62a330bd54e8df286927e8fe1a9ce637);
-            
-        
-
-        polygon_fa538976d37e22c64fb095a416c8fd5c.bindPopup(popup_a24baddea4b58f11f9e590ecd7927815)
-        ;
-
-        
-    
-    
-            polygon_fa538976d37e22c64fb095a416c8fd5c.bindTooltip(
-                `<div>
-                     新竹市北區 - AB2503180001 - 0-1000ft
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-            var polygon_dd800894c6a4cec647725d52caeef50a = L.polygon(
+            var polygon_cd36b2495cea643528346fae89c35f04 = L.polygon(
                 [[25.083721610318683, 121.52484352106879], [25.100090761973746, 121.52477898041477], [25.101256639454178, 121.48915924469698], [25.038570422936335, 121.48725521157257], [25.05464719697119, 121.53706718574033], [25.07972649503049, 121.53778182680477], [25.083721610318683, 121.52484352106879]],
                 {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
-            ).addTo(feature_group_25bff9f3b667a13820b2b84abe7d2e22);
+            ).addTo(feature_group_ce8e61f26d4e6bd15062b65197d43f7c);
         
     
-        var popup_6a9762a46c99ce3c5aa45d25e38c077b = L.popup({
+        var popup_e1037ebb63fcd226d0f0894438503e21 = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_3773766671f709ca3d127e227406e16c = $(`<div id="html_3773766671f709ca3d127e227406e16c" style="width: 100.0%; height: 100.0%;">                       <div style="font-family: Arial, sans-serif; min-width: 200px;">                           <h4 style="margin-bottom: 5px;">台北市圓山</h4>                           <p><b>申請案號:</b> AB2503180001</p>                           <p><b>有效期限:</b> 2025/04/12 ~ 2025/06/11</p>                           <p><b>高度:</b> 0-2000ft</p>                       </div>                       </div>`)[0];
-                popup_6a9762a46c99ce3c5aa45d25e38c077b.setContent(html_3773766671f709ca3d127e227406e16c);
+                var html_cfd7f213dd3c2894382cdfc715d65782 = $(`<div id="html_cfd7f213dd3c2894382cdfc715d65782" style="width: 100.0%; height: 100.0%;">                       <div style="font-family: Arial, sans-serif; min-width: 200px;">                           <h4 style="margin-bottom: 5px;">台北市大同區中正區_空域2</h4>                           <p><b>申請案號:</b> AB2503180001</p>                           <p><b>有效期限:</b> 2025/04/12 ~ 2025/06/11</p>                           <p><b>高度:</b> 0-2000ft</p>                       </div>                       </div>`)[0];
+                popup_e1037ebb63fcd226d0f0894438503e21.setContent(html_cfd7f213dd3c2894382cdfc715d65782);
             
         
 
-        polygon_dd800894c6a4cec647725d52caeef50a.bindPopup(popup_6a9762a46c99ce3c5aa45d25e38c077b)
+        polygon_cd36b2495cea643528346fae89c35f04.bindPopup(popup_e1037ebb63fcd226d0f0894438503e21)
         ;
 
         
     
     
-            polygon_dd800894c6a4cec647725d52caeef50a.bindTooltip(
+            polygon_cd36b2495cea643528346fae89c35f04.bindTooltip(
                 `<div>
-                     台北市圓山 - AB2503180001 - 0-2000ft
+                     台北市大同區中正區_空域2 - AB2503180001 - 0-2000ft
                  </div>`,
                 {
   "sticky": true,
@@ -254,572 +188,32 @@
             );
         
     
-            feature_group_25bff9f3b667a13820b2b84abe7d2e22.addTo(map_d39fa681c003504f8d724eda1edef417);
-        
-    
-            var feature_group_beb98f9b2ad7f38b786aae3fffb577a2 = L.featureGroup(
-                {
-}
-            );
-        
-    
-            var polygon_c49bf52098411530eb8fe287f9bed4ab = L.polygon(
-                [[23.995264503768357, 121.53673509473641], [23.186004464125276, 121.2077098559845], [23.12948041185625, 121.26480603928447], [23.455395064908405, 121.40452901239259], [23.436927130923706, 121.51436010713425], [23.938167101236424, 121.65930131788073], [23.995264503768357, 121.53673509473641]],
-                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
-            ).addTo(feature_group_beb98f9b2ad7f38b786aae3fffb577a2);
-        
-    
-        var popup_76d383435d41c61becbef5c1e3269d11 = L.popup({
-  "maxWidth": 300,
-});
-
-        
-            
-                var html_a139875dd47c14fd025a3524e60a8cc7 = $(`<div id="html_a139875dd47c14fd025a3524e60a8cc7" style="width: 100.0%; height: 100.0%;">                       <div style="font-family: Arial, sans-serif; min-width: 200px;">                           <h4 style="margin-bottom: 5px;">花蓮縣豐濱鄉</h4>                           <p><b>申請案號:</b> AB2503170016</p>                           <p><b>有效期限:</b> 2025/04/11​ ~ 2025/07/10</p>                           <p><b>高度:</b> 0-400ft</p>                       </div>                       </div>`)[0];
-                popup_76d383435d41c61becbef5c1e3269d11.setContent(html_a139875dd47c14fd025a3524e60a8cc7);
-            
-        
-
-        polygon_c49bf52098411530eb8fe287f9bed4ab.bindPopup(popup_76d383435d41c61becbef5c1e3269d11)
-        ;
-
-        
-    
-    
-            polygon_c49bf52098411530eb8fe287f9bed4ab.bindTooltip(
-                `<div>
-                     花蓮縣豐濱鄉 - AB2503170016 - 0-400ft
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-            var polygon_e3662d6912bb8317b204a4f46bdae486 = L.polygon(
-                [[23.453105476593986, 121.50071302766611], [23.149365377817766, 121.18762279267166], [22.771462411380448, 121.03702614421724], [22.752289847686754, 121.0660281997429], [22.809716013519395, 121.11075738782749], [22.966603949381092, 121.39198968524761], [23.453105476593986, 121.50071302766611]],
-                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
-            ).addTo(feature_group_beb98f9b2ad7f38b786aae3fffb577a2);
-        
-    
-        var popup_85c730b8a0db458822be8d47cb098842 = L.popup({
-  "maxWidth": 300,
-});
-
-        
-            
-                var html_ce6c9dc4f897ba592c364b4fd6a46fbc = $(`<div id="html_ce6c9dc4f897ba592c364b4fd6a46fbc" style="width: 100.0%; height: 100.0%;">                       <div style="font-family: Arial, sans-serif; min-width: 200px;">                           <h4 style="margin-bottom: 5px;">台東縣關山鎮</h4>                           <p><b>申請案號:</b> AB2503170016</p>                           <p><b>有效期限:</b> 2025/04/11​ ~ 2025/07/10</p>                           <p><b>高度:</b> 0-400ft</p>                       </div>                       </div>`)[0];
-                popup_85c730b8a0db458822be8d47cb098842.setContent(html_ce6c9dc4f897ba592c364b4fd6a46fbc);
-            
-        
-
-        polygon_e3662d6912bb8317b204a4f46bdae486.bindPopup(popup_85c730b8a0db458822be8d47cb098842)
-        ;
-
-        
-    
-    
-            polygon_e3662d6912bb8317b204a4f46bdae486.bindTooltip(
-                `<div>
-                     台東縣關山鎮 - AB2503170016 - 0-400ft
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-            feature_group_beb98f9b2ad7f38b786aae3fffb577a2.addTo(map_d39fa681c003504f8d724eda1edef417);
-        
-    
-            var feature_group_43725deb3eb47fbf85fa4264e3a356b0 = L.featureGroup(
-                {
-}
-            );
-        
-    
-            var polygon_ea96af95b91c7466b8ba60445ac2bbb0 = L.polygon(
-                [[24.009805793598122, 121.5995884720483], [23.94801392442203, 121.54868819157277], [23.92874948988748, 121.58527419308807], [23.996946852403735, 121.6291142288841], [24.009805793598122, 121.5995884720483]],
-                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
-            ).addTo(feature_group_43725deb3eb47fbf85fa4264e3a356b0);
-        
-    
-        var popup_64c7c2c01f123bf3adb79dd0e1b13d29 = L.popup({
-  "maxWidth": 300,
-});
-
-        
-            
-                var html_4038229f9f3aec7f04a410fb602ebf67 = $(`<div id="html_4038229f9f3aec7f04a410fb602ebf67" style="width: 100.0%; height: 100.0%;">                       <div style="font-family: Arial, sans-serif; min-width: 200px;">                           <h4 style="margin-bottom: 5px;">花蓮縣花蓮市</h4>                           <p><b>申請案號:</b> AB2502260001</p>                           <p><b>有效期限:</b> 2025/03/16​ ~ 2025/05/15​</p>                           <p><b>高度:</b> 0-2000ft</p>                       </div>                       </div>`)[0];
-                popup_64c7c2c01f123bf3adb79dd0e1b13d29.setContent(html_4038229f9f3aec7f04a410fb602ebf67);
-            
-        
-
-        polygon_ea96af95b91c7466b8ba60445ac2bbb0.bindPopup(popup_64c7c2c01f123bf3adb79dd0e1b13d29)
-        ;
-
-        
-    
-    
-            polygon_ea96af95b91c7466b8ba60445ac2bbb0.bindTooltip(
-                `<div>
-                     花蓮縣花蓮市 - AB2502260001 - 0-2000ft
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-            var polygon_50605c9994e652443edf4361819a95a3 = L.polygon(
-                [[24.19819392824225, 121.49540225381637], [24.175331489400136, 121.47857943887503], [24.15747714821961, 121.52801791543742], [24.15747714821961, 121.59359256143344], [24.183161553054266, 121.60732547158969], [24.19819392824225, 121.49540225381637]],
-                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
-            ).addTo(feature_group_43725deb3eb47fbf85fa4264e3a356b0);
-        
-    
-        var popup_88bc2e2bb1ebd451f4ac9b3bbe8a91f0 = L.popup({
-  "maxWidth": 300,
-});
-
-        
-            
-                var html_903d3c74973d64276219738988954090 = $(`<div id="html_903d3c74973d64276219738988954090" style="width: 100.0%; height: 100.0%;">                       <div style="font-family: Arial, sans-serif; min-width: 200px;">                           <h4 style="margin-bottom: 5px;">花蓮縣秀林鄉</h4>                           <p><b>申請案號:</b> AB2502260001</p>                           <p><b>有效期限:</b> 2025/03/16​ ~ 2025/05/15​</p>                           <p><b>高度:</b> 0-6200ft</p>                       </div>                       </div>`)[0];
-                popup_88bc2e2bb1ebd451f4ac9b3bbe8a91f0.setContent(html_903d3c74973d64276219738988954090);
-            
-        
-
-        polygon_50605c9994e652443edf4361819a95a3.bindPopup(popup_88bc2e2bb1ebd451f4ac9b3bbe8a91f0)
-        ;
-
-        
-    
-    
-            polygon_50605c9994e652443edf4361819a95a3.bindTooltip(
-                `<div>
-                     花蓮縣秀林鄉 - AB2502260001 - 0-6200ft
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-            var polygon_415f865c08fc9c8606ce6bca74d991de = L.polygon(
-                [[24.23059579974028, 121.6854337450364], [24.177048486082917, 121.64354836905983], [24.155122047453986, 121.69470345939179], [24.229030408151793, 121.74379861320033], [24.23059579974028, 121.6854337450364]],
-                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
-            ).addTo(feature_group_43725deb3eb47fbf85fa4264e3a356b0);
-        
-    
-        var popup_c7cb71c0a17f42c31dca5179f0731d96 = L.popup({
-  "maxWidth": 300,
-});
-
-        
-            
-                var html_16ab5ab64a4554f49eac3bdd591ec363 = $(`<div id="html_16ab5ab64a4554f49eac3bdd591ec363" style="width: 100.0%; height: 100.0%;">                       <div style="font-family: Arial, sans-serif; min-width: 200px;">                           <h4 style="margin-bottom: 5px;">太魯閣</h4>                           <p><b>申請案號:</b> AB2502260001</p>                           <p><b>有效期限:</b> 2025/03/16​ ~ 2025/05/15​</p>                           <p><b>高度:</b> 0-4300ft</p>                       </div>                       </div>`)[0];
-                popup_c7cb71c0a17f42c31dca5179f0731d96.setContent(html_16ab5ab64a4554f49eac3bdd591ec363);
-            
-        
-
-        polygon_415f865c08fc9c8606ce6bca74d991de.bindPopup(popup_c7cb71c0a17f42c31dca5179f0731d96)
-        ;
-
-        
-    
-    
-            polygon_415f865c08fc9c8606ce6bca74d991de.bindTooltip(
-                `<div>
-                     太魯閣 - AB2502260001 - 0-4300ft
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-            var polygon_876656adf311a710b2467f13de950769 = L.polygon(
-                [[24.13682964911071, 121.59819154406586], [24.056703963336805, 121.57905666495365], [24.043065876295472, 121.62180034781491], [24.06568929426181, 121.61295442248391], [24.09045187375092, 121.61673097277686], [24.108315573982253, 121.63115052844087], [24.13682964911071, 121.59819154406586]],
-                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
-            ).addTo(feature_group_43725deb3eb47fbf85fa4264e3a356b0);
-        
-    
-        var popup_9a52fee57d60c5e8a839f35e6804064c = L.popup({
-  "maxWidth": 300,
-});
-
-        
-            
-                var html_dd90f55eba9b2ab6442be2dad95ec902 = $(`<div id="html_dd90f55eba9b2ab6442be2dad95ec902" style="width: 100.0%; height: 100.0%;">                       <div style="font-family: Arial, sans-serif; min-width: 200px;">                           <h4 style="margin-bottom: 5px;">花蓮縣新城鄉</h4>                           <p><b>申請案號:</b> AB2502260001</p>                           <p><b>有效期限:</b> 2025/03/16​ ~ 2025/05/15​</p>                           <p><b>高度:</b> 0-5100ft</p>                       </div>                       </div>`)[0];
-                popup_9a52fee57d60c5e8a839f35e6804064c.setContent(html_dd90f55eba9b2ab6442be2dad95ec902);
-            
-        
-
-        polygon_876656adf311a710b2467f13de950769.bindPopup(popup_9a52fee57d60c5e8a839f35e6804064c)
-        ;
-
-        
-    
-    
-            polygon_876656adf311a710b2467f13de950769.bindTooltip(
-                `<div>
-                     花蓮縣新城鄉 - AB2502260001 - 0-5100ft
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-            feature_group_43725deb3eb47fbf85fa4264e3a356b0.addTo(map_d39fa681c003504f8d724eda1edef417);
-        
-    
-            var feature_group_5e0c6d31369e9269cb5f77241006d4e2 = L.featureGroup(
-                {
-}
-            );
-        
-    
-            var polygon_27b9e7950a3a844e4f2ae51e7eb65202 = L.polygon(
-                [[23.55898531790872, 120.19121298904176], [23.52861263364437, 120.18692145461799], [23.505474330130806, 120.22400031203978], [23.513344957698784, 120.24374137038947], [23.558198549336115, 120.23859152908089], [23.55898531790872, 120.19121298904176]],
-                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
-            ).addTo(feature_group_5e0c6d31369e9269cb5f77241006d4e2);
-        
-    
-        var popup_e46aee0062c1376ae6a23acdc1eb0325 = L.popup({
-  "maxWidth": 300,
-});
-
-        
-            
-                var html_1913c7d0d6857e2f99e4b68793105da0 = $(`<div id="html_1913c7d0d6857e2f99e4b68793105da0" style="width: 100.0%; height: 100.0%;">                       <div style="font-family: Arial, sans-serif; min-width: 200px;">                           <h4 style="margin-bottom: 5px;">雲林縣北港鎮</h4>                           <p><b>申請案號:</b> AB2502170011</p>                           <p><b>有效期限:</b> 2025/03/01​ ~ 2025/05/31​</p>                           <p><b>高度:</b> 0-400ft</p>                       </div>                       </div>`)[0];
-                popup_e46aee0062c1376ae6a23acdc1eb0325.setContent(html_1913c7d0d6857e2f99e4b68793105da0);
-            
-        
-
-        polygon_27b9e7950a3a844e4f2ae51e7eb65202.bindPopup(popup_e46aee0062c1376ae6a23acdc1eb0325)
-        ;
-
-        
-    
-    
-            polygon_27b9e7950a3a844e4f2ae51e7eb65202.bindTooltip(
-                `<div>
-                     雲林縣北港鎮 - AB2502170011 - 0-400ft
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-            var polygon_4efa197b5c0f72bdf48b88705355a43f = L.polygon(
-                [[23.283014104838525, 120.7326973449681], [23.073448268751932, 120.61322102660868], [23.02290149378609, 120.74093709106191], [23.19846981079463, 120.86315999145252], [23.283014104838525, 120.7326973449681]],
-                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
-            ).addTo(feature_group_5e0c6d31369e9269cb5f77241006d4e2);
-        
-    
-        var popup_ce1930cf3961092ddefc20346ca84b62 = L.popup({
-  "maxWidth": 300,
-});
-
-        
-            
-                var html_cf1a525cae86303eb59913ed340de719 = $(`<div id="html_cf1a525cae86303eb59913ed340de719" style="width: 100.0%; height: 100.0%;">                       <div style="font-family: Arial, sans-serif; min-width: 200px;">                           <h4 style="margin-bottom: 5px;">高雄市桃源區</h4>                           <p><b>申請案號:</b> AB2502170011</p>                           <p><b>有效期限:</b> 2025/03/01​ ~ 2025/05/31​</p>                           <p><b>高度:</b> 0-400ft</p>                       </div>                       </div>`)[0];
-                popup_ce1930cf3961092ddefc20346ca84b62.setContent(html_cf1a525cae86303eb59913ed340de719);
-            
-        
-
-        polygon_4efa197b5c0f72bdf48b88705355a43f.bindPopup(popup_ce1930cf3961092ddefc20346ca84b62)
-        ;
-
-        
-    
-    
-            polygon_4efa197b5c0f72bdf48b88705355a43f.bindTooltip(
-                `<div>
-                     高雄市桃源區 - AB2502170011 - 0-400ft
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-            var polygon_10d225262b73d8532922cab9e2e44d37 = L.polygon(
-                [[25.122938871958763, 121.47627005691317], [25.105374921603598, 121.48553977126855], [25.095892448342255, 121.5039075386026], [25.095426078232457, 121.52399191970609], [25.12200633627476, 121.52330527419835], [25.122938871958763, 121.47627005691317]],
-                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
-            ).addTo(feature_group_5e0c6d31369e9269cb5f77241006d4e2);
-        
-    
-        var popup_49f20824025c00f975a5c65b99790594 = L.popup({
-  "maxWidth": 300,
-});
-
-        
-            
-                var html_e59b295807bececa74359c74ceb483b9 = $(`<div id="html_e59b295807bececa74359c74ceb483b9" style="width: 100.0%; height: 100.0%;">                       <div style="font-family: Arial, sans-serif; min-width: 200px;">                           <h4 style="margin-bottom: 5px;">台北市士林區</h4>                           <p><b>申請案號:</b> AB2502170011</p>                           <p><b>有效期限:</b> 2025/03/01​ ~ 2025/05/31​</p>                           <p><b>高度:</b> 0-400ft</p>                       </div>                       </div>`)[0];
-                popup_49f20824025c00f975a5c65b99790594.setContent(html_e59b295807bececa74359c74ceb483b9);
-            
-        
-
-        polygon_10d225262b73d8532922cab9e2e44d37.bindPopup(popup_49f20824025c00f975a5c65b99790594)
-        ;
-
-        
-    
-    
-            polygon_10d225262b73d8532922cab9e2e44d37.bindTooltip(
-                `<div>
-                     台北市士林區 - AB2502170011 - 0-400ft
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-            var polygon_25ed235c5e2ede10620fc086362e597e = L.polygon(
-                [[23.90093822357528, 120.3607929717994], [23.79543093564311, 120.31135449523693], [23.67223075218017, 120.38070569152597], [23.74138805445428, 120.55374035949444], [23.887126682092674, 120.56815991515847], [23.90093822357528, 120.3607929717994]],
-                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
-            ).addTo(feature_group_5e0c6d31369e9269cb5f77241006d4e2);
-        
-    
-        var popup_37da7a0012dee7a8cabc1dcb84bd2c91 = L.popup({
-  "maxWidth": 300,
-});
-
-        
-            
-                var html_afdab23f3eacff1ecdec343dcab05834 = $(`<div id="html_afdab23f3eacff1ecdec343dcab05834" style="width: 100.0%; height: 100.0%;">                       <div style="font-family: Arial, sans-serif; min-width: 200px;">                           <h4 style="margin-bottom: 5px;">彰化縣雲林縣西螺鎮</h4>                           <p><b>申請案號:</b> AB2502170011</p>                           <p><b>有效期限:</b> 2025/03/01​ ~ 2025/05/31​</p>                           <p><b>高度:</b> 0-400ft</p>                       </div>                       </div>`)[0];
-                popup_37da7a0012dee7a8cabc1dcb84bd2c91.setContent(html_afdab23f3eacff1ecdec343dcab05834);
-            
-        
-
-        polygon_25ed235c5e2ede10620fc086362e597e.bindPopup(popup_37da7a0012dee7a8cabc1dcb84bd2c91)
-        ;
-
-        
-    
-    
-            polygon_25ed235c5e2ede10620fc086362e597e.bindTooltip(
-                `<div>
-                     彰化縣雲林縣西螺鎮 - AB2502170011 - 0-400ft
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-            feature_group_5e0c6d31369e9269cb5f77241006d4e2.addTo(map_d39fa681c003504f8d724eda1edef417);
-        
-    
-            var feature_group_5fff7ac9de8b9c6d39f60f131d5bb0d5 = L.featureGroup(
-                {
-}
-            );
-        
-    
-            var polygon_6c9fe38b72f18c592f6bc2357e1bad21 = L.polygon(
-                [[24.939951144553206, 121.7292303640405], [24.9650607396998, 121.83085398301576], [25.130531244971742, 122.0189948521563], [25.35308540847707, 121.70840208903041], [25.32019379766075, 121.516141346843], [25.128459084702296, 121.72442384548572], [24.939951144553206, 121.7292303640405]],
-                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
-            ).addTo(feature_group_5fff7ac9de8b9c6d39f60f131d5bb0d5);
-        
-    
-        var popup_fd4905e5aedb02d4d3c7fc6cf530081f = L.popup({
-  "maxWidth": 300,
-});
-
-        
-            
-                var html_3bf873b6f95a449e71388866bd4625ef = $(`<div id="html_3bf873b6f95a449e71388866bd4625ef" style="width: 100.0%; height: 100.0%;">                       <div style="font-family: Arial, sans-serif; min-width: 200px;">                           <h4 style="margin-bottom: 5px;">新北基隆</h4>                           <p><b>申請案號:</b> AB2411200006</p>                           <p><b>有效期限:</b> 2025/03/08​ ~ 2025/06/07​</p>                           <p><b>高度:</b> 0-400ft</p>                       </div>                       </div>`)[0];
-                popup_fd4905e5aedb02d4d3c7fc6cf530081f.setContent(html_3bf873b6f95a449e71388866bd4625ef);
-            
-        
-
-        polygon_6c9fe38b72f18c592f6bc2357e1bad21.bindPopup(popup_fd4905e5aedb02d4d3c7fc6cf530081f)
-        ;
-
-        
-    
-    
-            polygon_6c9fe38b72f18c592f6bc2357e1bad21.bindTooltip(
-                `<div>
-                     新北基隆 - AB2411200006 - 0-400ft
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-            var polygon_23c20e3f88675f834e7b9e3fe44e32c9 = L.polygon(
-                [[24.37676665691017, 120.67631747860507], [24.097935127875516, 120.69348361630033], [24.10671007755679, 120.79167392391761], [24.297311888406878, 120.77382114071445], [24.37676665691017, 120.67631747860507]],
-                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
-            ).addTo(feature_group_5fff7ac9de8b9c6d39f60f131d5bb0d5);
-        
-    
-        var popup_49b8acdccc8f599be97bcebbe559e15c = L.popup({
-  "maxWidth": 300,
-});
-
-        
-            
-                var html_727226e2f0fb2ccb567fdee4ef052384 = $(`<div id="html_727226e2f0fb2ccb567fdee4ef052384" style="width: 100.0%; height: 100.0%;">                       <div style="font-family: Arial, sans-serif; min-width: 200px;">                           <h4 style="margin-bottom: 5px;">台中市后里區</h4>                           <p><b>申請案號:</b> AB2411200006</p>                           <p><b>有效期限:</b> 2025/03/08​ ~ 2025/06/07​</p>                           <p><b>高度:</b> 0-400ft</p>                       </div>                       </div>`)[0];
-                popup_49b8acdccc8f599be97bcebbe559e15c.setContent(html_727226e2f0fb2ccb567fdee4ef052384);
-            
-        
-
-        polygon_23c20e3f88675f834e7b9e3fe44e32c9.bindPopup(popup_49b8acdccc8f599be97bcebbe559e15c)
-        ;
-
-        
-    
-    
-            polygon_23c20e3f88675f834e7b9e3fe44e32c9.bindTooltip(
-                `<div>
-                     台中市后里區 - AB2411200006 - 0-400ft
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-            var polygon_063f343a697f2babea626655b90f6218 = L.polygon(
-                [[25.16234022304566, 121.48592689692272], [25.251077021551634, 121.45331123530153], [25.2095641225698, 121.44072274829476], [25.155192910227726, 121.40742044116591], [25.122765769122044, 121.33681040874903], [25.079239795133848, 121.42332774273346], [25.16234022304566, 121.48592689692272]],
-                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
-            ).addTo(feature_group_5fff7ac9de8b9c6d39f60f131d5bb0d5);
-        
-    
-        var popup_6966d8be1ae1495dd82cdbea6e9fdf7c = L.popup({
-  "maxWidth": 300,
-});
-
-        
-            
-                var html_b9086ea55167666abe3a38c67b2d01dc = $(`<div id="html_b9086ea55167666abe3a38c67b2d01dc" style="width: 100.0%; height: 100.0%;">                       <div style="font-family: Arial, sans-serif; min-width: 200px;">                           <h4 style="margin-bottom: 5px;">新北市八里區</h4>                           <p><b>申請案號:</b> AB2411200006</p>                           <p><b>有效期限:</b> 2025/03/08​ ~ 2025/06/07​</p>                           <p><b>高度:</b> 0-400ft</p>                       </div>                       </div>`)[0];
-                popup_6966d8be1ae1495dd82cdbea6e9fdf7c.setContent(html_b9086ea55167666abe3a38c67b2d01dc);
-            
-        
-
-        polygon_063f343a697f2babea626655b90f6218.bindPopup(popup_6966d8be1ae1495dd82cdbea6e9fdf7c)
-        ;
-
-        
-    
-    
-            polygon_063f343a697f2babea626655b90f6218.bindTooltip(
-                `<div>
-                     新北市八里區 - AB2411200006 - 0-400ft
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-            feature_group_5fff7ac9de8b9c6d39f60f131d5bb0d5.addTo(map_d39fa681c003504f8d724eda1edef417);
-        
-    
-            var feature_group_3a01ef6b41b1237e843d902d682e2cbc = L.featureGroup(
-                {
-}
-            );
-        
-    
-            var polygon_7bba42f02e8885fd91f7f184970ee56c = L.polygon(
-                [[25.096492911345006, 121.48900596062943], [25.039116337146616, 121.48831931512159], [25.049691817623533, 121.51887504021923], [25.041293716507884, 121.53672782342232], [25.079080640422283, 121.5370711461762], [25.096492911345006, 121.48900596062943]],
-                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
-            ).addTo(feature_group_3a01ef6b41b1237e843d902d682e2cbc);
-        
-    
-        var popup_b85fef3df61987fd45f7b1ddfe3709a5 = L.popup({
-  "maxWidth": 300,
-});
-
-        
-            
-                var html_1f65fcd15e9a9371f4a76879035550b7 = $(`<div id="html_1f65fcd15e9a9371f4a76879035550b7" style="width: 100.0%; height: 100.0%;">                       <div style="font-family: Arial, sans-serif; min-width: 200px;">                           <h4 style="margin-bottom: 5px;">台北市大同區中正區</h4>                           <p><b>申請案號:</b> AB2411070001</p>                           <p><b>有效期限:</b> 2025/04/15​ ~ 2025/07/14</p>                           <p><b>高度:</b> 0-2000ft</p>                       </div>                       </div>`)[0];
-                popup_b85fef3df61987fd45f7b1ddfe3709a5.setContent(html_1f65fcd15e9a9371f4a76879035550b7);
-            
-        
-
-        polygon_7bba42f02e8885fd91f7f184970ee56c.bindPopup(popup_b85fef3df61987fd45f7b1ddfe3709a5)
-        ;
-
-        
-    
-    
-            polygon_7bba42f02e8885fd91f7f184970ee56c.bindTooltip(
-                `<div>
-                     台北市大同區中正區 - AB2411070001 - 0-2000ft
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-            var polygon_c882ed6616f7b0e41afe9c4294c55632 = L.polygon(
-                [[25.09136394994359, 121.4996911773515], [25.07307163697025, 121.5073286639853], [25.07221376884179, 121.5566349585399], [25.06298240268647, 121.6155885132125], [25.07582146437146, 121.6197870657349], [25.07596216212269, 121.5502441498335], [25.09136394994359, 121.4996911773515]],
-                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
-            ).addTo(feature_group_3a01ef6b41b1237e843d902d682e2cbc);
-        
-    
-        var popup_cbf933e8a46c7367125eb9a1c5d568de = L.popup({
-  "maxWidth": 300,
-});
-
-        
-            
-                var html_546ff40d307bd14c38dc3befbf14a39d = $(`<div id="html_546ff40d307bd14c38dc3befbf14a39d" style="width: 100.0%; height: 100.0%;">                       <div style="font-family: Arial, sans-serif; min-width: 200px;">                           <h4 style="margin-bottom: 5px;">台北大佳河濱公園</h4>                           <p><b>申請案號:</b> AB2411070001</p>                           <p><b>有效期限:</b> 2025/04/15​ ~ 2025/07/14</p>                           <p><b>高度:</b> 0-2000ft</p>                       </div>                       </div>`)[0];
-                popup_cbf933e8a46c7367125eb9a1c5d568de.setContent(html_546ff40d307bd14c38dc3befbf14a39d);
-            
-        
-
-        polygon_c882ed6616f7b0e41afe9c4294c55632.bindPopup(popup_cbf933e8a46c7367125eb9a1c5d568de)
-        ;
-
-        
-    
-    
-            polygon_c882ed6616f7b0e41afe9c4294c55632.bindTooltip(
-                `<div>
-                     台北大佳河濱公園 - AB2411070001 - 0-2000ft
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-            var polygon_a6fd7b45e8fbfeabc9d6fe671ebecaf4 = L.polygon(
+            var polygon_fb1f54a29082e01f023a46897081c4eb = L.polygon(
                 [[25.075828815037923, 121.5707679700116], [25.037240149960887, 121.57058457397018], [25.032695648562456, 121.64857784770528], [25.09994921107739, 121.6491719570021], [25.101657948445162, 121.5838366981605], [25.075906555959673, 121.58372840397156], [25.075828815037923, 121.5707679700116]],
                 {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
-            ).addTo(feature_group_3a01ef6b41b1237e843d902d682e2cbc);
+            ).addTo(feature_group_ce8e61f26d4e6bd15062b65197d43f7c);
         
     
-        var popup_79415bdba53b142a5c42aee5d47711da = L.popup({
+        var popup_2239991b2994e8398ecb0ddd5bcbe812 = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_48087a51b70a18b68c688f541a1d1137 = $(`<div id="html_48087a51b70a18b68c688f541a1d1137" style="width: 100.0%; height: 100.0%;">                       <div style="font-family: Arial, sans-serif; min-width: 200px;">                           <h4 style="margin-bottom: 5px;">台北市南港區內湖區</h4>                           <p><b>申請案號:</b> AB2411070001</p>                           <p><b>有效期限:</b> 2025/04/15​ ~ 2025/07/14</p>                           <p><b>高度:</b> 0-2000ft</p>                       </div>                       </div>`)[0];
-                popup_79415bdba53b142a5c42aee5d47711da.setContent(html_48087a51b70a18b68c688f541a1d1137);
+                var html_6961b1c783a9169442d886c0be94c2df = $(`<div id="html_6961b1c783a9169442d886c0be94c2df" style="width: 100.0%; height: 100.0%;">                       <div style="font-family: Arial, sans-serif; min-width: 200px;">                           <h4 style="margin-bottom: 5px;">台北市內湖區南港區_空域1</h4>                           <p><b>申請案號:</b> AB2503180001</p>                           <p><b>有效期限:</b> 2025/04/12 ~ 2025/06/11</p>                           <p><b>高度:</b> 0-2000ft</p>                       </div>                       </div>`)[0];
+                popup_2239991b2994e8398ecb0ddd5bcbe812.setContent(html_6961b1c783a9169442d886c0be94c2df);
             
         
 
-        polygon_a6fd7b45e8fbfeabc9d6fe671ebecaf4.bindPopup(popup_79415bdba53b142a5c42aee5d47711da)
+        polygon_fb1f54a29082e01f023a46897081c4eb.bindPopup(popup_2239991b2994e8398ecb0ddd5bcbe812)
         ;
 
         
     
     
-            polygon_a6fd7b45e8fbfeabc9d6fe671ebecaf4.bindTooltip(
+            polygon_fb1f54a29082e01f023a46897081c4eb.bindTooltip(
                 `<div>
-                     台北市南港區內湖區 - AB2411070001 - 0-2000ft
+                     台北市內湖區南港區_空域1 - AB2503180001 - 0-2000ft
                  </div>`,
                 {
   "sticky": true,
@@ -827,41 +221,32 @@
             );
         
     
-            feature_group_3a01ef6b41b1237e843d902d682e2cbc.addTo(map_d39fa681c003504f8d724eda1edef417);
-        
-    
-            var feature_group_f170b535d1e5e63889cefd14feed8031 = L.featureGroup(
-                {
-}
-            );
-        
-    
-            var polygon_509779488e79fc8f2ea4541ae824b5fc = L.polygon(
-                [[24.189980021702063, 120.62338536243234], [24.106021209973598, 120.62166874866286], [24.105394444420934, 120.745608262823], [24.205637870225885, 120.7476681993464], [24.209082338823514, 120.66939061145584], [24.189980021702063, 120.62338536243234]],
+            var polygon_29ea46e00d83881eb1b26e3369abdb81 = L.polygon(
+                [[24.81215042221816, 120.94036167825259], [24.803156188968963, 120.92720058153193], [24.78437769031376, 120.9480574388316], [24.810686147637835, 120.99173184822106], [24.824230065346534, 120.96877968276604], [24.809696310741824, 120.95186299050872], [24.81215042221816, 120.94036167825259]],
                 {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
-            ).addTo(feature_group_f170b535d1e5e63889cefd14feed8031);
+            ).addTo(feature_group_ce8e61f26d4e6bd15062b65197d43f7c);
         
     
-        var popup_9c459a5ee03b2a314a6cf3b29b4c20f6 = L.popup({
+        var popup_aa4026ac497dc24bb12899d6db93f33e = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_a8e71505696c4078f2577be65a281bd0 = $(`<div id="html_a8e71505696c4078f2577be65a281bd0" style="width: 100.0%; height: 100.0%;">                       <div style="font-family: Arial, sans-serif; min-width: 200px;">                           <h4 style="margin-bottom: 5px;">台中市區</h4>                           <p><b>申請案號:</b> AB2411050002</p>                           <p><b>有效期限:</b> 2025/04/15​ ~ 2025/07/14</p>                           <p><b>高度:</b> 0-2000ft</p>                       </div>                       </div>`)[0];
-                popup_9c459a5ee03b2a314a6cf3b29b4c20f6.setContent(html_a8e71505696c4078f2577be65a281bd0);
+                var html_8e0be4d2d8c2e1ca9a7a9669d5e0e19c = $(`<div id="html_8e0be4d2d8c2e1ca9a7a9669d5e0e19c" style="width: 100.0%; height: 100.0%;">                       <div style="font-family: Arial, sans-serif; min-width: 200px;">                           <h4 style="margin-bottom: 5px;">新竹市北區_空域3</h4>                           <p><b>申請案號:</b> AB2503180001</p>                           <p><b>有效期限:</b> 2025/04/12 ~ 2025/06/11</p>                           <p><b>高度:</b> 0-1000ft</p>                       </div>                       </div>`)[0];
+                popup_aa4026ac497dc24bb12899d6db93f33e.setContent(html_8e0be4d2d8c2e1ca9a7a9669d5e0e19c);
             
         
 
-        polygon_509779488e79fc8f2ea4541ae824b5fc.bindPopup(popup_9c459a5ee03b2a314a6cf3b29b4c20f6)
+        polygon_29ea46e00d83881eb1b26e3369abdb81.bindPopup(popup_aa4026ac497dc24bb12899d6db93f33e)
         ;
 
         
     
     
-            polygon_509779488e79fc8f2ea4541ae824b5fc.bindTooltip(
+            polygon_29ea46e00d83881eb1b26e3369abdb81.bindTooltip(
                 `<div>
-                     台中市區 - AB2411050002 - 0-2000ft
+                     新竹市北區_空域3 - AB2503180001 - 0-1000ft
                  </div>`,
                 {
   "sticky": true,
@@ -869,107 +254,41 @@
             );
         
     
-            var polygon_40dea3cc25b020169442b3eb4201d37a = L.polygon(
-                [[22.631316326651202, 120.20263417176999], [22.534941547629348, 120.19988893084329], [22.524159431559866, 120.36605714373393], [22.579654059003897, 120.32897694520743], [22.62402773439678, 120.32863362245364], [22.631316326651202, 120.20263417176999]],
-                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
-            ).addTo(feature_group_f170b535d1e5e63889cefd14feed8031);
+            feature_group_ce8e61f26d4e6bd15062b65197d43f7c.addTo(map_eccb10d67ffc8bd2d5860189d8042279);
         
     
-        var popup_5b0c6cc4b4471b7a78ad9418b2d4e051 = L.popup({
-  "maxWidth": 300,
-});
-
-        
-            
-                var html_c4e0207032ce1f93629e81586a474d4d = $(`<div id="html_c4e0207032ce1f93629e81586a474d4d" style="width: 100.0%; height: 100.0%;">                       <div style="font-family: Arial, sans-serif; min-width: 200px;">                           <h4 style="margin-bottom: 5px;">高雄港三里內（大）</h4>                           <p><b>申請案號:</b> AB2411050002</p>                           <p><b>有效期限:</b> 2025/04/15​ ~ 2025/07/14</p>                           <p><b>高度:</b> 0-2000ft</p>                       </div>                       </div>`)[0];
-                popup_5b0c6cc4b4471b7a78ad9418b2d4e051.setContent(html_c4e0207032ce1f93629e81586a474d4d);
-            
-        
-
-        polygon_40dea3cc25b020169442b3eb4201d37a.bindPopup(popup_5b0c6cc4b4471b7a78ad9418b2d4e051)
-        ;
-
-        
-    
-    
-            polygon_40dea3cc25b020169442b3eb4201d37a.bindTooltip(
-                `<div>
-                     高雄港三里內（大） - AB2411050002 - 0-2000ft
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-            var polygon_1576c88eec3bf1e988df8b29ce3ace43 = L.polygon(
-                [[22.969467030522626, 120.25602086000241], [23.08768850153805, 120.25739012770453], [23.075054924507555, 120.10632811598576], [22.933635984714723, 120.10958968214783], [22.969467030522626, 120.20641072206298], [22.969467030522626, 120.25602086000241]],
-                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
-            ).addTo(feature_group_f170b535d1e5e63889cefd14feed8031);
-        
-    
-        var popup_3bc54db12f8bb6954daf5ae4b8ddae4e = L.popup({
-  "maxWidth": 300,
-});
-
-        
-            
-                var html_594862e613db2d573a5a777699d047e1 = $(`<div id="html_594862e613db2d573a5a777699d047e1" style="width: 100.0%; height: 100.0%;">                       <div style="font-family: Arial, sans-serif; min-width: 200px;">                           <h4 style="margin-bottom: 5px;">台南市區</h4>                           <p><b>申請案號:</b> AB2411050002</p>                           <p><b>有效期限:</b> 2025/04/15​ ~ 2025/07/14</p>                           <p><b>高度:</b> 0-2000ft</p>                       </div>                       </div>`)[0];
-                popup_3bc54db12f8bb6954daf5ae4b8ddae4e.setContent(html_594862e613db2d573a5a777699d047e1);
-            
-        
-
-        polygon_1576c88eec3bf1e988df8b29ce3ace43.bindPopup(popup_3bc54db12f8bb6954daf5ae4b8ddae4e)
-        ;
-
-        
-    
-    
-            polygon_1576c88eec3bf1e988df8b29ce3ace43.bindTooltip(
-                `<div>
-                     台南市區 - AB2411050002 - 0-2000ft
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-            feature_group_f170b535d1e5e63889cefd14feed8031.addTo(map_d39fa681c003504f8d724eda1edef417);
-        
-    
-            var feature_group_c109cc3a78808e8dae3cbe2c50aed97e = L.featureGroup(
+            var feature_group_a292f90e6ffcaec8d22bf5fe488442a3 = L.featureGroup(
                 {
 }
             );
         
     
-            var polygon_d97a87b00bf682eece2f464e8debaa0c = L.polygon(
-                [[24.725542313458035, 121.6004068181972], [24.700014487261875, 121.98721086244379], [24.978681688283878, 121.99326997260845], [24.9761919826872, 121.91705232124131], [24.91455571993111, 121.84838777045996], [24.725542313458035, 121.6004068181972]],
+            var polygon_7580bc6eb4adb2f32a0d6fda188ad737 = L.polygon(
+                [[24.37676665691017, 120.67631747860507], [24.097935127875516, 120.69348361630033], [24.10671007755679, 120.79167392391761], [24.297311888406878, 120.77382114071445], [24.37676665691017, 120.67631747860507]],
                 {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
-            ).addTo(feature_group_c109cc3a78808e8dae3cbe2c50aed97e);
+            ).addTo(feature_group_a292f90e6ffcaec8d22bf5fe488442a3);
         
     
-        var popup_d15fb07cddf179923d37aa4a97100207 = L.popup({
+        var popup_20f59ef8f2e567ad11ecb3fd866b88ed = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_e70c1b46011ed1587663dccc63340f96 = $(`<div id="html_e70c1b46011ed1587663dccc63340f96" style="width: 100.0%; height: 100.0%;">                       <div style="font-family: Arial, sans-serif; min-width: 200px;">                           <h4 style="margin-bottom: 5px;">宜蘭溪北</h4>                           <p><b>申請案號:</b> AB2411030001</p>                           <p><b>有效期限:</b> 2025/04/15​ ~ 2025/07/14</p>                           <p><b>高度:</b> 0-400ft</p>                       </div>                       </div>`)[0];
-                popup_d15fb07cddf179923d37aa4a97100207.setContent(html_e70c1b46011ed1587663dccc63340f96);
+                var html_a4287c52ff78dedc964d643927e8c0bb = $(`<div id="html_a4287c52ff78dedc964d643927e8c0bb" style="width: 100.0%; height: 100.0%;">                       <div style="font-family: Arial, sans-serif; min-width: 200px;">                           <h4 style="margin-bottom: 5px;">台中市后里區_空域3</h4>                           <p><b>申請案號:</b> AB2411200006</p>                           <p><b>有效期限:</b> 2025/03/08​ ~ 2025/06/07​</p>                           <p><b>高度:</b> 0-400ft</p>                       </div>                       </div>`)[0];
+                popup_20f59ef8f2e567ad11ecb3fd866b88ed.setContent(html_a4287c52ff78dedc964d643927e8c0bb);
             
         
 
-        polygon_d97a87b00bf682eece2f464e8debaa0c.bindPopup(popup_d15fb07cddf179923d37aa4a97100207)
+        polygon_7580bc6eb4adb2f32a0d6fda188ad737.bindPopup(popup_20f59ef8f2e567ad11ecb3fd866b88ed)
         ;
 
         
     
     
-            polygon_d97a87b00bf682eece2f464e8debaa0c.bindTooltip(
+            polygon_7580bc6eb4adb2f32a0d6fda188ad737.bindTooltip(
                 `<div>
-                     宜蘭溪北 - AB2411030001 - 0-400ft
+                     台中市后里區_空域3 - AB2411200006 - 0-400ft
                  </div>`,
                 {
   "sticky": true,
@@ -977,32 +296,32 @@
             );
         
     
-            var polygon_abae702501e96c6823174e170ea930e8 = L.polygon(
-                [[24.72181470496287, 121.59482782344621], [24.552810299838438, 121.43363242606912], [24.381550174346515, 121.91625302295482], [24.722438417169563, 121.92167108516492], [24.72181470496287, 121.59482782344621]],
+            var polygon_05fc5ffcabeeedb877ca506d9de32b63 = L.polygon(
+                [[25.16234022304566, 121.48592689692272], [25.251077021551634, 121.45331123530153], [25.2095641225698, 121.44072274829476], [25.155192910227726, 121.40742044116591], [25.122765769122044, 121.33681040874903], [25.079239795133848, 121.42332774273346], [25.16234022304566, 121.48592689692272]],
                 {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
-            ).addTo(feature_group_c109cc3a78808e8dae3cbe2c50aed97e);
+            ).addTo(feature_group_a292f90e6ffcaec8d22bf5fe488442a3);
         
     
-        var popup_e08b8f1abae44d7f491f9f9ca76912c1 = L.popup({
+        var popup_fd2fbfcc292f3f59c0883b11aefaccad = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_855455e9c98e375f0a0cd592cfba628d = $(`<div id="html_855455e9c98e375f0a0cd592cfba628d" style="width: 100.0%; height: 100.0%;">                       <div style="font-family: Arial, sans-serif; min-width: 200px;">                           <h4 style="margin-bottom: 5px;">宜蘭溪南</h4>                           <p><b>申請案號:</b> AB2411030001</p>                           <p><b>有效期限:</b> 2025/04/15​ ~ 2025/07/14</p>                           <p><b>高度:</b> 0-400ft</p>                       </div>                       </div>`)[0];
-                popup_e08b8f1abae44d7f491f9f9ca76912c1.setContent(html_855455e9c98e375f0a0cd592cfba628d);
+                var html_69da6cc27499a0d6e6cdbd7d3b5af2b7 = $(`<div id="html_69da6cc27499a0d6e6cdbd7d3b5af2b7" style="width: 100.0%; height: 100.0%;">                       <div style="font-family: Arial, sans-serif; min-width: 200px;">                           <h4 style="margin-bottom: 5px;">新北市八里區_空域2</h4>                           <p><b>申請案號:</b> AB2411200006</p>                           <p><b>有效期限:</b> 2025/03/08​ ~ 2025/06/07​</p>                           <p><b>高度:</b> 0-400ft</p>                       </div>                       </div>`)[0];
+                popup_fd2fbfcc292f3f59c0883b11aefaccad.setContent(html_69da6cc27499a0d6e6cdbd7d3b5af2b7);
             
         
 
-        polygon_abae702501e96c6823174e170ea930e8.bindPopup(popup_e08b8f1abae44d7f491f9f9ca76912c1)
+        polygon_05fc5ffcabeeedb877ca506d9de32b63.bindPopup(popup_fd2fbfcc292f3f59c0883b11aefaccad)
         ;
 
         
     
     
-            polygon_abae702501e96c6823174e170ea930e8.bindTooltip(
+            polygon_05fc5ffcabeeedb877ca506d9de32b63.bindTooltip(
                 `<div>
-                     宜蘭溪南 - AB2411030001 - 0-400ft
+                     新北市八里區_空域2 - AB2411200006 - 0-400ft
                  </div>`,
                 {
   "sticky": true,
@@ -1010,32 +329,32 @@
             );
         
     
-            var polygon_9aa2773b25e96a8213768c7a86c2b3b6 = L.polygon(
-                [[24.820778273140252, 120.9793332741717], [24.786340759177985, 120.94070946435718], [24.78306791866084, 120.99237953882016], [24.776210258640262, 121.00782906274587], [24.80519687256684, 121.01400887231628], [24.820778273140252, 120.9793332741717]],
+            var polygon_6bcd74108251ff0b9c679421579b59e8 = L.polygon(
+                [[24.939951144553206, 121.7292303640405], [24.9650607396998, 121.83085398301576], [25.130531244971742, 122.0189948521563], [25.35308540847707, 121.70840208903041], [25.32019379766075, 121.516141346843], [25.128459084702296, 121.72442384548572], [24.939951144553206, 121.7292303640405]],
                 {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
-            ).addTo(feature_group_c109cc3a78808e8dae3cbe2c50aed97e);
+            ).addTo(feature_group_a292f90e6ffcaec8d22bf5fe488442a3);
         
     
-        var popup_d1568f3efbcfb98b2b40fce92cbfaa67 = L.popup({
+        var popup_a8a6383141d49504e1bdf7261423dab0 = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_c1b4e7547a6cdb4a26e52c01fee5160c = $(`<div id="html_c1b4e7547a6cdb4a26e52c01fee5160c" style="width: 100.0%; height: 100.0%;">                       <div style="font-family: Arial, sans-serif; min-width: 200px;">                           <h4 style="margin-bottom: 5px;">新竹市東區</h4>                           <p><b>申請案號:</b> AB2411030001</p>                           <p><b>有效期限:</b> 2025/04/15​ ~ 2025/07/14</p>                           <p><b>高度:</b> 0-400ft</p>                       </div>                       </div>`)[0];
-                popup_d1568f3efbcfb98b2b40fce92cbfaa67.setContent(html_c1b4e7547a6cdb4a26e52c01fee5160c);
+                var html_4629c421154fcfab7087268b216d3e28 = $(`<div id="html_4629c421154fcfab7087268b216d3e28" style="width: 100.0%; height: 100.0%;">                       <div style="font-family: Arial, sans-serif; min-width: 200px;">                           <h4 style="margin-bottom: 5px;">新北市基隆市_空域1</h4>                           <p><b>申請案號:</b> AB2411200006</p>                           <p><b>有效期限:</b> 2025/03/08​ ~ 2025/06/07​</p>                           <p><b>高度:</b> 0-400ft</p>                       </div>                       </div>`)[0];
+                popup_a8a6383141d49504e1bdf7261423dab0.setContent(html_4629c421154fcfab7087268b216d3e28);
             
         
 
-        polygon_9aa2773b25e96a8213768c7a86c2b3b6.bindPopup(popup_d1568f3efbcfb98b2b40fce92cbfaa67)
+        polygon_6bcd74108251ff0b9c679421579b59e8.bindPopup(popup_a8a6383141d49504e1bdf7261423dab0)
         ;
 
         
     
     
-            polygon_9aa2773b25e96a8213768c7a86c2b3b6.bindTooltip(
+            polygon_6bcd74108251ff0b9c679421579b59e8.bindTooltip(
                 `<div>
-                     新竹市東區 - AB2411030001 - 0-400ft
+                     新北市基隆市_空域1 - AB2411200006 - 0-400ft
                  </div>`,
                 {
   "sticky": true,
@@ -1043,41 +362,182 @@
             );
         
     
-            feature_group_c109cc3a78808e8dae3cbe2c50aed97e.addTo(map_d39fa681c003504f8d724eda1edef417);
+            feature_group_a292f90e6ffcaec8d22bf5fe488442a3.addTo(map_eccb10d67ffc8bd2d5860189d8042279);
         
     
-            var feature_group_19f3caa51a3eac692fe7905f950963fc = L.featureGroup(
+            var feature_group_aee5be73b9c806892359f8bf45539671 = L.featureGroup(
                 {
 }
             );
         
     
-            var polygon_fd5fa8851f71daf0ff2729465877d676 = L.polygon(
+            var polygon_7087af6b09758980ce1c6b929ecc556b = L.polygon(
+                [[25.122938871958763, 121.47627005691317], [25.105374921603598, 121.48553977126855], [25.095892448342255, 121.5039075386026], [25.095426078232457, 121.52399191970609], [25.12200633627476, 121.52330527419835], [25.122938871958763, 121.47627005691317]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_aee5be73b9c806892359f8bf45539671);
+        
+    
+        var popup_c49d5c5ea4e05d53f18d3e1b8c8e0d59 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9814a1ecfa8677540de6775c4bdbb650 = $(`<div id="html_9814a1ecfa8677540de6775c4bdbb650" style="width: 100.0%; height: 100.0%;">                       <div style="font-family: Arial, sans-serif; min-width: 200px;">                           <h4 style="margin-bottom: 5px;">台北市士林區_空域4</h4>                           <p><b>申請案號:</b> AB2502170011</p>                           <p><b>有效期限:</b> 2025/03/01​ ~ 2025/05/31​</p>                           <p><b>高度:</b> 0-400ft</p>                       </div>                       </div>`)[0];
+                popup_c49d5c5ea4e05d53f18d3e1b8c8e0d59.setContent(html_9814a1ecfa8677540de6775c4bdbb650);
+            
+        
+
+        polygon_7087af6b09758980ce1c6b929ecc556b.bindPopup(popup_c49d5c5ea4e05d53f18d3e1b8c8e0d59)
+        ;
+
+        
+    
+    
+            polygon_7087af6b09758980ce1c6b929ecc556b.bindTooltip(
+                `<div>
+                     台北市士林區_空域4 - AB2502170011 - 0-400ft
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var polygon_5a88b610d1b5a42025159b6c63c5a558 = L.polygon(
+                [[23.283014104838525, 120.7326973449681], [23.073448268751932, 120.61322102660868], [23.02290149378609, 120.74093709106191], [23.19846981079463, 120.86315999145252], [23.283014104838525, 120.7326973449681]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_aee5be73b9c806892359f8bf45539671);
+        
+    
+        var popup_a5b21994cad8f768ce3e225f5b6ad77a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a99747d49d46ec42694a88fc2498461d = $(`<div id="html_a99747d49d46ec42694a88fc2498461d" style="width: 100.0%; height: 100.0%;">                       <div style="font-family: Arial, sans-serif; min-width: 200px;">                           <h4 style="margin-bottom: 5px;">高雄市桃源區_空域3</h4>                           <p><b>申請案號:</b> AB2502170011</p>                           <p><b>有效期限:</b> 2025/03/01​ ~ 2025/05/31​</p>                           <p><b>高度:</b> 0-400ft</p>                       </div>                       </div>`)[0];
+                popup_a5b21994cad8f768ce3e225f5b6ad77a.setContent(html_a99747d49d46ec42694a88fc2498461d);
+            
+        
+
+        polygon_5a88b610d1b5a42025159b6c63c5a558.bindPopup(popup_a5b21994cad8f768ce3e225f5b6ad77a)
+        ;
+
+        
+    
+    
+            polygon_5a88b610d1b5a42025159b6c63c5a558.bindTooltip(
+                `<div>
+                     高雄市桃源區_空域3 - AB2502170011 - 0-400ft
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var polygon_b8136396bd972a0a488560c47b312673 = L.polygon(
+                [[23.55898531790872, 120.19121298904176], [23.52861263364437, 120.18692145461799], [23.505474330130806, 120.22400031203978], [23.513344957698784, 120.24374137038947], [23.558198549336115, 120.23859152908089], [23.55898531790872, 120.19121298904176]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_aee5be73b9c806892359f8bf45539671);
+        
+    
+        var popup_6e7d655c2f3728bb5e2d6a1c0bfd6f7e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_33fcf6b060c4eca0b46bbeefee501a60 = $(`<div id="html_33fcf6b060c4eca0b46bbeefee501a60" style="width: 100.0%; height: 100.0%;">                       <div style="font-family: Arial, sans-serif; min-width: 200px;">                           <h4 style="margin-bottom: 5px;">雲林縣北港鎮_空域2</h4>                           <p><b>申請案號:</b> AB2502170011</p>                           <p><b>有效期限:</b> 2025/03/01​ ~ 2025/05/31​</p>                           <p><b>高度:</b> 0-400ft</p>                       </div>                       </div>`)[0];
+                popup_6e7d655c2f3728bb5e2d6a1c0bfd6f7e.setContent(html_33fcf6b060c4eca0b46bbeefee501a60);
+            
+        
+
+        polygon_b8136396bd972a0a488560c47b312673.bindPopup(popup_6e7d655c2f3728bb5e2d6a1c0bfd6f7e)
+        ;
+
+        
+    
+    
+            polygon_b8136396bd972a0a488560c47b312673.bindTooltip(
+                `<div>
+                     雲林縣北港鎮_空域2 - AB2502170011 - 0-400ft
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var polygon_cb162f1e9a7bfc77ee3923103fa5307b = L.polygon(
+                [[23.90093822357528, 120.3607929717994], [23.79543093564311, 120.31135449523693], [23.67223075218017, 120.38070569152597], [23.74138805445428, 120.55374035949444], [23.887126682092674, 120.56815991515847], [23.90093822357528, 120.3607929717994]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_aee5be73b9c806892359f8bf45539671);
+        
+    
+        var popup_742415c726b98d6c1c49b6893785c5ad = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d7bd551a20ea3c3517952ccc4f58e588 = $(`<div id="html_d7bd551a20ea3c3517952ccc4f58e588" style="width: 100.0%; height: 100.0%;">                       <div style="font-family: Arial, sans-serif; min-width: 200px;">                           <h4 style="margin-bottom: 5px;">彰化縣雲林縣西螺鎮_空域1</h4>                           <p><b>申請案號:</b> AB2502170011</p>                           <p><b>有效期限:</b> 2025/03/01​ ~ 2025/05/31​</p>                           <p><b>高度:</b> 0-400ft</p>                       </div>                       </div>`)[0];
+                popup_742415c726b98d6c1c49b6893785c5ad.setContent(html_d7bd551a20ea3c3517952ccc4f58e588);
+            
+        
+
+        polygon_cb162f1e9a7bfc77ee3923103fa5307b.bindPopup(popup_742415c726b98d6c1c49b6893785c5ad)
+        ;
+
+        
+    
+    
+            polygon_cb162f1e9a7bfc77ee3923103fa5307b.bindTooltip(
+                `<div>
+                     彰化縣雲林縣西螺鎮_空域1 - AB2502170011 - 0-400ft
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            feature_group_aee5be73b9c806892359f8bf45539671.addTo(map_eccb10d67ffc8bd2d5860189d8042279);
+        
+    
+            var feature_group_393529fa7f454a76824276f4e7cc7afb = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var polygon_659b1343b09866b3931bbc81f5424da9 = L.polygon(
                 [[25.06192666477378, 121.51984690241616], [25.005156193726926, 121.53375147394935], [24.994888044779117, 121.58215998225005], [25.060216157883378, 121.58456324152738], [25.06192666477378, 121.51984690241616]],
                 {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
-            ).addTo(feature_group_19f3caa51a3eac692fe7905f950963fc);
+            ).addTo(feature_group_393529fa7f454a76824276f4e7cc7afb);
         
     
-        var popup_2746fbd3b69e7dcff9f262c5dc242687 = L.popup({
+        var popup_cabe1dfab6f9e0b6792140212debc806 = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_446f2b74e8c0405dbc19cde951b6c7ff = $(`<div id="html_446f2b74e8c0405dbc19cde951b6c7ff" style="width: 100.0%; height: 100.0%;">                       <div style="font-family: Arial, sans-serif; min-width: 200px;">                           <h4 style="margin-bottom: 5px;">台北市大安區信義區</h4>                           <p><b>申請案號:</b> AB2411040001</p>                           <p><b>有效期限:</b> 2025/04/15​ ~ 2025/07/14</p>                           <p><b>高度:</b> 0-2900ft</p>                       </div>                       </div>`)[0];
-                popup_2746fbd3b69e7dcff9f262c5dc242687.setContent(html_446f2b74e8c0405dbc19cde951b6c7ff);
+                var html_de6ef1d4900b16fe13988425bcfb96f3 = $(`<div id="html_de6ef1d4900b16fe13988425bcfb96f3" style="width: 100.0%; height: 100.0%;">                       <div style="font-family: Arial, sans-serif; min-width: 200px;">                           <h4 style="margin-bottom: 5px;">台北市大安區信義區_空域1</h4>                           <p><b>申請案號:</b> AB2411040001</p>                           <p><b>有效期限:</b> 2025/04/15​ ~ 2025/07/14</p>                           <p><b>高度:</b> 0-2900ft</p>                       </div>                       </div>`)[0];
+                popup_cabe1dfab6f9e0b6792140212debc806.setContent(html_de6ef1d4900b16fe13988425bcfb96f3);
             
         
 
-        polygon_fd5fa8851f71daf0ff2729465877d676.bindPopup(popup_2746fbd3b69e7dcff9f262c5dc242687)
+        polygon_659b1343b09866b3931bbc81f5424da9.bindPopup(popup_cabe1dfab6f9e0b6792140212debc806)
         ;
 
         
     
     
-            polygon_fd5fa8851f71daf0ff2729465877d676.bindTooltip(
+            polygon_659b1343b09866b3931bbc81f5424da9.bindTooltip(
                 `<div>
-                     台北市大安區信義區 - AB2411040001 - 0-2900ft
+                     台北市大安區信義區_空域1 - AB2411040001 - 0-2900ft
                  </div>`,
                 {
   "sticky": true,
@@ -1085,34 +545,716 @@
             );
         
     
-            feature_group_19f3caa51a3eac692fe7905f950963fc.addTo(map_d39fa681c003504f8d724eda1edef417);
+            var polygon_7065af287f763a643e2230bd6b768f50 = L.polygon(
+                [[25.21104978329259, 121.7588303982644], [25.21101737717064, 121.7569494258032], [25.210920205738677, 121.75507118057216], [25.21075840973131, 121.75319838584747], [25.210532223480023, 121.7513337570023], [25.21024197457537, 121.7494799975704], [25.2098880833938, 121.74763979532541], [25.209471062491108, 121.74581581838504], [25.20899151586232, 121.74401071134116], [25.208450138069495, 121.74222709142649], [25.207847713239406, 121.7404675447196], [25.207185113930926, 121.73873462239469], [25.206463299875537, 121.73703083702364], [25.205683316591, 121.73535865893246], [25.204846293872144, 121.73372051261934], [25.203953444158447, 121.73211877323975], [25.2030060607834, 121.73055576316288], [25.20200551610615, 121.72903374860392], [25.200953259529268, 121.72755493633831], [25.199850815404123, 121.72612147050252], [25.19869978082909, 121.72473542948498], [25.19750182334121, 121.72339882291253], [25.196258678506403, 121.72211358873716], [25.194972147411203, 121.72088159042553], [25.193644094058676, 121.71970461425728], [25.19227644267418, 121.71858436673524], [25.190871174922613, 121.7175224721115], [25.189430327042935, 121.71652047003163], [25.187955986903248, 121.71557981330272], [25.186450290980723, 121.7147018657873], [25.1849154212703, 121.71388790042512], [25.183353602127916, 121.71313909738834], [25.18176709705133, 121.71245654236974], [25.180158205404126, 121.71184122500875], [25.17852925908724, 121.71129403745684], [25.176882619162534, 121.71081577308351], [25.17522067243388, 121.71040712532637], [25.17354582799069, 121.71006868668583], [25.171860513718066, 121.7098009478653], [25.17016717277933, 121.70960429706065], [25.168468260075723, 121.70947901939668], [25.166766238689366, 121.70942529651408], [25.165063576311997, 121.7094432063057], [25.163362741668355, 121.7095327228043], [25.16166620093622, 121.70969371621935], [25.159976414170057, 121.70992595312597], [25.158295831732783, 121.71022909680262], [25.156626890740625, 121.7106027077201], [25.154972011527974, 121.71104624417825], [25.153333594134164, 121.71155906309171], [25.151714014820374, 121.71214042092191], [25.15011562261991, 121.71278947475551], [25.148540735928464, 121.71350528352681], [25.14699163913643, 121.71428680938133], [25.145470579312082, 121.71513291918124], [25.143979762937025, 121.71604238614843], [25.142521352701422, 121.71701389164251], [25.141097464360474, 121.71804602707356], [25.139710163661192, 121.71913729594385], [25.138361463338914, 121.72028611601762], [25.137053320192308, 121.72149082161592], [25.135787632238035, 121.72274966603061], [25.134566235951652, 121.72406082405773], [25.13339090359684, 121.72542239464347], [25.1322633406476, 121.72683240364069], [25.131185183308336, 121.72828880667092], [25.13015799613283, 121.72978949208913], [25.129183269749205, 121.73133228404514], [25.12826241868992, 121.73291494563772], [25.127396779334198, 121.73453518215912], [25.126587607963273, 121.73619064442133], [25.125836078931748, 121.73787893216222], [25.125143282958234, 121.73959759752591], [25.124510225538028, 121.74134414861203], [25.123937825479555, 121.74311605308839], [25.123426913565833, 121.74491074186294], [25.12297823134624, 121.7467256128087], [25.12259243005594, 121.74855803453592], [25.122270069667707, 121.75040535020862], [25.12201161807732, 121.75226488139565], [25.12181745042111, 121.75413393195426], [25.121687848530865, 121.75600979194023], [25.121623000522522, 121.75788974153556], [25.121623000522522, 121.75977105499331], [25.121687848530865, 121.76165100458873], [25.12181745042111, 121.76352686457459], [25.12201161807732, 121.76539591513335], [25.122270069667707, 121.76725544632018], [25.12259243005594, 121.76910276199293], [25.12297823134624, 121.7709351837203], [25.123426913565833, 121.77275005466586], [25.123937825479555, 121.77454474344047], [25.124510225538028, 121.77631664791694], [25.125143282958234, 121.77806319900301], [25.125836078931748, 121.77978186436678], [25.126587607963273, 121.78147015210753], [25.127396779334198, 121.78312561436972], [25.12826241868992, 121.78474585089114], [25.129183269749205, 121.78632851248386], [25.13015799613283, 121.78787130443973], [25.131185183308336, 121.78937198985804], [25.1322633406476, 121.79082839288832], [25.13339090359684, 121.7922384018854], [25.134566235951652, 121.79359997247111], [25.135787632238035, 121.79491113049819], [25.137053320192308, 121.79616997491296], [25.138361463338914, 121.79737468051125], [25.139710163661192, 121.79852350058515], [25.141097464360474, 121.79961476945536], [25.142521352701422, 121.80064690488636], [25.143979762937025, 121.8016184103805], [25.145470579312082, 121.80252787734763], [25.14699163913643, 121.80337398714767], [25.148540735928464, 121.80415551300207], [25.15011562261991, 121.80487132177333], [25.151714014820374, 121.80552037560709], [25.153333594134164, 121.80610173343729], [25.154972011527974, 121.80661455235062], [25.156626890740625, 121.80705808880877], [25.158295831732783, 121.80743169972625], [25.159976414170057, 121.80773484340303], [25.16166620093622, 121.80796708030957], [25.163362741668355, 121.80812807372455], [25.165063576311997, 121.80821759022322], [25.166766238689366, 121.80823550001492], [25.168468260075723, 121.80818177713216], [25.17016717277933, 121.80805649946821], [25.171860513718066, 121.80785984866355], [25.17354582799069, 121.80759210984317], [25.17522067243388, 121.80725367120252], [25.176882619162534, 121.80684502344549], [25.17852925908724, 121.80636675907216], [25.180158205404126, 121.80581957152025], [25.18176709705133, 121.8052042541592], [25.183353602127916, 121.80452169914062], [25.1849154212703, 121.80377289610375], [25.186450290980723, 121.8029589307417], [25.187955986903248, 121.80208098322628], [25.189430327042935, 121.80114032649738], [25.190871174922613, 121.80013832441738], [25.19227644267418, 121.79907642979363], [25.193644094058676, 121.7979561822717], [25.194972147411203, 121.7967792061034], [25.196258678506403, 121.7955472077917], [25.19750182334121, 121.79426197361627], [25.19869978082909, 121.79292536704402], [25.199850815404123, 121.79153932602648], [25.200953259529268, 121.79010586019069], [25.20200551610615, 121.78862704792508], [25.2030060607834, 121.78710503336596], [25.203953444158447, 121.7855420232891], [25.204846293872144, 121.78394028390966], [25.205683316591, 121.78230213759655], [25.206463299875537, 121.78062995950523], [25.207185113930926, 121.77892617413416], [25.207847713239406, 121.77719325180938], [25.208450138069495, 121.7754337051024], [25.20899151586232, 121.77365008518775], [25.209471062491108, 121.77184497814396], [25.2098880833938, 121.7700210012035], [25.21024197457537, 121.7681807989586], [25.210532223480023, 121.76632703952657], [25.21075840973131, 121.76446241068138], [25.210920205738677, 121.7625896159567], [25.21101737717064, 121.76071137072567], [25.21104978329259, 121.7588303982644]],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_393529fa7f454a76824276f4e7cc7afb);
         
     
-            var layer_control_3c9cfa1f8c871d56e39efacb4a015fe0_layers = {
+        var popup_d66b70d7c3ce413239eba3f8cc79f29f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_543fac4abfde54fe838c673300eb0265 = $(`<div id="html_543fac4abfde54fe838c673300eb0265" style="width: 100.0%; height: 100.0%;">                       <div style="font-family: Arial, sans-serif; min-width: 200px;">                           <h4 style="margin-bottom: 5px;">基隆港（圓形）_空域2</h4>                           <p><b>申請案號:</b> AB2411040001</p>                           <p><b>有效期限:</b> 2025/04/15​ ~ 2025/07/14</p>                           <p><b>高度:</b> 0-400ft</p>                       </div>                       </div>`)[0];
+                popup_d66b70d7c3ce413239eba3f8cc79f29f.setContent(html_543fac4abfde54fe838c673300eb0265);
+            
+        
+
+        polygon_7065af287f763a643e2230bd6b768f50.bindPopup(popup_d66b70d7c3ce413239eba3f8cc79f29f)
+        ;
+
+        
+    
+    
+            polygon_7065af287f763a643e2230bd6b768f50.bindTooltip(
+                `<div>
+                     基隆港（圓形）_空域2 - AB2411040001 - 0-400ft
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var polygon_d08631aeff00c184f278029fec72297d = L.polygon(
+                [[25.018397708619688, 121.43277344863208], [24.97247982072831, 121.43157718341148], [24.96907087905853, 121.5980042294721], [25.012070235015347, 121.59975906472008], [25.018397708619688, 121.43277344863208]],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_393529fa7f454a76824276f4e7cc7afb);
+        
+    
+        var popup_fedf0fbed71c2b67b8614022ebffbf5e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_cc033990aae2a219e8c46af74f879fbe = $(`<div id="html_cc033990aae2a219e8c46af74f879fbe" style="width: 100.0%; height: 100.0%;">                       <div style="font-family: Arial, sans-serif; min-width: 200px;">                           <h4 style="margin-bottom: 5px;">松機南側綠區_空域3</h4>                           <p><b>申請案號:</b> AB2411040001</p>                           <p><b>有效期限:</b> 2025/04/15​ ~ 2025/07/14</p>                           <p><b>高度:</b> 0-400ft</p>                       </div>                       </div>`)[0];
+                popup_fedf0fbed71c2b67b8614022ebffbf5e.setContent(html_cc033990aae2a219e8c46af74f879fbe);
+            
+        
+
+        polygon_d08631aeff00c184f278029fec72297d.bindPopup(popup_fedf0fbed71c2b67b8614022ebffbf5e)
+        ;
+
+        
+    
+    
+            polygon_d08631aeff00c184f278029fec72297d.bindTooltip(
+                `<div>
+                     松機南側綠區_空域3 - AB2411040001 - 0-400ft
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            feature_group_393529fa7f454a76824276f4e7cc7afb.addTo(map_eccb10d67ffc8bd2d5860189d8042279);
+        
+    
+            var feature_group_4ea86214615c9192f3d54a901c7be67f = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var polygon_554165cb6512deddd298c13d658d23d2 = L.polygon(
+                [[25.09136394994359, 121.4996911773515], [25.07307163697025, 121.5073286639853], [25.07221376884179, 121.5566349585399], [25.06298240268647, 121.6155885132125], [25.07582146437146, 121.6197870657349], [25.07596216212269, 121.5502441498335], [25.09136394994359, 121.4996911773515]],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_4ea86214615c9192f3d54a901c7be67f);
+        
+    
+        var popup_c24198db2916f1f392af2e1da844753a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_0e0c3f9a1f6b8f1ac865ecd0755777f7 = $(`<div id="html_0e0c3f9a1f6b8f1ac865ecd0755777f7" style="width: 100.0%; height: 100.0%;">                       <div style="font-family: Arial, sans-serif; min-width: 200px;">                           <h4 style="margin-bottom: 5px;">台北大佳河濱公園_空域2</h4>                           <p><b>申請案號:</b> AB2411070001</p>                           <p><b>有效期限:</b> 2025/04/15​ ~ 2025/07/14</p>                           <p><b>高度:</b> 0-2000ft</p>                       </div>                       </div>`)[0];
+                popup_c24198db2916f1f392af2e1da844753a.setContent(html_0e0c3f9a1f6b8f1ac865ecd0755777f7);
+            
+        
+
+        polygon_554165cb6512deddd298c13d658d23d2.bindPopup(popup_c24198db2916f1f392af2e1da844753a)
+        ;
+
+        
+    
+    
+            polygon_554165cb6512deddd298c13d658d23d2.bindTooltip(
+                `<div>
+                     台北大佳河濱公園_空域2 - AB2411070001 - 0-2000ft
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            feature_group_4ea86214615c9192f3d54a901c7be67f.addTo(map_eccb10d67ffc8bd2d5860189d8042279);
+        
+    
+            var feature_group_d5973c4ba8f77fed61606eafa33c9174 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var polygon_a16451209a289e781a3b62621026ce3e = L.polygon(
+                [[24.189980021702063, 120.62338536243234], [24.106021209973598, 120.62166874866286], [24.105394444420934, 120.745608262823], [24.205637870225885, 120.7476681993464], [24.209082338823514, 120.66939061145584], [24.189980021702063, 120.62338536243234]],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d5973c4ba8f77fed61606eafa33c9174);
+        
+    
+        var popup_30d1832c7eb5b5d35cfe5dd0ad7a0fe7 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_487d93f0c2a76b53f8183d1eb0bb3305 = $(`<div id="html_487d93f0c2a76b53f8183d1eb0bb3305" style="width: 100.0%; height: 100.0%;">                       <div style="font-family: Arial, sans-serif; min-width: 200px;">                           <h4 style="margin-bottom: 5px;">台中市區_空域1</h4>                           <p><b>申請案號:</b> AB2411050002</p>                           <p><b>有效期限:</b> 2025/04/15​ ~ 2025/07/14</p>                           <p><b>高度:</b> 0-2000ft</p>                       </div>                       </div>`)[0];
+                popup_30d1832c7eb5b5d35cfe5dd0ad7a0fe7.setContent(html_487d93f0c2a76b53f8183d1eb0bb3305);
+            
+        
+
+        polygon_a16451209a289e781a3b62621026ce3e.bindPopup(popup_30d1832c7eb5b5d35cfe5dd0ad7a0fe7)
+        ;
+
+        
+    
+    
+            polygon_a16451209a289e781a3b62621026ce3e.bindTooltip(
+                `<div>
+                     台中市區_空域1 - AB2411050002 - 0-2000ft
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var polygon_77add67fd5f49a0aa093ddf70dc2857b = L.polygon(
+                [[22.969467030522626, 120.25602086000241], [23.08768850153805, 120.25739012770453], [23.075054924507555, 120.10632811598576], [22.933635984714723, 120.10958968214783], [22.969467030522626, 120.20641072206298], [22.969467030522626, 120.25602086000241]],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d5973c4ba8f77fed61606eafa33c9174);
+        
+    
+        var popup_02f62cbc59026704dfd9ec23458c0b27 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_718e7f611086fd94e9f795716687066f = $(`<div id="html_718e7f611086fd94e9f795716687066f" style="width: 100.0%; height: 100.0%;">                       <div style="font-family: Arial, sans-serif; min-width: 200px;">                           <h4 style="margin-bottom: 5px;">台南市區_空域2</h4>                           <p><b>申請案號:</b> AB2411050002</p>                           <p><b>有效期限:</b> 2025/04/15​ ~ 2025/07/14</p>                           <p><b>高度:</b> 0-400ft</p>                       </div>                       </div>`)[0];
+                popup_02f62cbc59026704dfd9ec23458c0b27.setContent(html_718e7f611086fd94e9f795716687066f);
+            
+        
+
+        polygon_77add67fd5f49a0aa093ddf70dc2857b.bindPopup(popup_02f62cbc59026704dfd9ec23458c0b27)
+        ;
+
+        
+    
+    
+            polygon_77add67fd5f49a0aa093ddf70dc2857b.bindTooltip(
+                `<div>
+                     台南市區_空域2 - AB2411050002 - 0-400ft
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var polygon_7d03e49421257dc505afd654973a9481 = L.polygon(
+                [[22.631316326651202, 120.20263417176999], [22.534941547629348, 120.19988893084329], [22.524159431559866, 120.36605714373393], [22.579654059003897, 120.32897694520743], [22.62402773439678, 120.32863362245364], [22.631316326651202, 120.20263417176999]],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d5973c4ba8f77fed61606eafa33c9174);
+        
+    
+        var popup_a4459031f31e7a91d07afd6b38e71721 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a2ad38d873a8740dd3d12ed67e9160e7 = $(`<div id="html_a2ad38d873a8740dd3d12ed67e9160e7" style="width: 100.0%; height: 100.0%;">                       <div style="font-family: Arial, sans-serif; min-width: 200px;">                           <h4 style="margin-bottom: 5px;">高雄港三浬內（大）_空域3</h4>                           <p><b>申請案號:</b> AB2411050002</p>                           <p><b>有效期限:</b> 2025/04/15​ ~ 2025/07/14</p>                           <p><b>高度:</b> 0-400ft</p>                       </div>                       </div>`)[0];
+                popup_a4459031f31e7a91d07afd6b38e71721.setContent(html_a2ad38d873a8740dd3d12ed67e9160e7);
+            
+        
+
+        polygon_7d03e49421257dc505afd654973a9481.bindPopup(popup_a4459031f31e7a91d07afd6b38e71721)
+        ;
+
+        
+    
+    
+            polygon_7d03e49421257dc505afd654973a9481.bindTooltip(
+                `<div>
+                     高雄港三浬內（大）_空域3 - AB2411050002 - 0-400ft
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            feature_group_d5973c4ba8f77fed61606eafa33c9174.addTo(map_eccb10d67ffc8bd2d5860189d8042279);
+        
+    
+            var feature_group_a366e7c378e4eff299a9f3469eb3cf2b = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var polygon_a4e02f4624e7e2996b7687592eed0bad = L.polygon(
+                [[24.725542313458035, 121.6004068181972], [24.700014487261875, 121.98721086244379], [24.978681688283878, 121.99326997260845], [24.9761919826872, 121.91705232124131], [24.91455571993111, 121.84838777045996], [24.725542313458035, 121.6004068181972]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_a366e7c378e4eff299a9f3469eb3cf2b);
+        
+    
+        var popup_c33ba280475ae3b21b0425576c8307a1 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_13a0cebc4dd24d05ac620611c9bcb25d = $(`<div id="html_13a0cebc4dd24d05ac620611c9bcb25d" style="width: 100.0%; height: 100.0%;">                       <div style="font-family: Arial, sans-serif; min-width: 200px;">                           <h4 style="margin-bottom: 5px;">宜蘭溪北_空域1</h4>                           <p><b>申請案號:</b> AB2411030001</p>                           <p><b>有效期限:</b> 2025/04/15​ ~ 2025/07/14</p>                           <p><b>高度:</b> 0-400ft</p>                       </div>                       </div>`)[0];
+                popup_c33ba280475ae3b21b0425576c8307a1.setContent(html_13a0cebc4dd24d05ac620611c9bcb25d);
+            
+        
+
+        polygon_a4e02f4624e7e2996b7687592eed0bad.bindPopup(popup_c33ba280475ae3b21b0425576c8307a1)
+        ;
+
+        
+    
+    
+            polygon_a4e02f4624e7e2996b7687592eed0bad.bindTooltip(
+                `<div>
+                     宜蘭溪北_空域1 - AB2411030001 - 0-400ft
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var polygon_5262d6c8279eb2366fd0409bf98910d5 = L.polygon(
+                [[24.72181470496287, 121.59482782344621], [24.552810299838438, 121.43363242606912], [24.381550174346515, 121.91625302295482], [24.722438417169563, 121.92167108516492], [24.72181470496287, 121.59482782344621]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_a366e7c378e4eff299a9f3469eb3cf2b);
+        
+    
+        var popup_cca6bedf18eb7dcfcf281dc567de4059 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f5ee9ac4a360af62b2e56225d30b1d09 = $(`<div id="html_f5ee9ac4a360af62b2e56225d30b1d09" style="width: 100.0%; height: 100.0%;">                       <div style="font-family: Arial, sans-serif; min-width: 200px;">                           <h4 style="margin-bottom: 5px;">宜蘭溪南_空域2</h4>                           <p><b>申請案號:</b> AB2411030001</p>                           <p><b>有效期限:</b> 2025/04/15​ ~ 2025/07/14</p>                           <p><b>高度:</b> 0-400ft</p>                       </div>                       </div>`)[0];
+                popup_cca6bedf18eb7dcfcf281dc567de4059.setContent(html_f5ee9ac4a360af62b2e56225d30b1d09);
+            
+        
+
+        polygon_5262d6c8279eb2366fd0409bf98910d5.bindPopup(popup_cca6bedf18eb7dcfcf281dc567de4059)
+        ;
+
+        
+    
+    
+            polygon_5262d6c8279eb2366fd0409bf98910d5.bindTooltip(
+                `<div>
+                     宜蘭溪南_空域2 - AB2411030001 - 0-400ft
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var polygon_c23160950951c5586b88ddbfc1aa9991 = L.polygon(
+                [[24.820778273140252, 120.9793332741717], [24.786340759177985, 120.94070946435718], [24.78306791866084, 120.99237953882016], [24.776210258640262, 121.00782906274587], [24.80519687256684, 121.01400887231628], [24.820778273140252, 120.9793332741717]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_a366e7c378e4eff299a9f3469eb3cf2b);
+        
+    
+        var popup_785c7e9274cd3b6a96b5b689528da58d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_cd36afd80357a555b1508ade31cbe19d = $(`<div id="html_cd36afd80357a555b1508ade31cbe19d" style="width: 100.0%; height: 100.0%;">                       <div style="font-family: Arial, sans-serif; min-width: 200px;">                           <h4 style="margin-bottom: 5px;">新竹市東區_空域3</h4>                           <p><b>申請案號:</b> AB2411030001</p>                           <p><b>有效期限:</b> 2025/04/15​ ~ 2025/07/14</p>                           <p><b>高度:</b> 0-400ft</p>                       </div>                       </div>`)[0];
+                popup_785c7e9274cd3b6a96b5b689528da58d.setContent(html_cd36afd80357a555b1508ade31cbe19d);
+            
+        
+
+        polygon_c23160950951c5586b88ddbfc1aa9991.bindPopup(popup_785c7e9274cd3b6a96b5b689528da58d)
+        ;
+
+        
+    
+    
+            polygon_c23160950951c5586b88ddbfc1aa9991.bindTooltip(
+                `<div>
+                     新竹市東區_空域3 - AB2411030001 - 0-400ft
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            feature_group_a366e7c378e4eff299a9f3469eb3cf2b.addTo(map_eccb10d67ffc8bd2d5860189d8042279);
+        
+    
+            var feature_group_742f86b85ce77c5b7b734fde6755ba5f = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var polygon_96155d4a0c331b71c8e60623db5844f6 = L.polygon(
+                [[24.23059579974028, 121.6854337450364], [24.177048486082917, 121.64354836905983], [24.155122047453986, 121.69470345939179], [24.229030408151793, 121.74379861320033], [24.23059579974028, 121.6854337450364]],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_742f86b85ce77c5b7b734fde6755ba5f);
+        
+    
+        var popup_0cda657f07d0a931ff187eeb58367fde = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_57ed8808eac1223858b2778b99997cc4 = $(`<div id="html_57ed8808eac1223858b2778b99997cc4" style="width: 100.0%; height: 100.0%;">                       <div style="font-family: Arial, sans-serif; min-width: 200px;">                           <h4 style="margin-bottom: 5px;">太魯閣_空域1</h4>                           <p><b>申請案號:</b> AB2502260001</p>                           <p><b>有效期限:</b> 2025/03/16​ ~ 2025/05/15​</p>                           <p><b>高度:</b> 0-4300ft</p>                       </div>                       </div>`)[0];
+                popup_0cda657f07d0a931ff187eeb58367fde.setContent(html_57ed8808eac1223858b2778b99997cc4);
+            
+        
+
+        polygon_96155d4a0c331b71c8e60623db5844f6.bindPopup(popup_0cda657f07d0a931ff187eeb58367fde)
+        ;
+
+        
+    
+    
+            polygon_96155d4a0c331b71c8e60623db5844f6.bindTooltip(
+                `<div>
+                     太魯閣_空域1 - AB2502260001 - 0-4300ft
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var polygon_5cd00ba5b1e0f6c60cc7f6c2a20daffb = L.polygon(
+                [[24.19819392824225, 121.49540225381637], [24.175331489400136, 121.47857943887503], [24.15747714821961, 121.52801791543742], [24.15747714821961, 121.59359256143344], [24.183161553054266, 121.60732547158969], [24.19819392824225, 121.49540225381637]],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_742f86b85ce77c5b7b734fde6755ba5f);
+        
+    
+        var popup_abcbca553a957516ea96d8934258e425 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9960b6831f6556ed7c532b2bf86efb1b = $(`<div id="html_9960b6831f6556ed7c532b2bf86efb1b" style="width: 100.0%; height: 100.0%;">                       <div style="font-family: Arial, sans-serif; min-width: 200px;">                           <h4 style="margin-bottom: 5px;">花蓮縣秀林鄉_空域2</h4>                           <p><b>申請案號:</b> AB2502260001</p>                           <p><b>有效期限:</b> 2025/03/16​ ~ 2025/05/15​</p>                           <p><b>高度:</b> 0-6200ft</p>                       </div>                       </div>`)[0];
+                popup_abcbca553a957516ea96d8934258e425.setContent(html_9960b6831f6556ed7c532b2bf86efb1b);
+            
+        
+
+        polygon_5cd00ba5b1e0f6c60cc7f6c2a20daffb.bindPopup(popup_abcbca553a957516ea96d8934258e425)
+        ;
+
+        
+    
+    
+            polygon_5cd00ba5b1e0f6c60cc7f6c2a20daffb.bindTooltip(
+                `<div>
+                     花蓮縣秀林鄉_空域2 - AB2502260001 - 0-6200ft
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var polygon_4318aae292d0ed91255ffcf2393e3daa = L.polygon(
+                [[24.009805793598122, 121.5995884720483], [23.94801392442203, 121.54868819157277], [23.92874948988748, 121.58527419308807], [23.996946852403735, 121.6291142288841], [24.009805793598122, 121.5995884720483]],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_742f86b85ce77c5b7b734fde6755ba5f);
+        
+    
+        var popup_b818fcaa76c254f2c681d734e5eb190d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_3e004db180f1ebab771fe92073ed0b88 = $(`<div id="html_3e004db180f1ebab771fe92073ed0b88" style="width: 100.0%; height: 100.0%;">                       <div style="font-family: Arial, sans-serif; min-width: 200px;">                           <h4 style="margin-bottom: 5px;">花蓮縣花蓮市_空域4</h4>                           <p><b>申請案號:</b> AB2502260001</p>                           <p><b>有效期限:</b> 2025/03/16​ ~ 2025/05/15​</p>                           <p><b>高度:</b> 0-2000ft</p>                       </div>                       </div>`)[0];
+                popup_b818fcaa76c254f2c681d734e5eb190d.setContent(html_3e004db180f1ebab771fe92073ed0b88);
+            
+        
+
+        polygon_4318aae292d0ed91255ffcf2393e3daa.bindPopup(popup_b818fcaa76c254f2c681d734e5eb190d)
+        ;
+
+        
+    
+    
+            polygon_4318aae292d0ed91255ffcf2393e3daa.bindTooltip(
+                `<div>
+                     花蓮縣花蓮市_空域4 - AB2502260001 - 0-2000ft
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var polygon_8e4cc2162e98cf1d09c84d8c52b8a910 = L.polygon(
+                [[24.13682964911071, 121.59819154406586], [24.056703963336805, 121.57905666495365], [24.043065876295472, 121.62180034781491], [24.06568929426181, 121.61295442248391], [24.09045187375092, 121.61673097277686], [24.108315573982253, 121.63115052844087], [24.13682964911071, 121.59819154406586]],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_742f86b85ce77c5b7b734fde6755ba5f);
+        
+    
+        var popup_e0eda5bb0c57e279c9581de863732475 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_58fe9fb82d83ec777bd927edb4da7d0b = $(`<div id="html_58fe9fb82d83ec777bd927edb4da7d0b" style="width: 100.0%; height: 100.0%;">                       <div style="font-family: Arial, sans-serif; min-width: 200px;">                           <h4 style="margin-bottom: 5px;">花蓮縣新城鄉_空域3</h4>                           <p><b>申請案號:</b> AB2502260001</p>                           <p><b>有效期限:</b> 2025/03/16​ ~ 2025/05/15​</p>                           <p><b>高度:</b> 0-5100ft</p>                       </div>                       </div>`)[0];
+                popup_e0eda5bb0c57e279c9581de863732475.setContent(html_58fe9fb82d83ec777bd927edb4da7d0b);
+            
+        
+
+        polygon_8e4cc2162e98cf1d09c84d8c52b8a910.bindPopup(popup_e0eda5bb0c57e279c9581de863732475)
+        ;
+
+        
+    
+    
+            polygon_8e4cc2162e98cf1d09c84d8c52b8a910.bindTooltip(
+                `<div>
+                     花蓮縣新城鄉_空域3 - AB2502260001 - 0-5100ft
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            feature_group_742f86b85ce77c5b7b734fde6755ba5f.addTo(map_eccb10d67ffc8bd2d5860189d8042279);
+        
+    
+            var feature_group_dfd3c0995c755c836f92e59b663166d3 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var polygon_323c43e638652986adde9af836ed1620 = L.polygon(
+                [[23.453105476593986, 121.50071302766611], [23.149365377817766, 121.18762279267166], [22.771462411380448, 121.03702614421724], [22.752289847686754, 121.0660281997429], [22.809716013519395, 121.11075738782749], [22.966603949381092, 121.39198968524761], [23.453105476593986, 121.50071302766611]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dfd3c0995c755c836f92e59b663166d3);
+        
+    
+        var popup_62d54fc611833502a19229eda1dd9422 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_fdbaeff6a0469b67d6d295719ca9ec68 = $(`<div id="html_fdbaeff6a0469b67d6d295719ca9ec68" style="width: 100.0%; height: 100.0%;">                       <div style="font-family: Arial, sans-serif; min-width: 200px;">                           <h4 style="margin-bottom: 5px;">台東縣關山鎮_空域2</h4>                           <p><b>申請案號:</b> AB2503170016</p>                           <p><b>有效期限:</b> 2025/04/11​ ~ 2025/07/10</p>                           <p><b>高度:</b> 0-400ft</p>                       </div>                       </div>`)[0];
+                popup_62d54fc611833502a19229eda1dd9422.setContent(html_fdbaeff6a0469b67d6d295719ca9ec68);
+            
+        
+
+        polygon_323c43e638652986adde9af836ed1620.bindPopup(popup_62d54fc611833502a19229eda1dd9422)
+        ;
+
+        
+    
+    
+            polygon_323c43e638652986adde9af836ed1620.bindTooltip(
+                `<div>
+                     台東縣關山鎮_空域2 - AB2503170016 - 0-400ft
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var polygon_ba3a33467af694250a7236be14d77f3d = L.polygon(
+                [[23.995264503768357, 121.53673509473641], [23.186004464125276, 121.2077098559845], [23.12948041185625, 121.26480603928447], [23.455395064908405, 121.40452901239259], [23.436927130923706, 121.51436010713425], [23.938167101236424, 121.65930131788073], [23.995264503768357, 121.53673509473641]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dfd3c0995c755c836f92e59b663166d3);
+        
+    
+        var popup_900f809c321829eb6554ca5e8c44870b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_fd9930c506e6908a30c9b44abdc1e916 = $(`<div id="html_fd9930c506e6908a30c9b44abdc1e916" style="width: 100.0%; height: 100.0%;">                       <div style="font-family: Arial, sans-serif; min-width: 200px;">                           <h4 style="margin-bottom: 5px;">花蓮縣豐濱鄉_空域1</h4>                           <p><b>申請案號:</b> AB2503170016</p>                           <p><b>有效期限:</b> 2025/04/11​ ~ 2025/07/10</p>                           <p><b>高度:</b> 0-400ft</p>                       </div>                       </div>`)[0];
+                popup_900f809c321829eb6554ca5e8c44870b.setContent(html_fd9930c506e6908a30c9b44abdc1e916);
+            
+        
+
+        polygon_ba3a33467af694250a7236be14d77f3d.bindPopup(popup_900f809c321829eb6554ca5e8c44870b)
+        ;
+
+        
+    
+    
+            polygon_ba3a33467af694250a7236be14d77f3d.bindTooltip(
+                `<div>
+                     花蓮縣豐濱鄉_空域1 - AB2503170016 - 0-400ft
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            feature_group_dfd3c0995c755c836f92e59b663166d3.addTo(map_eccb10d67ffc8bd2d5860189d8042279);
+        
+    
+            var feature_group_80715d375cfa3dca2aa62a5639988bf2 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var polygon_924761b48b09761af1c0be04ed2efbd5 = L.polygon(
+                [[25.110932927535224, 121.52453984618273], [25.111260195452182, 121.47443584650847], [25.082982291507328, 121.50700021088224], [25.058442154533626, 121.50822329819292], [25.057664632252102, 121.54435801804163], [25.083718963183262, 121.52462467104293], [25.110932927535224, 121.52453984618273]],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_80715d375cfa3dca2aa62a5639988bf2);
+        
+    
+        var popup_6c9ba110a07531633f59d8ef43f42b29 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_2d99fd00f1d4d91264feba267d311506 = $(`<div id="html_2d99fd00f1d4d91264feba267d311506" style="width: 100.0%; height: 100.0%;">                       <div style="font-family: Arial, sans-serif; min-width: 200px;">                           <h4 style="margin-bottom: 5px;">台北市士林區_空域1</h4>                           <p><b>申請案號:</b> AB2411240002</p>                           <p><b>有效期限:</b> 2025/04/15​ ~ 2025/07/14</p>                           <p><b>高度:</b> 0-2000ft</p>                       </div>                       </div>`)[0];
+                popup_6c9ba110a07531633f59d8ef43f42b29.setContent(html_2d99fd00f1d4d91264feba267d311506);
+            
+        
+
+        polygon_924761b48b09761af1c0be04ed2efbd5.bindPopup(popup_6c9ba110a07531633f59d8ef43f42b29)
+        ;
+
+        
+    
+    
+            polygon_924761b48b09761af1c0be04ed2efbd5.bindTooltip(
+                `<div>
+                     台北市士林區_空域1 - AB2411240002 - 0-2000ft
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var polygon_b4b050d3bc32559aa6122e8e21502efa = L.polygon(
+                [[24.779625133333205, 120.99374612431333], [24.7675615419485, 120.98856644342946], [24.762495628775437, 120.9790392370085], [24.741528345407524, 120.97311691950361], [24.74938540161766, 121.0233577118377], [24.77066309400787, 121.01237138371272], [24.779625133333205, 120.99374612431333]],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_80715d375cfa3dca2aa62a5639988bf2);
+        
+    
+        var popup_08fc8a269c631d8c1cd82ac851cf3a17 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c4e082fb39551af65e4211ddabb1a217 = $(`<div id="html_c4e082fb39551af65e4211ddabb1a217" style="width: 100.0%; height: 100.0%;">                       <div style="font-family: Arial, sans-serif; min-width: 200px;">                           <h4 style="margin-bottom: 5px;">竹科寶山_空域2</h4>                           <p><b>申請案號:</b> AB2411240002</p>                           <p><b>有效期限:</b> 2025/04/15​ ~ 2025/07/14</p>                           <p><b>高度:</b> 0-2900ft</p>                       </div>                       </div>`)[0];
+                popup_08fc8a269c631d8c1cd82ac851cf3a17.setContent(html_c4e082fb39551af65e4211ddabb1a217);
+            
+        
+
+        polygon_b4b050d3bc32559aa6122e8e21502efa.bindPopup(popup_08fc8a269c631d8c1cd82ac851cf3a17)
+        ;
+
+        
+    
+    
+            polygon_b4b050d3bc32559aa6122e8e21502efa.bindTooltip(
+                `<div>
+                     竹科寶山_空域2 - AB2411240002 - 0-2900ft
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var polygon_c3ff5dc205fd47e1f14794783de64c43 = L.polygon(
+                [[22.629115574853916, 120.30441092811624], [22.63303922344717, 120.21035437921412], [22.55535312542626, 120.265214270748], [22.629115574853916, 120.30441092811624]],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_80715d375cfa3dca2aa62a5639988bf2);
+        
+    
+        var popup_664d1d0394411dd60f903e85b15cd84a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_16b7f6acf03fc022d183e3ae49729baa = $(`<div id="html_16b7f6acf03fc022d183e3ae49729baa" style="width: 100.0%; height: 100.0%;">                       <div style="font-family: Arial, sans-serif; min-width: 200px;">                           <h4 style="margin-bottom: 5px;">高雄港三浬外_空域3</h4>                           <p><b>申請案號:</b> AB2411240002</p>                           <p><b>有效期限:</b> 2025/04/15​ ~ 2025/07/14</p>                           <p><b>高度:</b> 0-2000ft</p>                       </div>                       </div>`)[0];
+                popup_664d1d0394411dd60f903e85b15cd84a.setContent(html_16b7f6acf03fc022d183e3ae49729baa);
+            
+        
+
+        polygon_c3ff5dc205fd47e1f14794783de64c43.bindPopup(popup_664d1d0394411dd60f903e85b15cd84a)
+        ;
+
+        
+    
+    
+            polygon_c3ff5dc205fd47e1f14794783de64c43.bindTooltip(
+                `<div>
+                     高雄港三浬外_空域3 - AB2411240002 - 0-2000ft
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var polygon_885d504b3b9a5b1d2f53eefd753f3e2d = L.polygon(
+                [[25.104129928164742, 121.44969238452703], [25.024617807118833, 121.40824554972441], [25.020567445945087, 121.47894924990922], [25.09526918875578, 121.48368133716383], [25.104129928164742, 121.44969238452703]],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_80715d375cfa3dca2aa62a5639988bf2);
+        
+    
+        var popup_28c8050c57df9da30172653e6235e5cd = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c4a303790edb71e751b2b7bd02e69bc2 = $(`<div id="html_c4a303790edb71e751b2b7bd02e69bc2" style="width: 100.0%; height: 100.0%;">                       <div style="font-family: Arial, sans-serif; min-width: 200px;">                           <h4 style="margin-bottom: 5px;">新北市新莊區_空域4</h4>                           <p><b>申請案號:</b> AB2411240002</p>                           <p><b>有效期限:</b> 2025/04/15​ ~ 2025/07/14</p>                           <p><b>高度:</b> 0-2000ft</p>                       </div>                       </div>`)[0];
+                popup_28c8050c57df9da30172653e6235e5cd.setContent(html_c4a303790edb71e751b2b7bd02e69bc2);
+            
+        
+
+        polygon_885d504b3b9a5b1d2f53eefd753f3e2d.bindPopup(popup_28c8050c57df9da30172653e6235e5cd)
+        ;
+
+        
+    
+    
+            polygon_885d504b3b9a5b1d2f53eefd753f3e2d.bindTooltip(
+                `<div>
+                     新北市新莊區_空域4 - AB2411240002 - 0-2000ft
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            feature_group_80715d375cfa3dca2aa62a5639988bf2.addTo(map_eccb10d67ffc8bd2d5860189d8042279);
+        
+    
+            var layer_control_5bdc03ea15119ecb3e5134e6c988d1e7_layers = {
                 base_layers : {
-                    "openstreetmap" : tile_layer_5430c49f982f779d766440761d1c3981,
+                    "openstreetmap" : tile_layer_590ee5bccddc2bfd119e488834f15ed7,
                 },
                 overlays :  {
-                    "2025\u6625\u5b63\u53f0\u5317\u65b0\u7af9\u7d00\u9304\u7247\u62cd\u651d\uff08\u9ad8\u7a7a\uff09 \u7a7a\u62cd\u651d\u5f71" : feature_group_25bff9f3b667a13820b2b84abe7d2e22,
-                    "2025\u82b1\u6771\u570b\u969b\u81ea\u884c\u8eca\u8cfd \u7a7a\u62cd\u651d\u5f71" : feature_group_beb98f9b2ad7f38b786aae3fffb577a2,
-                    "2025\u6625\u5b63\u82b1\u84ee\u7d00\u9304\u7247\u62cd\u651d \u7a7a\u62cd\u651d\u5f71\uff08\u9ad8\u7a7a\uff09" : feature_group_43725deb3eb47fbf85fa4264e3a356b0,
-                    "\u53f0\u5317\u5f70\u5316\u96f2\u6797\u9ad8\u96c4\u57ce\u5e02\u7d00\u9304\u7247\u62cd\u651d \u7a7a\u62cd\u651d\u5f71" : feature_group_5e0c6d31369e9269cb5f77241006d4e2,
-                    "2025\u6625\u5b63\u65b0\u5317\u57fa\u9686\u53f0\u4e2d\u57ce\u5e02\u7d00\u9304\u7247\u62cd\u651d \u7a7a\u62cd\u651d\u5f71" : feature_group_5fff7ac9de8b9c6d39f60f131d5bb0d5,
-                    "2025\u590f\u5b63\u53f0\u5317\u7d00\u9304\u7247\u62cd\u651d(\u9ad8\u7a7a)\u7a7a\u62cd\u651d\u5f71" : feature_group_3a01ef6b41b1237e843d902d682e2cbc,
-                    "2025\u590f\u5b63\u53f0\u4e2d\u53f0\u5357\u9ad8\u96c4\u7d00\u9304\u7247\u62cd\u651d(\u9ad8\u7a7a)\u7a7a\u62cd\u651d\u5f71" : feature_group_f170b535d1e5e63889cefd14feed8031,
-                    "2025 \u590f\u5b63\u5b9c\u862d\u65b0\u7af9\u7d00\u9304\u7247\u62cd\u651d \u7a7a\u62cd\u651d\u5f71" : feature_group_c109cc3a78808e8dae3cbe2c50aed97e,
-                    "2025 \u590f\u5b63\u5927\u53f0\u5317\u5730\u5340\u7d00\u9304\u7247\u62cd\u651d(\u9ad8\u7a7a)\u7a7a\u62cd\u651d\u5f71" : feature_group_19f3caa51a3eac692fe7905f950963fc,
+                    "2025\u6625\u5b63\u53f0\u5317\u65b0\u7af9\u7d00\u9304\u7247\u62cd\u651d\uff08\u9ad8\u7a7a\uff09 \u7a7a\u62cd\u651d\u5f71" : feature_group_ce8e61f26d4e6bd15062b65197d43f7c,
+                    "2025\u6625\u5b63\u65b0\u5317\u57fa\u9686\u53f0\u4e2d\u57ce\u5e02\u7d00\u9304\u7247\u62cd\u651d \u7a7a\u62cd\u651d\u5f71" : feature_group_a292f90e6ffcaec8d22bf5fe488442a3,
+                    "\u53f0\u5317\u5f70\u5316\u96f2\u6797\u9ad8\u96c4\u57ce\u5e02\u7d00\u9304\u7247\u62cd\u651d \u7a7a\u62cd\u651d\u5f71" : feature_group_aee5be73b9c806892359f8bf45539671,
+                    "2025 \u590f\u5b63\u5927\u53f0\u5317\u5730\u5340\u7d00\u9304\u7247\u62cd\u651d(\u9ad8\u7a7a)\u7a7a\u62cd\u651d\u5f71" : feature_group_393529fa7f454a76824276f4e7cc7afb,
+                    "2025\u590f\u5b63\u53f0\u5317\u7d00\u9304\u7247\u62cd\u651d(\u9ad8\u7a7a)\u7a7a\u62cd\u651d\u5f71" : feature_group_4ea86214615c9192f3d54a901c7be67f,
+                    "2025\u590f\u5b63\u53f0\u4e2d\u53f0\u5357\u9ad8\u96c4\u7d00\u9304\u7247\u62cd\u651d(\u9ad8\u7a7a)\u7a7a\u62cd\u651d\u5f71" : feature_group_d5973c4ba8f77fed61606eafa33c9174,
+                    "2025 \u590f\u5b63\u5b9c\u862d\u65b0\u7af9\u7d00\u9304\u7247\u62cd\u651d \u7a7a\u62cd\u651d\u5f71" : feature_group_a366e7c378e4eff299a9f3469eb3cf2b,
+                    "2025\u6625\u5b63\u82b1\u84ee\u7d00\u9304\u7247\u62cd\u651d \u7a7a\u62cd\u651d\u5f71\uff08\u9ad8\u7a7a\uff09" : feature_group_742f86b85ce77c5b7b734fde6755ba5f,
+                    "2025\u82b1\u6771\u570b\u969b\u81ea\u884c\u8eca\u8cfd \u7a7a\u62cd\u651d\u5f71" : feature_group_dfd3c0995c755c836f92e59b663166d3,
+                    "\t2025\u6625\u5b63\u53f0\u5317\u65b0\u5317\u65b0\u7af9\u9ad8\u96c4\u7d00\u9304\u7247\u62cd\u651d\uff08\u9ad8\u7a7a\uff09 \u7a7a\u62cd\u651d\u5f71" : feature_group_80715d375cfa3dca2aa62a5639988bf2,
                 },
             };
-            let layer_control_3c9cfa1f8c871d56e39efacb4a015fe0 = L.control.layers(
-                layer_control_3c9cfa1f8c871d56e39efacb4a015fe0_layers.base_layers,
-                layer_control_3c9cfa1f8c871d56e39efacb4a015fe0_layers.overlays,
+            let layer_control_5bdc03ea15119ecb3e5134e6c988d1e7 = L.control.layers(
+                layer_control_5bdc03ea15119ecb3e5134e6c988d1e7_layers.base_layers,
+                layer_control_5bdc03ea15119ecb3e5134e6c988d1e7_layers.overlays,
                 {
   "position": "topright",
   "collapsed": false,
   "autoZIndex": true,
 }
-            ).addTo(map_d39fa681c003504f8d724eda1edef417);
+            ).addTo(map_eccb10d67ffc8bd2d5860189d8042279);
 
         
 </script>
