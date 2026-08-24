@@ -17,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_826579aa27443bb20d0f51eb78a54836 {
+                #map_f3a8d3d0579e2a7815db9490c023668b {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -61,7 +61,7 @@
         .leaflet-control-layers-expanded{max-height:60vh!important;overflow-y:auto!important}
     }</style>
     
-            <div class="folium-map" id="map_826579aa27443bb20d0f51eb78a54836" ></div>
+            <div class="folium-map" id="map_f3a8d3d0579e2a7815db9490c023668b" ></div>
         
     
             
@@ -89,10 +89,10 @@
 <script>
     
     
-            var map_826579aa27443bb20d0f51eb78a54836 = L.map(
-                "map_826579aa27443bb20d0f51eb78a54836",
+            var map_f3a8d3d0579e2a7815db9490c023668b = L.map(
+                "map_f3a8d3d0579e2a7815db9490c023668b",
                 {
-                    center: [24.528700923128568, 121.09343700067136],
+                    center: [24.54776831245986, 121.1640628371869],
                     crs: L.CRS.EPSG3857,
                     ...{
   "zoom": 12,
@@ -107,7 +107,7 @@
 
         
     
-            var tile_layer_324dca2c7fd5e5b9ea1261661fd39536 = L.tileLayer(
+            var tile_layer_8e595eba8d844ebcea22d192be02928e = L.tileLayer(
                 "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {
   "minZoom": 0,
@@ -124,7 +124,7 @@
             );
         
     
-            tile_layer_324dca2c7fd5e5b9ea1261661fd39536.addTo(map_826579aa27443bb20d0f51eb78a54836);
+            tile_layer_8e595eba8d844ebcea22d192be02928e.addTo(map_f3a8d3d0579e2a7815db9490c023668b);
         
     
             var options = {
@@ -133,16 +133,16 @@
               edit: {},
             }
                 // FeatureGroup is to store editable layers.
-                var drawnItems_draw_control_26f351fd49ee9dc2433e0eaa324473bf =
+                var drawnItems_draw_control_ebdd36ee6ee0cb7925b5227712483a45 =
                     new L.featureGroup().addTo(
-                        map_826579aa27443bb20d0f51eb78a54836
+                        map_f3a8d3d0579e2a7815db9490c023668b
                     );
 
-            options.edit.featureGroup = drawnItems_draw_control_26f351fd49ee9dc2433e0eaa324473bf;
-            var draw_control_26f351fd49ee9dc2433e0eaa324473bf = new L.Control.Draw(
+            options.edit.featureGroup = drawnItems_draw_control_ebdd36ee6ee0cb7925b5227712483a45;
+            var draw_control_ebdd36ee6ee0cb7925b5227712483a45 = new L.Control.Draw(
                 options
-            ).addTo( map_826579aa27443bb20d0f51eb78a54836 );
-            map_826579aa27443bb20d0f51eb78a54836.on(L.Draw.Event.CREATED, function(e) {
+            ).addTo( map_f3a8d3d0579e2a7815db9490c023668b );
+            map_f3a8d3d0579e2a7815db9490c023668b.on(L.Draw.Event.CREATED, function(e) {
                 var layer = e.layer,
                     type = e.layerType;
                 var coords = JSON.stringify(layer.toGeoJSON());
@@ -150,15 +150,15 @@
                     alert(coords);
                     console.log(coords);
                 });
-                drawnItems_draw_control_26f351fd49ee9dc2433e0eaa324473bf.addLayer(layer);
+                drawnItems_draw_control_ebdd36ee6ee0cb7925b5227712483a45.addLayer(layer);
             });
-            map_826579aa27443bb20d0f51eb78a54836.on('draw:created', function(e) {
-                drawnItems_draw_control_26f351fd49ee9dc2433e0eaa324473bf.addLayer(e.layer);
+            map_f3a8d3d0579e2a7815db9490c023668b.on('draw:created', function(e) {
+                drawnItems_draw_control_ebdd36ee6ee0cb7925b5227712483a45.addLayer(e.layer);
             });
 
             
             document.getElementById('export').onclick = function(e) {
-                var data = drawnItems_draw_control_26f351fd49ee9dc2433e0eaa324473bf.toGeoJSON();
+                var data = drawnItems_draw_control_ebdd36ee6ee0cb7925b5227712483a45.toGeoJSON();
                 var convertedData = 'text/json;charset=utf-8,'
                     + encodeURIComponent(JSON.stringify(data));
                 document.getElementById('export').setAttribute(
@@ -171,36 +171,36 @@
             
         
     
-            var feature_group_84d4bcf2052dc4c93b8cc5edc2000f5a = L.featureGroup(
+            var feature_group_6f4f50befc2f5c0533ad044ad179047c = L.featureGroup(
                 {
 }
             );
         
     
-            var polygon_d3846a7440669247287d8bf4c6560598 = L.polygon(
+            var polygon_c0e3a4addf5a7cd98b65b201725ce061 = L.polygon(
                 [[24.05735, 120.50575277777777], [24.07185, 120.50575277777777], [24.08062777777778, 120.51905555555558], [24.075924999999994, 120.53948333333331], [24.05468611111111, 120.53974166666669], [24.050924999999996, 120.51940000000002], [24.05735, 120.50575277777777]],
                 {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
-            ).addTo(feature_group_84d4bcf2052dc4c93b8cc5edc2000f5a);
+            ).addTo(feature_group_6f4f50befc2f5c0533ad044ad179047c);
         
     
-        var popup_f7a9906da8190cb49ca8b5a9bb8924e3 = L.popup({
+        var popup_6d10c8c21518482de6b2f8496860c02a = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_c645a964578a37133a2156a8f5f1adfc = $(`<div id="html_c645a964578a37133a2156a8f5f1adfc" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px"><h4 style="margin:0 0 8px">彰化縣彰化市＿空域1（飛豬空拍）</h4><p style="margin:2px 0"><b>案名：</b>2026 夏季水資源中心紀錄 彰化 （飛豬空拍）</p><p style="margin:2px 0"><b>申請案號：</b>AB2606180012</p><p style="margin:2px 0"><b>有效期限：</b>2026/07/15 ~ 2026/10/14</p><p style="margin:2px 0"><b>高度：</b>0-400ft</p></div></div>`)[0];
-                popup_f7a9906da8190cb49ca8b5a9bb8924e3.setContent(html_c645a964578a37133a2156a8f5f1adfc);
+                var html_f84b4707eff08bfb5d930a02f04eaf9e = $(`<div id="html_f84b4707eff08bfb5d930a02f04eaf9e" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px"><h4 style="margin:0 0 8px">彰化縣彰化市＿空域1（飛豬空拍）</h4><p style="margin:2px 0"><b>案名：</b>2026 夏季水資源中心紀錄 彰化 （飛豬空拍）</p><p style="margin:2px 0"><b>申請案號：</b>AB2606180012</p><p style="margin:2px 0"><b>有效期限：</b>2026/07/15 ~ 2026/10/14</p><p style="margin:2px 0"><b>高度：</b>0-400ft</p></div></div>`)[0];
+                popup_6d10c8c21518482de6b2f8496860c02a.setContent(html_f84b4707eff08bfb5d930a02f04eaf9e);
             
         
 
-        polygon_d3846a7440669247287d8bf4c6560598.bindPopup(popup_f7a9906da8190cb49ca8b5a9bb8924e3)
+        polygon_c0e3a4addf5a7cd98b65b201725ce061.bindPopup(popup_6d10c8c21518482de6b2f8496860c02a)
         ;
 
         
     
     
-            polygon_d3846a7440669247287d8bf4c6560598.bindTooltip(
+            polygon_c0e3a4addf5a7cd98b65b201725ce061.bindTooltip(
                 `<div>
                      彰化縣彰化市＿空域1（飛豬空拍） | AB2606180012 | 0-400ft
                  </div>`,
@@ -210,30 +210,30 @@
             );
         
     
-            var polygon_bbfdecae57ffd7f9de8e860c641419e0 = L.polygon(
+            var polygon_722956a8cc72eea77b69a97998e5e818 = L.polygon(
                 [[24.052961111111113, 120.4075305555556], [24.069655555555556, 120.41602777777777], [24.07122222222222, 120.43671388888887], [24.057508333333335, 120.4516472222222], [24.040499999999998, 120.43722777777779], [24.041752777777777, 120.41963333333332], [24.052961111111113, 120.4075305555556]],
                 {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
-            ).addTo(feature_group_84d4bcf2052dc4c93b8cc5edc2000f5a);
+            ).addTo(feature_group_6f4f50befc2f5c0533ad044ad179047c);
         
     
-        var popup_053a55e74d71594ab0740e5cf7208521 = L.popup({
+        var popup_c6fe57940cf357a321c1258e46feecdc = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_4441d6e7dc09d81942d712ae9d0292f1 = $(`<div id="html_4441d6e7dc09d81942d712ae9d0292f1" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px"><h4 style="margin:0 0 8px">彰化縣鹿港鎮＿空域2（飛豬空拍）</h4><p style="margin:2px 0"><b>案名：</b>2026 夏季水資源中心紀錄 彰化 （飛豬空拍）</p><p style="margin:2px 0"><b>申請案號：</b>AB2606180012</p><p style="margin:2px 0"><b>有效期限：</b>2026/07/15 ~ 2026/10/14</p><p style="margin:2px 0"><b>高度：</b>0-400ft</p></div></div>`)[0];
-                popup_053a55e74d71594ab0740e5cf7208521.setContent(html_4441d6e7dc09d81942d712ae9d0292f1);
+                var html_afdc802e3d2f632083110c3c9c9ccde6 = $(`<div id="html_afdc802e3d2f632083110c3c9c9ccde6" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px"><h4 style="margin:0 0 8px">彰化縣鹿港鎮＿空域2（飛豬空拍）</h4><p style="margin:2px 0"><b>案名：</b>2026 夏季水資源中心紀錄 彰化 （飛豬空拍）</p><p style="margin:2px 0"><b>申請案號：</b>AB2606180012</p><p style="margin:2px 0"><b>有效期限：</b>2026/07/15 ~ 2026/10/14</p><p style="margin:2px 0"><b>高度：</b>0-400ft</p></div></div>`)[0];
+                popup_c6fe57940cf357a321c1258e46feecdc.setContent(html_afdc802e3d2f632083110c3c9c9ccde6);
             
         
 
-        polygon_bbfdecae57ffd7f9de8e860c641419e0.bindPopup(popup_053a55e74d71594ab0740e5cf7208521)
+        polygon_722956a8cc72eea77b69a97998e5e818.bindPopup(popup_c6fe57940cf357a321c1258e46feecdc)
         ;
 
         
     
     
-            polygon_bbfdecae57ffd7f9de8e860c641419e0.bindTooltip(
+            polygon_722956a8cc72eea77b69a97998e5e818.bindTooltip(
                 `<div>
                      彰化縣鹿港鎮＿空域2（飛豬空拍） | AB2606180012 | 0-400ft
                  </div>`,
@@ -243,30 +243,30 @@
             );
         
     
-            var polygon_704aeb963f548e3095d00585541fa0cf = L.polygon(
+            var polygon_1948908560956c0883b5fe50dc28830f = L.polygon(
                 [[23.88704166666667, 120.33673611111111], [23.903758333333332, 120.34540555555554], [23.90838611111111, 120.36222777777778], [23.89645833333333, 120.37647500000001], [23.879272222222223, 120.37338611111109], [23.87911666666667, 120.35304444444442], [23.88704166666667, 120.33673611111111]],
                 {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
-            ).addTo(feature_group_84d4bcf2052dc4c93b8cc5edc2000f5a);
+            ).addTo(feature_group_6f4f50befc2f5c0533ad044ad179047c);
         
     
-        var popup_fbcda42a2e17f31694de7cb0d870cc05 = L.popup({
+        var popup_2981ca9d0ea49bdd28dc20baa896ae6c = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_6dc4ed72efdd25179084ead4a378a838 = $(`<div id="html_6dc4ed72efdd25179084ead4a378a838" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px"><h4 style="margin:0 0 8px">彰化縣二林站＿空域3（飛豬空拍）</h4><p style="margin:2px 0"><b>案名：</b>2026 夏季水資源中心紀錄 彰化 （飛豬空拍）</p><p style="margin:2px 0"><b>申請案號：</b>AB2606180012</p><p style="margin:2px 0"><b>有效期限：</b>2026/07/15 ~ 2026/10/14</p><p style="margin:2px 0"><b>高度：</b>0-400ft</p></div></div>`)[0];
-                popup_fbcda42a2e17f31694de7cb0d870cc05.setContent(html_6dc4ed72efdd25179084ead4a378a838);
+                var html_4d446b60379126e008d6a3ac87f79519 = $(`<div id="html_4d446b60379126e008d6a3ac87f79519" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px"><h4 style="margin:0 0 8px">彰化縣二林站＿空域3（飛豬空拍）</h4><p style="margin:2px 0"><b>案名：</b>2026 夏季水資源中心紀錄 彰化 （飛豬空拍）</p><p style="margin:2px 0"><b>申請案號：</b>AB2606180012</p><p style="margin:2px 0"><b>有效期限：</b>2026/07/15 ~ 2026/10/14</p><p style="margin:2px 0"><b>高度：</b>0-400ft</p></div></div>`)[0];
+                popup_2981ca9d0ea49bdd28dc20baa896ae6c.setContent(html_4d446b60379126e008d6a3ac87f79519);
             
         
 
-        polygon_704aeb963f548e3095d00585541fa0cf.bindPopup(popup_fbcda42a2e17f31694de7cb0d870cc05)
+        polygon_1948908560956c0883b5fe50dc28830f.bindPopup(popup_2981ca9d0ea49bdd28dc20baa896ae6c)
         ;
 
         
     
     
-            polygon_704aeb963f548e3095d00585541fa0cf.bindTooltip(
+            polygon_1948908560956c0883b5fe50dc28830f.bindTooltip(
                 `<div>
                      彰化縣二林站＿空域3（飛豬空拍） | AB2606180012 | 0-400ft
                  </div>`,
@@ -276,180 +276,39 @@
             );
         
     
-            feature_group_84d4bcf2052dc4c93b8cc5edc2000f5a.addTo(map_826579aa27443bb20d0f51eb78a54836);
+            feature_group_6f4f50befc2f5c0533ad044ad179047c.addTo(map_f3a8d3d0579e2a7815db9490c023668b);
         
     
-            var feature_group_e396f92ceda185a3a6c389b19680cc6e = L.featureGroup(
+            var feature_group_29c9779c29dc582ad0613eb42b6df891 = L.featureGroup(
                 {
 }
             );
         
     
-            var polygon_5f55fb04ed20a9bb3a1bf220756afe39 = L.polygon(
-                [[24.230441666666664, 120.5821638888889], [24.232163888888888, 120.63743888888891], [24.192552777777777, 120.6386416666667], [24.191144444444443, 120.58302222222218], [24.230441666666664, 120.5821638888889]],
-                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
-            ).addTo(feature_group_e396f92ceda185a3a6c389b19680cc6e);
-        
-    
-        var popup_b168ed65897512e11e3a8ffe3ca8dddc = L.popup({
-  "maxWidth": 300,
-});
-
-        
-            
-                var html_eae5577947dd5f73f596784a0bee6c32 = $(`<div id="html_eae5577947dd5f73f596784a0bee6c32" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px"><h4 style="margin:0 0 8px">台中市大雅區_空域1</h4><p style="margin:2px 0"><b>案名：</b>2026夏季台中嘉義（高空）</p><p style="margin:2px 0"><b>申請案號：</b>AB2605220009</p><p style="margin:2px 0"><b>有效期限：</b>2026/06/20 ~ 2026/08/19</p><p style="margin:2px 0"><b>高度：</b>0-2000ft</p></div></div>`)[0];
-                popup_b168ed65897512e11e3a8ffe3ca8dddc.setContent(html_eae5577947dd5f73f596784a0bee6c32);
-            
-        
-
-        polygon_5f55fb04ed20a9bb3a1bf220756afe39.bindPopup(popup_b168ed65897512e11e3a8ffe3ca8dddc)
-        ;
-
-        
-    
-    
-            polygon_5f55fb04ed20a9bb3a1bf220756afe39.bindTooltip(
-                `<div>
-                     台中市大雅區_空域1 | AB2605220009 | 0-2000ft
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-            var polygon_7ec4fc53bb4e61ed866fb4799874e00c = L.polygon(
-                [[24.189783333333335, 120.62024722222219], [24.206694444444445, 120.66316388888886], [24.20951111111111, 120.71328888888891], [24.108330555555554, 120.70951111111111], [24.103316666666668, 120.61784444444443], [24.189783333333335, 120.62024722222219]],
-                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
-            ).addTo(feature_group_e396f92ceda185a3a6c389b19680cc6e);
-        
-    
-        var popup_1452979555ab6cde896dfaddd8f5af23 = L.popup({
-  "maxWidth": 300,
-});
-
-        
-            
-                var html_e1468f80aaa424b6f42fe2753b7d1136 = $(`<div id="html_e1468f80aaa424b6f42fe2753b7d1136" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px"><h4 style="margin:0 0 8px">台中市北區_空域2</h4><p style="margin:2px 0"><b>案名：</b>2026夏季台中嘉義（高空）</p><p style="margin:2px 0"><b>申請案號：</b>AB2605220009</p><p style="margin:2px 0"><b>有效期限：</b>2026/06/20 ~ 2026/08/19</p><p style="margin:2px 0"><b>高度：</b>0-2000ft</p></div></div>`)[0];
-                popup_1452979555ab6cde896dfaddd8f5af23.setContent(html_e1468f80aaa424b6f42fe2753b7d1136);
-            
-        
-
-        polygon_7ec4fc53bb4e61ed866fb4799874e00c.bindPopup(popup_1452979555ab6cde896dfaddd8f5af23)
-        ;
-
-        
-    
-    
-            polygon_7ec4fc53bb4e61ed866fb4799874e00c.bindTooltip(
-                `<div>
-                     台中市北區_空域2 | AB2605220009 | 0-2000ft
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-            var polygon_e3806b4952a2f3de160e54de81f587f5 = L.polygon(
-                [[23.498761111111115, 120.25566388888886], [23.500019444444447, 120.32879166666663], [23.421916666666664, 120.32948055555552], [23.421600000000005, 120.2560083333333], [23.498761111111115, 120.25566388888886]],
-                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
-            ).addTo(feature_group_e396f92ceda185a3a6c389b19680cc6e);
-        
-    
-        var popup_e0c0703fe706f62ec7d92000c56a36a2 = L.popup({
-  "maxWidth": 300,
-});
-
-        
-            
-                var html_46fdf19d1bdec484c6132efe123f6842 = $(`<div id="html_46fdf19d1bdec484c6132efe123f6842" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px"><h4 style="margin:0 0 8px">嘉義縣太保市_空域3</h4><p style="margin:2px 0"><b>案名：</b>2026夏季台中嘉義（高空）</p><p style="margin:2px 0"><b>申請案號：</b>AB2605220009</p><p style="margin:2px 0"><b>有效期限：</b>2026/06/20 ~ 2026/08/19</p><p style="margin:2px 0"><b>高度：</b>0-2000ft</p></div></div>`)[0];
-                popup_e0c0703fe706f62ec7d92000c56a36a2.setContent(html_46fdf19d1bdec484c6132efe123f6842);
-            
-        
-
-        polygon_e3806b4952a2f3de160e54de81f587f5.bindPopup(popup_e0c0703fe706f62ec7d92000c56a36a2)
-        ;
-
-        
-    
-    
-            polygon_e3806b4952a2f3de160e54de81f587f5.bindTooltip(
-                `<div>
-                     嘉義縣太保市_空域3 | AB2605220009 | 0-2000ft
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-            var polygon_d0f94970d116f23bc2a58a44631b8925 = L.polygon(
-                [[23.524108333333334, 120.10544444444446], [23.505219444444446, 120.19299166666667], [23.38710277777778, 120.19402222222222], [23.389625, 120.09308611111113], [23.524108333333334, 120.10544444444446]],
-                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
-            ).addTo(feature_group_e396f92ceda185a3a6c389b19680cc6e);
-        
-    
-        var popup_d6ddf29e8fa6622696ccb981d27f5d83 = L.popup({
-  "maxWidth": 300,
-});
-
-        
-            
-                var html_a47023de4fe20dbb6bdb7c4f62394719 = $(`<div id="html_a47023de4fe20dbb6bdb7c4f62394719" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px"><h4 style="margin:0 0 8px">嘉義縣東石鄉_空域4</h4><p style="margin:2px 0"><b>案名：</b>2026夏季台中嘉義（高空）</p><p style="margin:2px 0"><b>申請案號：</b>AB2605220009</p><p style="margin:2px 0"><b>有效期限：</b>2026/06/20 ~ 2026/08/19</p><p style="margin:2px 0"><b>高度：</b>0-2000ft</p></div></div>`)[0];
-                popup_d6ddf29e8fa6622696ccb981d27f5d83.setContent(html_a47023de4fe20dbb6bdb7c4f62394719);
-            
-        
-
-        polygon_d0f94970d116f23bc2a58a44631b8925.bindPopup(popup_d6ddf29e8fa6622696ccb981d27f5d83)
-        ;
-
-        
-    
-    
-            polygon_d0f94970d116f23bc2a58a44631b8925.bindTooltip(
-                `<div>
-                     嘉義縣東石鄉_空域4 | AB2605220009 | 0-2000ft
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-            feature_group_e396f92ceda185a3a6c389b19680cc6e.addTo(map_826579aa27443bb20d0f51eb78a54836);
-        
-    
-            var feature_group_a0c056eceff5680f18c644d64278c30d = L.featureGroup(
-                {
-}
-            );
-        
-    
-            var polygon_7734507866162fdc94a31a15aa12b124 = L.polygon(
+            var polygon_e257c3683daa7ac77517feec1e9bbe83 = L.polygon(
                 [[23.139472222222224, 120.22258055555557], [23.139947222222222, 120.3296972222222], [23.06778888888889, 120.31836666666669], [23.06178611111111, 120.22738611111113]],
                 {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
-            ).addTo(feature_group_a0c056eceff5680f18c644d64278c30d);
+            ).addTo(feature_group_29c9779c29dc582ad0613eb42b6df891);
         
     
-        var popup_04ddbadaef1bfcfca2facf85c813f6be = L.popup({
+        var popup_e4f375c34f058efc4f3517d22f198d1b = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_a21722655868f6d7c57a25810bdf52e6 = $(`<div id="html_a21722655868f6d7c57a25810bdf52e6" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px"><h4 style="margin:0 0 8px">台南市新市區_空域1</h4><p style="margin:2px 0"><b>案名：</b>2026夏季台南高雄（高空）</p><p style="margin:2px 0"><b>申請案號：</b>AB2607200037</p><p style="margin:2px 0"><b>有效期限：</b>2026/07/27​ ~ 2026/09/26​</p><p style="margin:2px 0"><b>高度：</b>0-2000ft</p></div></div>`)[0];
-                popup_04ddbadaef1bfcfca2facf85c813f6be.setContent(html_a21722655868f6d7c57a25810bdf52e6);
+                var html_96e957ad0dcd9e95b7d766123e542e0d = $(`<div id="html_96e957ad0dcd9e95b7d766123e542e0d" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px"><h4 style="margin:0 0 8px">台南市新市區_空域1</h4><p style="margin:2px 0"><b>案名：</b>2026夏季台南高雄（高空）</p><p style="margin:2px 0"><b>申請案號：</b>AB2607200037</p><p style="margin:2px 0"><b>有效期限：</b>2026/07/27​ ~ 2026/09/26​</p><p style="margin:2px 0"><b>高度：</b>0-2000ft</p></div></div>`)[0];
+                popup_e4f375c34f058efc4f3517d22f198d1b.setContent(html_96e957ad0dcd9e95b7d766123e542e0d);
             
         
 
-        polygon_7734507866162fdc94a31a15aa12b124.bindPopup(popup_04ddbadaef1bfcfca2facf85c813f6be)
+        polygon_e257c3683daa7ac77517feec1e9bbe83.bindPopup(popup_e4f375c34f058efc4f3517d22f198d1b)
         ;
 
         
     
     
-            polygon_7734507866162fdc94a31a15aa12b124.bindTooltip(
+            polygon_e257c3683daa7ac77517feec1e9bbe83.bindTooltip(
                 `<div>
                      台南市新市區_空域1 | AB2607200037 | 0-2000ft
                  </div>`,
@@ -459,30 +318,30 @@
             );
         
     
-            var polygon_1805e374aa3e54c4c01611e6e79be86a = L.polygon(
+            var polygon_4c7212f5fff64ca5f3dc88d1bc5fe8f8 = L.polygon(
                 [[22.93999722222222, 120.26823611111108], [22.939525000000003, 120.34771388888889], [22.87769722222222, 120.34685555555554], [22.879755555555555, 120.27098055555557], [22.93999722222222, 120.26823611111108]],
                 {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
-            ).addTo(feature_group_a0c056eceff5680f18c644d64278c30d);
+            ).addTo(feature_group_29c9779c29dc582ad0613eb42b6df891);
         
     
-        var popup_efd44b76bffa346e3b3d4030c85bc1c4 = L.popup({
+        var popup_2baf155a422f23313b21f0c706f74833 = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_697c614168f93a653d042fd228ff4f29 = $(`<div id="html_697c614168f93a653d042fd228ff4f29" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px"><h4 style="margin:0 0 8px">台南市歸仁區、高雄市阿蓮區_空域2</h4><p style="margin:2px 0"><b>案名：</b>2026夏季台南高雄（高空）</p><p style="margin:2px 0"><b>申請案號：</b>AB2607200037</p><p style="margin:2px 0"><b>有效期限：</b>2026/07/27​ ~ 2026/09/26​</p><p style="margin:2px 0"><b>高度：</b>0-2000ft</p></div></div>`)[0];
-                popup_efd44b76bffa346e3b3d4030c85bc1c4.setContent(html_697c614168f93a653d042fd228ff4f29);
+                var html_788dbd4e2b574a71d61cff9570888117 = $(`<div id="html_788dbd4e2b574a71d61cff9570888117" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px"><h4 style="margin:0 0 8px">台南市歸仁區、高雄市阿蓮區_空域2</h4><p style="margin:2px 0"><b>案名：</b>2026夏季台南高雄（高空）</p><p style="margin:2px 0"><b>申請案號：</b>AB2607200037</p><p style="margin:2px 0"><b>有效期限：</b>2026/07/27​ ~ 2026/09/26​</p><p style="margin:2px 0"><b>高度：</b>0-2000ft</p></div></div>`)[0];
+                popup_2baf155a422f23313b21f0c706f74833.setContent(html_788dbd4e2b574a71d61cff9570888117);
             
         
 
-        polygon_1805e374aa3e54c4c01611e6e79be86a.bindPopup(popup_efd44b76bffa346e3b3d4030c85bc1c4)
+        polygon_4c7212f5fff64ca5f3dc88d1bc5fe8f8.bindPopup(popup_2baf155a422f23313b21f0c706f74833)
         ;
 
         
     
     
-            polygon_1805e374aa3e54c4c01611e6e79be86a.bindTooltip(
+            polygon_4c7212f5fff64ca5f3dc88d1bc5fe8f8.bindTooltip(
                 `<div>
                      台南市歸仁區、高雄市阿蓮區_空域2 | AB2607200037 | 0-2000ft
                  </div>`,
@@ -492,30 +351,30 @@
             );
         
     
-            var polygon_a90963b153aa2495c186c9fa3c2f4109 = L.polygon(
+            var polygon_3a0d247f2d5b368be8ddb47b5d6f4703 = L.polygon(
                 [[22.85817777777778, 120.22698611111109], [22.86466388888889, 120.30766666666669], [22.80675833333333, 120.3083527777778], [22.80675833333333, 120.23145]],
                 {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
-            ).addTo(feature_group_a0c056eceff5680f18c644d64278c30d);
+            ).addTo(feature_group_29c9779c29dc582ad0613eb42b6df891);
         
     
-        var popup_907d2115b5c6285c043c3708a8f0c2d5 = L.popup({
+        var popup_57cd2c18a7105620592ea56d92e26372 = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_22090920f2b7ae5c0ac73589584b860a = $(`<div id="html_22090920f2b7ae5c0ac73589584b860a" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px"><h4 style="margin:0 0 8px">高雄市路竹區_空域3</h4><p style="margin:2px 0"><b>案名：</b>2026夏季台南高雄（高空）</p><p style="margin:2px 0"><b>申請案號：</b>AB2607200037</p><p style="margin:2px 0"><b>有效期限：</b>2026/07/27​ ~ 2026/09/26​</p><p style="margin:2px 0"><b>高度：</b>0-2000ft</p></div></div>`)[0];
-                popup_907d2115b5c6285c043c3708a8f0c2d5.setContent(html_22090920f2b7ae5c0ac73589584b860a);
+                var html_f0256a1960e6d44f18d1b503d177eee2 = $(`<div id="html_f0256a1960e6d44f18d1b503d177eee2" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px"><h4 style="margin:0 0 8px">高雄市路竹區_空域3</h4><p style="margin:2px 0"><b>案名：</b>2026夏季台南高雄（高空）</p><p style="margin:2px 0"><b>申請案號：</b>AB2607200037</p><p style="margin:2px 0"><b>有效期限：</b>2026/07/27​ ~ 2026/09/26​</p><p style="margin:2px 0"><b>高度：</b>0-2000ft</p></div></div>`)[0];
+                popup_57cd2c18a7105620592ea56d92e26372.setContent(html_f0256a1960e6d44f18d1b503d177eee2);
             
         
 
-        polygon_a90963b153aa2495c186c9fa3c2f4109.bindPopup(popup_907d2115b5c6285c043c3708a8f0c2d5)
+        polygon_3a0d247f2d5b368be8ddb47b5d6f4703.bindPopup(popup_57cd2c18a7105620592ea56d92e26372)
         ;
 
         
     
     
-            polygon_a90963b153aa2495c186c9fa3c2f4109.bindTooltip(
+            polygon_3a0d247f2d5b368be8ddb47b5d6f4703.bindTooltip(
                 `<div>
                      高雄市路竹區_空域3 | AB2607200037 | 0-2000ft
                  </div>`,
@@ -525,30 +384,30 @@
             );
         
     
-            var polygon_10144b08c7a1d64b647ae4121ff37972 = L.polygon(
+            var polygon_4319b991ad7efa82f8ce77cd93b3b9ee = L.polygon(
                 [[22.80963055555556, 120.29478333333333], [22.81105555555555, 120.3732333333333], [22.740147222222223, 120.36808333333336], [22.742680555555555, 120.29409722222222]],
                 {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
-            ).addTo(feature_group_a0c056eceff5680f18c644d64278c30d);
+            ).addTo(feature_group_29c9779c29dc582ad0613eb42b6df891);
         
     
-        var popup_045c8ef06485cb2a9fd1d701d02c39d6 = L.popup({
+        var popup_41ebba3c350503419b177cc45114a560 = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_79e55abe23f38fa65e7e2c8d430c21b0 = $(`<div id="html_79e55abe23f38fa65e7e2c8d430c21b0" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px"><h4 style="margin:0 0 8px">高雄市橋頭區_空域4</h4><p style="margin:2px 0"><b>案名：</b>2026夏季台南高雄（高空）</p><p style="margin:2px 0"><b>申請案號：</b>AB2607200037</p><p style="margin:2px 0"><b>有效期限：</b>2026/07/27​ ~ 2026/09/26​</p><p style="margin:2px 0"><b>高度：</b>0-2000ft</p></div></div>`)[0];
-                popup_045c8ef06485cb2a9fd1d701d02c39d6.setContent(html_79e55abe23f38fa65e7e2c8d430c21b0);
+                var html_d911dd048f6215ff5bc3703e839d90eb = $(`<div id="html_d911dd048f6215ff5bc3703e839d90eb" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px"><h4 style="margin:0 0 8px">高雄市橋頭區_空域4</h4><p style="margin:2px 0"><b>案名：</b>2026夏季台南高雄（高空）</p><p style="margin:2px 0"><b>申請案號：</b>AB2607200037</p><p style="margin:2px 0"><b>有效期限：</b>2026/07/27​ ~ 2026/09/26​</p><p style="margin:2px 0"><b>高度：</b>0-2000ft</p></div></div>`)[0];
+                popup_41ebba3c350503419b177cc45114a560.setContent(html_d911dd048f6215ff5bc3703e839d90eb);
             
         
 
-        polygon_10144b08c7a1d64b647ae4121ff37972.bindPopup(popup_045c8ef06485cb2a9fd1d701d02c39d6)
+        polygon_4319b991ad7efa82f8ce77cd93b3b9ee.bindPopup(popup_41ebba3c350503419b177cc45114a560)
         ;
 
         
     
     
-            polygon_10144b08c7a1d64b647ae4121ff37972.bindTooltip(
+            polygon_4319b991ad7efa82f8ce77cd93b3b9ee.bindTooltip(
                 `<div>
                      高雄市橋頭區_空域4 | AB2607200037 | 0-2000ft
                  </div>`,
@@ -558,39 +417,39 @@
             );
         
     
-            feature_group_a0c056eceff5680f18c644d64278c30d.addTo(map_826579aa27443bb20d0f51eb78a54836);
+            feature_group_29c9779c29dc582ad0613eb42b6df891.addTo(map_f3a8d3d0579e2a7815db9490c023668b);
         
     
-            var feature_group_0e87049fc4ec457de470fd6525014768 = L.featureGroup(
+            var feature_group_f20c84ac17b245c9846fbcf888ccfc5e = L.featureGroup(
                 {
 }
             );
         
     
-            var polygon_17ae081f730fb00394f017741c501053 = L.polygon(
+            var polygon_8468c4e9542caf7febbbdae3faf69ba8 = L.polygon(
                 [[25.330950000000005, 121.54769444444443], [25.331880555555554, 121.63455555555554], [25.212419444444443, 121.74822222222225], [25.15556388888889, 121.66376388888891], [25.256830555555556, 121.59029444444445], [25.268438888888888, 121.5209277777778], [25.330950000000005, 121.54769444444443]],
                 {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
-            ).addTo(feature_group_0e87049fc4ec457de470fd6525014768);
+            ).addTo(feature_group_f20c84ac17b245c9846fbcf888ccfc5e);
         
     
-        var popup_db7f0934af0f9b77809ae7c26222e208 = L.popup({
+        var popup_1b57621a6fee56ca74f9669c614c5fb7 = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_5d92bc1a7032209d1831c27cc63402d5 = $(`<div id="html_5d92bc1a7032209d1831c27cc63402d5" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px"><h4 style="margin:0 0 8px">新北市萬里區＿空域1</h4><p style="margin:2px 0"><b>案名：</b>2026夏季新北彰化高雄</p><p style="margin:2px 0"><b>申請案號：</b>AB2606120002</p><p style="margin:2px 0"><b>有效期限：</b>2026/06/27 ~ 2026/09/26</p><p style="margin:2px 0"><b>高度：</b>0-400ft</p></div></div>`)[0];
-                popup_db7f0934af0f9b77809ae7c26222e208.setContent(html_5d92bc1a7032209d1831c27cc63402d5);
+                var html_5298feaac6dfd6f148efc193bfa4ecda = $(`<div id="html_5298feaac6dfd6f148efc193bfa4ecda" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px"><h4 style="margin:0 0 8px">新北市萬里區＿空域1</h4><p style="margin:2px 0"><b>案名：</b>2026夏季新北彰化高雄</p><p style="margin:2px 0"><b>申請案號：</b>AB2606120002</p><p style="margin:2px 0"><b>有效期限：</b>2026/06/27 ~ 2026/09/26</p><p style="margin:2px 0"><b>高度：</b>0-400ft</p></div></div>`)[0];
+                popup_1b57621a6fee56ca74f9669c614c5fb7.setContent(html_5298feaac6dfd6f148efc193bfa4ecda);
             
         
 
-        polygon_17ae081f730fb00394f017741c501053.bindPopup(popup_db7f0934af0f9b77809ae7c26222e208)
+        polygon_8468c4e9542caf7febbbdae3faf69ba8.bindPopup(popup_1b57621a6fee56ca74f9669c614c5fb7)
         ;
 
         
     
     
-            polygon_17ae081f730fb00394f017741c501053.bindTooltip(
+            polygon_8468c4e9542caf7febbbdae3faf69ba8.bindTooltip(
                 `<div>
                      新北市萬里區＿空域1 | AB2606120002 | 0-400ft
                  </div>`,
@@ -600,30 +459,30 @@
             );
         
     
-            var polygon_ccf3e50f05f8b22110285f4ba693af3c = L.polygon(
+            var polygon_bd6a7cff4d1249e263569e5d6b649496 = L.polygon(
                 [[24.115155555555557, 120.37587499999997], [24.069397222222218, 120.47853055555555], [23.939730555555556, 120.39561666666667], [23.95258333333333, 120.24421111111108], [24.115155555555557, 120.37587499999997]],
                 {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
-            ).addTo(feature_group_0e87049fc4ec457de470fd6525014768);
+            ).addTo(feature_group_f20c84ac17b245c9846fbcf888ccfc5e);
         
     
-        var popup_d16b67b0a56eca3917ef4507cdb958f1 = L.popup({
+        var popup_9780a46c821d4184e10c7f347327660f = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_9311946c3f481d706085592692d8a550 = $(`<div id="html_9311946c3f481d706085592692d8a550" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px"><h4 style="margin:0 0 8px">彰化縣萬芳香＿空域2</h4><p style="margin:2px 0"><b>案名：</b>2026夏季新北彰化高雄</p><p style="margin:2px 0"><b>申請案號：</b>AB2606120002</p><p style="margin:2px 0"><b>有效期限：</b>2026/06/27 ~ 2026/09/26</p><p style="margin:2px 0"><b>高度：</b>0-400ft</p></div></div>`)[0];
-                popup_d16b67b0a56eca3917ef4507cdb958f1.setContent(html_9311946c3f481d706085592692d8a550);
+                var html_8c339b7cec8c51903f24dd6668a3a131 = $(`<div id="html_8c339b7cec8c51903f24dd6668a3a131" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px"><h4 style="margin:0 0 8px">彰化縣萬芳香＿空域2</h4><p style="margin:2px 0"><b>案名：</b>2026夏季新北彰化高雄</p><p style="margin:2px 0"><b>申請案號：</b>AB2606120002</p><p style="margin:2px 0"><b>有效期限：</b>2026/06/27 ~ 2026/09/26</p><p style="margin:2px 0"><b>高度：</b>0-400ft</p></div></div>`)[0];
+                popup_9780a46c821d4184e10c7f347327660f.setContent(html_8c339b7cec8c51903f24dd6668a3a131);
             
         
 
-        polygon_ccf3e50f05f8b22110285f4ba693af3c.bindPopup(popup_d16b67b0a56eca3917ef4507cdb958f1)
+        polygon_bd6a7cff4d1249e263569e5d6b649496.bindPopup(popup_9780a46c821d4184e10c7f347327660f)
         ;
 
         
     
     
-            polygon_ccf3e50f05f8b22110285f4ba693af3c.bindTooltip(
+            polygon_bd6a7cff4d1249e263569e5d6b649496.bindTooltip(
                 `<div>
                      彰化縣萬芳香＿空域2 | AB2606120002 | 0-400ft
                  </div>`,
@@ -633,30 +492,30 @@
             );
         
     
-            var polygon_b9c047d4372d003f00260693c250e3a9 = L.polygon(
+            var polygon_214d1b0a4e13840e2f9d3c948b438421 = L.polygon(
                 [[22.692308333333333, 120.29221388888888], [22.690724999999997, 120.3052611111111], [22.65730555555555, 120.30551666666669], [22.65619444444444, 120.28079722222225], [22.692308333333333, 120.29221388888888]],
                 {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
-            ).addTo(feature_group_0e87049fc4ec457de470fd6525014768);
+            ).addTo(feature_group_f20c84ac17b245c9846fbcf888ccfc5e);
         
     
-        var popup_7e3923baac47146e23371020953e8258 = L.popup({
+        var popup_1bd55ca94f5fa0daffa9e31521f57704 = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_381613d25ea787548a4e0fb576e59557 = $(`<div id="html_381613d25ea787548a4e0fb576e59557" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px"><h4 style="margin:0 0 8px">高雄市左營區＿空域3</h4><p style="margin:2px 0"><b>案名：</b>2026夏季新北彰化高雄</p><p style="margin:2px 0"><b>申請案號：</b>AB2606120002</p><p style="margin:2px 0"><b>有效期限：</b>2026/06/27 ~ 2026/09/26</p><p style="margin:2px 0"><b>高度：</b>0-400ft</p></div></div>`)[0];
-                popup_7e3923baac47146e23371020953e8258.setContent(html_381613d25ea787548a4e0fb576e59557);
+                var html_2f2340a70dd78b3c1ef33fc31e81ac37 = $(`<div id="html_2f2340a70dd78b3c1ef33fc31e81ac37" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px"><h4 style="margin:0 0 8px">高雄市左營區＿空域3</h4><p style="margin:2px 0"><b>案名：</b>2026夏季新北彰化高雄</p><p style="margin:2px 0"><b>申請案號：</b>AB2606120002</p><p style="margin:2px 0"><b>有效期限：</b>2026/06/27 ~ 2026/09/26</p><p style="margin:2px 0"><b>高度：</b>0-400ft</p></div></div>`)[0];
+                popup_1bd55ca94f5fa0daffa9e31521f57704.setContent(html_2f2340a70dd78b3c1ef33fc31e81ac37);
             
         
 
-        polygon_b9c047d4372d003f00260693c250e3a9.bindPopup(popup_7e3923baac47146e23371020953e8258)
+        polygon_214d1b0a4e13840e2f9d3c948b438421.bindPopup(popup_1bd55ca94f5fa0daffa9e31521f57704)
         ;
 
         
     
     
-            polygon_b9c047d4372d003f00260693c250e3a9.bindTooltip(
+            polygon_214d1b0a4e13840e2f9d3c948b438421.bindTooltip(
                 `<div>
                      高雄市左營區＿空域3 | AB2606120002 | 0-400ft
                  </div>`,
@@ -666,39 +525,39 @@
             );
         
     
-            feature_group_0e87049fc4ec457de470fd6525014768.addTo(map_826579aa27443bb20d0f51eb78a54836);
+            feature_group_f20c84ac17b245c9846fbcf888ccfc5e.addTo(map_f3a8d3d0579e2a7815db9490c023668b);
         
     
-            var feature_group_fcd55d8e1e205ae3725082a69a7e1b66 = L.featureGroup(
+            var feature_group_27479f46dfea0f136e2294a15e0fa51b = L.featureGroup(
                 {
 }
             );
         
     
-            var polygon_94c9bfff1156ce2706839eb554906266 = L.polygon(
+            var polygon_5ee3ef8013ca7c63c372065bb0ab3d6a = L.polygon(
                 [[22.733030555555555, 120.26948055555552], [22.732555555555557, 120.32011944444442], [22.672855555555557, 120.292225], [22.677133333333334, 120.26870833333336], [22.733030555555555, 120.26948055555552]],
                 {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
-            ).addTo(feature_group_fcd55d8e1e205ae3725082a69a7e1b66);
+            ).addTo(feature_group_27479f46dfea0f136e2294a15e0fa51b);
         
     
-        var popup_3fc841b2110cfcd5d41b285a0b00544c = L.popup({
+        var popup_aeb5c08cb8f29efef310b4ddfdd8c9bc = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_d5f0bcd07845ed5c8c56a10a7b27f35d = $(`<div id="html_d5f0bcd07845ed5c8c56a10a7b27f35d" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px"><h4 style="margin:0 0 8px">高雄市楠梓區_空域1</h4><p style="margin:2px 0"><b>案名：</b>2026夏季高雄屏東台東（高空）</p><p style="margin:2px 0"><b>申請案號：</b>AB2607210001</p><p style="margin:2px 0"><b>有效期限：</b>2026/07/27​ ~ 2026/09/26​</p><p style="margin:2px 0"><b>高度：</b>0-2000ft</p></div></div>`)[0];
-                popup_3fc841b2110cfcd5d41b285a0b00544c.setContent(html_d5f0bcd07845ed5c8c56a10a7b27f35d);
+                var html_1d92abbb72dd06397795d8c9975c3f77 = $(`<div id="html_1d92abbb72dd06397795d8c9975c3f77" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px"><h4 style="margin:0 0 8px">高雄市楠梓區_空域1</h4><p style="margin:2px 0"><b>案名：</b>2026夏季高雄屏東台東（高空）</p><p style="margin:2px 0"><b>申請案號：</b>AB2607210001</p><p style="margin:2px 0"><b>有效期限：</b>2026/07/27​ ~ 2026/09/26​</p><p style="margin:2px 0"><b>高度：</b>0-2000ft</p></div></div>`)[0];
+                popup_aeb5c08cb8f29efef310b4ddfdd8c9bc.setContent(html_1d92abbb72dd06397795d8c9975c3f77);
             
         
 
-        polygon_94c9bfff1156ce2706839eb554906266.bindPopup(popup_3fc841b2110cfcd5d41b285a0b00544c)
+        polygon_5ee3ef8013ca7c63c372065bb0ab3d6a.bindPopup(popup_aeb5c08cb8f29efef310b4ddfdd8c9bc)
         ;
 
         
     
     
-            polygon_94c9bfff1156ce2706839eb554906266.bindTooltip(
+            polygon_5ee3ef8013ca7c63c372065bb0ab3d6a.bindTooltip(
                 `<div>
                      高雄市楠梓區_空域1 | AB2607210001 | 0-2000ft
                  </div>`,
@@ -708,30 +567,30 @@
             );
         
     
-            var polygon_549a364fd6515bf162b204fcb8250307 = L.polygon(
+            var polygon_08aca8ec64300b1687c006881ef9f2cb = L.polygon(
                 [[22.731802777777773, 120.34299166666666], [22.73259444444444, 120.4078805555556], [22.653505555555554, 120.4073], [22.653822222222225, 120.33777777777777], [22.731802777777773, 120.34299166666666]],
                 {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
-            ).addTo(feature_group_fcd55d8e1e205ae3725082a69a7e1b66);
+            ).addTo(feature_group_27479f46dfea0f136e2294a15e0fa51b);
         
     
-        var popup_bf70ffcba680644ad96424b4350dea77 = L.popup({
+        var popup_c5526fdf76c5f324b13b54f23df54a4b = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_f4c016adb0aa5b304ab3574cb338407b = $(`<div id="html_f4c016adb0aa5b304ab3574cb338407b" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px"><h4 style="margin:0 0 8px">高雄市仁武區_空域2</h4><p style="margin:2px 0"><b>案名：</b>2026夏季高雄屏東台東（高空）</p><p style="margin:2px 0"><b>申請案號：</b>AB2607210001</p><p style="margin:2px 0"><b>有效期限：</b>2026/07/27​ ~ 2026/09/26​</p><p style="margin:2px 0"><b>高度：</b>0-2000ft</p></div></div>`)[0];
-                popup_bf70ffcba680644ad96424b4350dea77.setContent(html_f4c016adb0aa5b304ab3574cb338407b);
+                var html_9b19e4ade28629cfdbf8e7ca96ea06ba = $(`<div id="html_9b19e4ade28629cfdbf8e7ca96ea06ba" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px"><h4 style="margin:0 0 8px">高雄市仁武區_空域2</h4><p style="margin:2px 0"><b>案名：</b>2026夏季高雄屏東台東（高空）</p><p style="margin:2px 0"><b>申請案號：</b>AB2607210001</p><p style="margin:2px 0"><b>有效期限：</b>2026/07/27​ ~ 2026/09/26​</p><p style="margin:2px 0"><b>高度：</b>0-2000ft</p></div></div>`)[0];
+                popup_c5526fdf76c5f324b13b54f23df54a4b.setContent(html_9b19e4ade28629cfdbf8e7ca96ea06ba);
             
         
 
-        polygon_549a364fd6515bf162b204fcb8250307.bindPopup(popup_bf70ffcba680644ad96424b4350dea77)
+        polygon_08aca8ec64300b1687c006881ef9f2cb.bindPopup(popup_c5526fdf76c5f324b13b54f23df54a4b)
         ;
 
         
     
     
-            polygon_549a364fd6515bf162b204fcb8250307.bindTooltip(
+            polygon_08aca8ec64300b1687c006881ef9f2cb.bindTooltip(
                 `<div>
                      高雄市仁武區_空域2 | AB2607210001 | 0-2000ft
                  </div>`,
@@ -741,30 +600,30 @@
             );
         
     
-            var polygon_d3358c2e6f62470b14686560c0445717 = L.polygon(
+            var polygon_f61d91dcadf35fae8e32d8b2d4002c4c = L.polygon(
                 [[22.661530555555558, 120.43664166666665], [22.660897222222225, 120.45003055555559], [22.668911111111107, 120.48070555555557], [22.628430555555557, 120.4812027777778], [22.629538888888888, 120.43674166666668], [22.661530555555558, 120.43664166666665]],
                 {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
-            ).addTo(feature_group_fcd55d8e1e205ae3725082a69a7e1b66);
+            ).addTo(feature_group_27479f46dfea0f136e2294a15e0fa51b);
         
     
-        var popup_d1a6457c3890722f33023d0e700cd8cf = L.popup({
+        var popup_1cab953ae1a6f384e5a57285082535ea = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_c789bcddbe1c03946544621309cf4299 = $(`<div id="html_c789bcddbe1c03946544621309cf4299" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px"><h4 style="margin:0 0 8px">屏東縣屏東市_空域3</h4><p style="margin:2px 0"><b>案名：</b>2026夏季高雄屏東台東（高空）</p><p style="margin:2px 0"><b>申請案號：</b>AB2607210001</p><p style="margin:2px 0"><b>有效期限：</b>2026/07/27​ ~ 2026/09/26​</p><p style="margin:2px 0"><b>高度：</b>0-2000ft</p></div></div>`)[0];
-                popup_d1a6457c3890722f33023d0e700cd8cf.setContent(html_c789bcddbe1c03946544621309cf4299);
+                var html_adeb55f6814409df126753a73e11caf3 = $(`<div id="html_adeb55f6814409df126753a73e11caf3" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px"><h4 style="margin:0 0 8px">屏東縣屏東市_空域3</h4><p style="margin:2px 0"><b>案名：</b>2026夏季高雄屏東台東（高空）</p><p style="margin:2px 0"><b>申請案號：</b>AB2607210001</p><p style="margin:2px 0"><b>有效期限：</b>2026/07/27​ ~ 2026/09/26​</p><p style="margin:2px 0"><b>高度：</b>0-2000ft</p></div></div>`)[0];
+                popup_1cab953ae1a6f384e5a57285082535ea.setContent(html_adeb55f6814409df126753a73e11caf3);
             
         
 
-        polygon_d3358c2e6f62470b14686560c0445717.bindPopup(popup_d1a6457c3890722f33023d0e700cd8cf)
+        polygon_f61d91dcadf35fae8e32d8b2d4002c4c.bindPopup(popup_1cab953ae1a6f384e5a57285082535ea)
         ;
 
         
     
     
-            polygon_d3358c2e6f62470b14686560c0445717.bindTooltip(
+            polygon_f61d91dcadf35fae8e32d8b2d4002c4c.bindTooltip(
                 `<div>
                      屏東縣屏東市_空域3 | AB2607210001 | 0-2000ft
                  </div>`,
@@ -774,30 +633,30 @@
             );
         
     
-            var polygon_98e6e66af36af3f134fed5b749fee38a = L.polygon(
+            var polygon_998eb0feb340e4c20fcea084a9726df7 = L.polygon(
                 [[22.625088888888893, 120.41201666666667], [22.625169444444442, 120.43287222222224], [22.617008333333338, 120.4332166666667], [22.607841666666673, 120.43590833333334], [22.58644722222222, 120.44637777777777], [22.583119444444446, 120.42054444444445], [22.625088888888893, 120.41201666666667]],
                 {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
-            ).addTo(feature_group_fcd55d8e1e205ae3725082a69a7e1b66);
+            ).addTo(feature_group_27479f46dfea0f136e2294a15e0fa51b);
         
     
-        var popup_3618388629d6a639700a1baa781e8f6c = L.popup({
+        var popup_3a7119e3b4cc38a048251d189e9a9e0b = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_60f9efb17b92dcfc4344a1632593cf8e = $(`<div id="html_60f9efb17b92dcfc4344a1632593cf8e" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px"><h4 style="margin:0 0 8px">高雄市大寮區_空域4</h4><p style="margin:2px 0"><b>案名：</b>2026夏季高雄屏東台東（高空）</p><p style="margin:2px 0"><b>申請案號：</b>AB2607210001</p><p style="margin:2px 0"><b>有效期限：</b>2026/07/27​ ~ 2026/09/26​</p><p style="margin:2px 0"><b>高度：</b>0-2000ft</p></div></div>`)[0];
-                popup_3618388629d6a639700a1baa781e8f6c.setContent(html_60f9efb17b92dcfc4344a1632593cf8e);
+                var html_d848bed86081bd350d07a68f13a3be37 = $(`<div id="html_d848bed86081bd350d07a68f13a3be37" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px"><h4 style="margin:0 0 8px">高雄市大寮區_空域4</h4><p style="margin:2px 0"><b>案名：</b>2026夏季高雄屏東台東（高空）</p><p style="margin:2px 0"><b>申請案號：</b>AB2607210001</p><p style="margin:2px 0"><b>有效期限：</b>2026/07/27​ ~ 2026/09/26​</p><p style="margin:2px 0"><b>高度：</b>0-2000ft</p></div></div>`)[0];
+                popup_3a7119e3b4cc38a048251d189e9a9e0b.setContent(html_d848bed86081bd350d07a68f13a3be37);
             
         
 
-        polygon_98e6e66af36af3f134fed5b749fee38a.bindPopup(popup_3618388629d6a639700a1baa781e8f6c)
+        polygon_998eb0feb340e4c20fcea084a9726df7.bindPopup(popup_3a7119e3b4cc38a048251d189e9a9e0b)
         ;
 
         
     
     
-            polygon_98e6e66af36af3f134fed5b749fee38a.bindTooltip(
+            polygon_998eb0feb340e4c20fcea084a9726df7.bindTooltip(
                 `<div>
                      高雄市大寮區_空域4 | AB2607210001 | 0-2000ft
                  </div>`,
@@ -807,30 +666,30 @@
             );
         
     
-            var polygon_a6ac55e55eca03ff0edbeba87b30aac0 = L.polygon(
+            var polygon_f867b925bea94a970efaf88545487ed3 = L.polygon(
                 [[22.789808333333333, 121.09403333333333], [22.82367222222222, 121.1240722222222], [22.803736111111114, 121.15703333333336], [22.764644444444446, 121.12888055555554], [22.789808333333333, 121.09403333333333]],
                 {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
-            ).addTo(feature_group_fcd55d8e1e205ae3725082a69a7e1b66);
+            ).addTo(feature_group_27479f46dfea0f136e2294a15e0fa51b);
         
     
-        var popup_7147d63dedc9a42f6800fa638602fbd3 = L.popup({
+        var popup_a55d53ef99180ff82f5e74f2b916a528 = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_7fabb7cac8391b5fee27433673392f73 = $(`<div id="html_7fabb7cac8391b5fee27433673392f73" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px"><h4 style="margin:0 0 8px">台東縣台東市_空域5（notam已發佈）</h4><p style="margin:2px 0"><b>案名：</b>2026夏季高雄屏東台東（高空）</p><p style="margin:2px 0"><b>申請案號：</b>AB2607210001</p><p style="margin:2px 0"><b>有效期限：</b>2026/07/27​ ~ 2026/09/26​</p><p style="margin:2px 0"><b>高度：</b>0-2000ft</p></div></div>`)[0];
-                popup_7147d63dedc9a42f6800fa638602fbd3.setContent(html_7fabb7cac8391b5fee27433673392f73);
+                var html_488a444af8cdbe7a7997c906698fb93b = $(`<div id="html_488a444af8cdbe7a7997c906698fb93b" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px"><h4 style="margin:0 0 8px">台東縣台東市_空域5（notam已發佈）</h4><p style="margin:2px 0"><b>案名：</b>2026夏季高雄屏東台東（高空）</p><p style="margin:2px 0"><b>申請案號：</b>AB2607210001</p><p style="margin:2px 0"><b>有效期限：</b>2026/07/27​ ~ 2026/09/26​</p><p style="margin:2px 0"><b>高度：</b>0-2000ft</p></div></div>`)[0];
+                popup_a55d53ef99180ff82f5e74f2b916a528.setContent(html_488a444af8cdbe7a7997c906698fb93b);
             
         
 
-        polygon_a6ac55e55eca03ff0edbeba87b30aac0.bindPopup(popup_7147d63dedc9a42f6800fa638602fbd3)
+        polygon_f867b925bea94a970efaf88545487ed3.bindPopup(popup_a55d53ef99180ff82f5e74f2b916a528)
         ;
 
         
     
     
-            polygon_a6ac55e55eca03ff0edbeba87b30aac0.bindTooltip(
+            polygon_f867b925bea94a970efaf88545487ed3.bindTooltip(
                 `<div>
                      台東縣台東市_空域5（notam已發佈） | AB2607210001 | 0-2000ft
                  </div>`,
@@ -840,39 +699,39 @@
             );
         
     
-            feature_group_fcd55d8e1e205ae3725082a69a7e1b66.addTo(map_826579aa27443bb20d0f51eb78a54836);
+            feature_group_27479f46dfea0f136e2294a15e0fa51b.addTo(map_f3a8d3d0579e2a7815db9490c023668b);
         
     
-            var feature_group_3787b1df44dff6b65c8197992a3309a1 = L.featureGroup(
+            var feature_group_af2fcc91f9aa061d9d70b17fa016b6fa = L.featureGroup(
                 {
 }
             );
         
     
-            var polygon_95d6b61a2f2e260d01962d7836cba492 = L.polygon(
+            var polygon_54e405fa406e167bb567d28b20086e42 = L.polygon(
                 [[25.075827777777782, 121.57076666666667], [25.075905555555558, 121.58372777777775], [25.101655555555556, 121.58383611111113], [25.09994722222222, 121.64916944444445], [25.032694444444445, 121.64857777777776], [25.03723888888889, 121.57058333333336], [25.075827777777782, 121.57076666666667]],
                 {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
-            ).addTo(feature_group_3787b1df44dff6b65c8197992a3309a1);
+            ).addTo(feature_group_af2fcc91f9aa061d9d70b17fa016b6fa);
         
     
-        var popup_0e4c7310f54f94d040eb3f2ad957d2b9 = L.popup({
+        var popup_34af1024248887d0066faaccef1646c1 = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_e2b2f0e5df9fd3556dc09c342d71cfa7 = $(`<div id="html_e2b2f0e5df9fd3556dc09c342d71cfa7" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px"><h4 style="margin:0 0 8px">台北內湖、南港＿空域1</h4><p style="margin:2px 0"><b>案名：</b>2026秋季台北台中台嘉義（高空）</p><p style="margin:2px 0"><b>申請案號：</b>AB2608030001</p><p style="margin:2px 0"><b>有效期限：</b>2026/08/25 ~ 2026/10/24</p><p style="margin:2px 0"><b>高度：</b>0-2000ft</p></div></div>`)[0];
-                popup_0e4c7310f54f94d040eb3f2ad957d2b9.setContent(html_e2b2f0e5df9fd3556dc09c342d71cfa7);
+                var html_ebc8d4d0a0c6793a05b5f59c8ab6604e = $(`<div id="html_ebc8d4d0a0c6793a05b5f59c8ab6604e" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px"><h4 style="margin:0 0 8px">台北內湖、南港＿空域1</h4><p style="margin:2px 0"><b>案名：</b>2026秋季台北台中台嘉義（高空）</p><p style="margin:2px 0"><b>申請案號：</b>AB2608030001</p><p style="margin:2px 0"><b>有效期限：</b>2026/08/25 ~ 2026/10/24</p><p style="margin:2px 0"><b>高度：</b>0-2000ft</p></div></div>`)[0];
+                popup_34af1024248887d0066faaccef1646c1.setContent(html_ebc8d4d0a0c6793a05b5f59c8ab6604e);
             
         
 
-        polygon_95d6b61a2f2e260d01962d7836cba492.bindPopup(popup_0e4c7310f54f94d040eb3f2ad957d2b9)
+        polygon_54e405fa406e167bb567d28b20086e42.bindPopup(popup_34af1024248887d0066faaccef1646c1)
         ;
 
         
     
     
-            polygon_95d6b61a2f2e260d01962d7836cba492.bindTooltip(
+            polygon_54e405fa406e167bb567d28b20086e42.bindTooltip(
                 `<div>
                      台北內湖、南港＿空域1 | AB2608030001 | 0-2000ft
                  </div>`,
@@ -882,30 +741,30 @@
             );
         
     
-            var polygon_247b99280cde6474809f1eb8df7e16b1 = L.polygon(
+            var polygon_983b9a7f107be0e5001475584f9025f2 = L.polygon(
                 [[24.230441666666664, 120.5821638888889], [24.232163888888888, 120.63743888888891], [24.192552777777777, 120.6386416666667], [24.191144444444443, 120.58302222222218], [24.230441666666664, 120.5821638888889]],
                 {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
-            ).addTo(feature_group_3787b1df44dff6b65c8197992a3309a1);
+            ).addTo(feature_group_af2fcc91f9aa061d9d70b17fa016b6fa);
         
     
-        var popup_2d6d8a81aeccd51e43e60865b778d4b8 = L.popup({
+        var popup_13585d57a3f82ea28d17d4b93d100aa2 = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_d1ddb09751a63742b1af19f2affae040 = $(`<div id="html_d1ddb09751a63742b1af19f2affae040" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px"><h4 style="margin:0 0 8px">台中市大雅區＿空域2</h4><p style="margin:2px 0"><b>案名：</b>2026秋季台北台中台嘉義（高空）</p><p style="margin:2px 0"><b>申請案號：</b>AB2608030001</p><p style="margin:2px 0"><b>有效期限：</b>2026/08/25 ~ 2026/10/24</p><p style="margin:2px 0"><b>高度：</b>0-2000ft</p></div></div>`)[0];
-                popup_2d6d8a81aeccd51e43e60865b778d4b8.setContent(html_d1ddb09751a63742b1af19f2affae040);
+                var html_dc383844736d770395375dcf8a7c0668 = $(`<div id="html_dc383844736d770395375dcf8a7c0668" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px"><h4 style="margin:0 0 8px">台中市大雅區＿空域2</h4><p style="margin:2px 0"><b>案名：</b>2026秋季台北台中台嘉義（高空）</p><p style="margin:2px 0"><b>申請案號：</b>AB2608030001</p><p style="margin:2px 0"><b>有效期限：</b>2026/08/25 ~ 2026/10/24</p><p style="margin:2px 0"><b>高度：</b>0-2000ft</p></div></div>`)[0];
+                popup_13585d57a3f82ea28d17d4b93d100aa2.setContent(html_dc383844736d770395375dcf8a7c0668);
             
         
 
-        polygon_247b99280cde6474809f1eb8df7e16b1.bindPopup(popup_2d6d8a81aeccd51e43e60865b778d4b8)
+        polygon_983b9a7f107be0e5001475584f9025f2.bindPopup(popup_13585d57a3f82ea28d17d4b93d100aa2)
         ;
 
         
     
     
-            polygon_247b99280cde6474809f1eb8df7e16b1.bindTooltip(
+            polygon_983b9a7f107be0e5001475584f9025f2.bindTooltip(
                 `<div>
                      台中市大雅區＿空域2 | AB2608030001 | 0-2000ft
                  </div>`,
@@ -915,30 +774,30 @@
             );
         
     
-            var polygon_7217bd63745bffa694f97115dad9ee6f = L.polygon(
+            var polygon_2177e8d43551f1a0d47471e92b79e4d1 = L.polygon(
                 [[24.305844444444446, 120.70877777777781], [24.305533333333337, 120.81692499999998], [24.216641666666668, 120.8495388888889], [24.23417222222222, 120.70019444444443], [24.305844444444446, 120.70877777777781]],
                 {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
-            ).addTo(feature_group_3787b1df44dff6b65c8197992a3309a1);
+            ).addTo(feature_group_af2fcc91f9aa061d9d70b17fa016b6fa);
         
     
-        var popup_2d645eea3a87a1d85f21ad0e647a574c = L.popup({
+        var popup_19ed050ea1415e151d1d25244fdc3e9f = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_b5f25e406303f5d219e1c119640b355c = $(`<div id="html_b5f25e406303f5d219e1c119640b355c" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px"><h4 style="margin:0 0 8px">台中市新社區＿空域3</h4><p style="margin:2px 0"><b>案名：</b>2026秋季台北台中台嘉義（高空）</p><p style="margin:2px 0"><b>申請案號：</b>AB2608030001</p><p style="margin:2px 0"><b>有效期限：</b>2026/08/25 ~ 2026/10/24</p><p style="margin:2px 0"><b>高度：</b>0-2500ft</p></div></div>`)[0];
-                popup_2d645eea3a87a1d85f21ad0e647a574c.setContent(html_b5f25e406303f5d219e1c119640b355c);
+                var html_07d98510ddf1eb97a8147156fdf336db = $(`<div id="html_07d98510ddf1eb97a8147156fdf336db" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px"><h4 style="margin:0 0 8px">台中市新社區＿空域3</h4><p style="margin:2px 0"><b>案名：</b>2026秋季台北台中台嘉義（高空）</p><p style="margin:2px 0"><b>申請案號：</b>AB2608030001</p><p style="margin:2px 0"><b>有效期限：</b>2026/08/25 ~ 2026/10/24</p><p style="margin:2px 0"><b>高度：</b>0-2500ft</p></div></div>`)[0];
+                popup_19ed050ea1415e151d1d25244fdc3e9f.setContent(html_07d98510ddf1eb97a8147156fdf336db);
             
         
 
-        polygon_7217bd63745bffa694f97115dad9ee6f.bindPopup(popup_2d645eea3a87a1d85f21ad0e647a574c)
+        polygon_2177e8d43551f1a0d47471e92b79e4d1.bindPopup(popup_19ed050ea1415e151d1d25244fdc3e9f)
         ;
 
         
     
     
-            polygon_7217bd63745bffa694f97115dad9ee6f.bindTooltip(
+            polygon_2177e8d43551f1a0d47471e92b79e4d1.bindTooltip(
                 `<div>
                      台中市新社區＿空域3 | AB2608030001 | 0-2500ft
                  </div>`,
@@ -948,30 +807,30 @@
             );
         
     
-            var polygon_9978d29fc9e7311d82d52ba0b9c1c1a9 = L.polygon(
+            var polygon_c04b37c6ee58d8eda0af1764ea7db64e = L.polygon(
                 [[23.498761111111115, 120.25566388888886], [23.500019444444447, 120.32879166666663], [23.421916666666664, 120.32948055555552], [23.421600000000005, 120.2560083333333], [23.498761111111115, 120.25566388888886]],
                 {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
-            ).addTo(feature_group_3787b1df44dff6b65c8197992a3309a1);
+            ).addTo(feature_group_af2fcc91f9aa061d9d70b17fa016b6fa);
         
     
-        var popup_aef68ca31c157676006b1bfc75818194 = L.popup({
+        var popup_2be7aff35e44d10c3071fd2e61f889fe = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_b99671bbc35606caf7528308b5ab3ae6 = $(`<div id="html_b99671bbc35606caf7528308b5ab3ae6" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px"><h4 style="margin:0 0 8px">嘉義縣太保市＿空域4</h4><p style="margin:2px 0"><b>案名：</b>2026秋季台北台中台嘉義（高空）</p><p style="margin:2px 0"><b>申請案號：</b>AB2608030001</p><p style="margin:2px 0"><b>有效期限：</b>2026/08/25 ~ 2026/10/24</p><p style="margin:2px 0"><b>高度：</b>0-2500ft</p></div></div>`)[0];
-                popup_aef68ca31c157676006b1bfc75818194.setContent(html_b99671bbc35606caf7528308b5ab3ae6);
+                var html_5979a2c94157233a54dd84a09324fb4d = $(`<div id="html_5979a2c94157233a54dd84a09324fb4d" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px"><h4 style="margin:0 0 8px">嘉義縣太保市＿空域4</h4><p style="margin:2px 0"><b>案名：</b>2026秋季台北台中台嘉義（高空）</p><p style="margin:2px 0"><b>申請案號：</b>AB2608030001</p><p style="margin:2px 0"><b>有效期限：</b>2026/08/25 ~ 2026/10/24</p><p style="margin:2px 0"><b>高度：</b>0-2500ft</p></div></div>`)[0];
+                popup_2be7aff35e44d10c3071fd2e61f889fe.setContent(html_5979a2c94157233a54dd84a09324fb4d);
             
         
 
-        polygon_9978d29fc9e7311d82d52ba0b9c1c1a9.bindPopup(popup_aef68ca31c157676006b1bfc75818194)
+        polygon_c04b37c6ee58d8eda0af1764ea7db64e.bindPopup(popup_2be7aff35e44d10c3071fd2e61f889fe)
         ;
 
         
     
     
-            polygon_9978d29fc9e7311d82d52ba0b9c1c1a9.bindTooltip(
+            polygon_c04b37c6ee58d8eda0af1764ea7db64e.bindTooltip(
                 `<div>
                      嘉義縣太保市＿空域4 | AB2608030001 | 0-2500ft
                  </div>`,
@@ -981,39 +840,39 @@
             );
         
     
-            feature_group_3787b1df44dff6b65c8197992a3309a1.addTo(map_826579aa27443bb20d0f51eb78a54836);
+            feature_group_af2fcc91f9aa061d9d70b17fa016b6fa.addTo(map_f3a8d3d0579e2a7815db9490c023668b);
         
     
-            var feature_group_1c581367bd5a02cb129281ca4f4c38bc = L.featureGroup(
+            var feature_group_14b6b333a18676dceb42c8cd038c598b = L.featureGroup(
                 {
 }
             );
         
     
-            var polygon_f3d8b16bddc7b3a6b572b94616173025 = L.polygon(
+            var polygon_8078bbd8e6f4d9711be1f142c344e4d6 = L.polygon(
                 [[25.09136388888889, 121.49968888888885], [25.07596111111111, 121.5502416666667], [25.07581944444445, 121.6197861111111], [25.06298055555556, 121.61558611111113], [25.07221111111111, 121.5566333333333], [25.073069444444442, 121.50732777777775], [25.09136388888889, 121.49968888888885]],
                 {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
-            ).addTo(feature_group_1c581367bd5a02cb129281ca4f4c38bc);
+            ).addTo(feature_group_14b6b333a18676dceb42c8cd038c598b);
         
     
-        var popup_02f552f3e4176c965b6c1a2aa3c5a910 = L.popup({
+        var popup_7b88b5070da4e15763598ecdfae91dc5 = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_a70699106b35c046d6cdcdb61c82d58f = $(`<div id="html_a70699106b35c046d6cdcdb61c82d58f" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px"><h4 style="margin:0 0 8px">台北市中山區＿空域1</h4><p style="margin:2px 0"><b>案名：</b>2026秋季台北新北花蓮台中（高空）</p><p style="margin:2px 0"><b>申請案號：</b>AB2608130010</p><p style="margin:2px 0"><b>有效期限：</b>2026/09/05 ~ 2026/11/04</p><p style="margin:2px 0"><b>高度：</b>0-2000ft</p></div></div>`)[0];
-                popup_02f552f3e4176c965b6c1a2aa3c5a910.setContent(html_a70699106b35c046d6cdcdb61c82d58f);
+                var html_594e036e74f17c7dd55e5a38865840a1 = $(`<div id="html_594e036e74f17c7dd55e5a38865840a1" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px"><h4 style="margin:0 0 8px">台北市中山區＿空域1</h4><p style="margin:2px 0"><b>案名：</b>2026秋季台北新北花蓮台中（高空）</p><p style="margin:2px 0"><b>申請案號：</b>AB2608130010</p><p style="margin:2px 0"><b>有效期限：</b>2026/09/05 ~ 2026/11/04</p><p style="margin:2px 0"><b>高度：</b>0-2000ft</p></div></div>`)[0];
+                popup_7b88b5070da4e15763598ecdfae91dc5.setContent(html_594e036e74f17c7dd55e5a38865840a1);
             
         
 
-        polygon_f3d8b16bddc7b3a6b572b94616173025.bindPopup(popup_02f552f3e4176c965b6c1a2aa3c5a910)
+        polygon_8078bbd8e6f4d9711be1f142c344e4d6.bindPopup(popup_7b88b5070da4e15763598ecdfae91dc5)
         ;
 
         
     
     
-            polygon_f3d8b16bddc7b3a6b572b94616173025.bindTooltip(
+            polygon_8078bbd8e6f4d9711be1f142c344e4d6.bindTooltip(
                 `<div>
                      台北市中山區＿空域1 | AB2608130010 | 0-2000ft
                  </div>`,
@@ -1023,30 +882,30 @@
             );
         
     
-            var polygon_e10f61af292b40abd14663cf0e2fb71c = L.polygon(
+            var polygon_471e593216d50b0772b644a08e288ea4 = L.polygon(
                 [[25.133597222222225, 121.43748333333332], [25.125825000000003, 121.52451666666667], [25.08377777777778, 121.52443055555554], [25.079847222222224, 121.53762777777777], [25.048416666666665, 121.53714722222222], [25.050099999999997, 121.4724861111111], [25.133597222222225, 121.43748333333332]],
                 {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
-            ).addTo(feature_group_1c581367bd5a02cb129281ca4f4c38bc);
+            ).addTo(feature_group_14b6b333a18676dceb42c8cd038c598b);
         
     
-        var popup_14b02d45b08b85a9e93dc5f3f1ed63c9 = L.popup({
+        var popup_f53ff8e8de03e50956d0c77b81f4b065 = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_45827e5a9c02fc6d0b5fe295cb091ac9 = $(`<div id="html_45827e5a9c02fc6d0b5fe295cb091ac9" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px"><h4 style="margin:0 0 8px">台北市士林區＿空域2</h4><p style="margin:2px 0"><b>案名：</b>2026秋季台北新北花蓮台中（高空）</p><p style="margin:2px 0"><b>申請案號：</b>AB2608130010</p><p style="margin:2px 0"><b>有效期限：</b>2026/09/05 ~ 2026/11/04</p><p style="margin:2px 0"><b>高度：</b>0-2000ft</p></div></div>`)[0];
-                popup_14b02d45b08b85a9e93dc5f3f1ed63c9.setContent(html_45827e5a9c02fc6d0b5fe295cb091ac9);
+                var html_fdbe2fad8f8ee15cc0cbd01b6e476e24 = $(`<div id="html_fdbe2fad8f8ee15cc0cbd01b6e476e24" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px"><h4 style="margin:0 0 8px">台北市士林區＿空域2</h4><p style="margin:2px 0"><b>案名：</b>2026秋季台北新北花蓮台中（高空）</p><p style="margin:2px 0"><b>申請案號：</b>AB2608130010</p><p style="margin:2px 0"><b>有效期限：</b>2026/09/05 ~ 2026/11/04</p><p style="margin:2px 0"><b>高度：</b>0-2000ft</p></div></div>`)[0];
+                popup_f53ff8e8de03e50956d0c77b81f4b065.setContent(html_fdbe2fad8f8ee15cc0cbd01b6e476e24);
             
         
 
-        polygon_e10f61af292b40abd14663cf0e2fb71c.bindPopup(popup_14b02d45b08b85a9e93dc5f3f1ed63c9)
+        polygon_471e593216d50b0772b644a08e288ea4.bindPopup(popup_f53ff8e8de03e50956d0c77b81f4b065)
         ;
 
         
     
     
-            polygon_e10f61af292b40abd14663cf0e2fb71c.bindTooltip(
+            polygon_471e593216d50b0772b644a08e288ea4.bindTooltip(
                 `<div>
                      台北市士林區＿空域2 | AB2608130010 | 0-2000ft
                  </div>`,
@@ -1056,30 +915,30 @@
             );
         
     
-            var polygon_9a898bb39b42bb821e58c00b9709a1c6 = L.polygon(
+            var polygon_31bb8592a84d3016084a90743be431e2 = L.polygon(
                 [[24.189783333333335, 120.62024722222219], [24.206694444444445, 120.66316388888886], [24.20951111111111, 120.71328888888891], [24.108330555555554, 120.70951111111111], [24.103316666666668, 120.61784444444443], [24.189783333333335, 120.62024722222219]],
                 {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
-            ).addTo(feature_group_1c581367bd5a02cb129281ca4f4c38bc);
+            ).addTo(feature_group_14b6b333a18676dceb42c8cd038c598b);
         
     
-        var popup_518231b61a6077762941a84830ab32c1 = L.popup({
+        var popup_a2cdfcc9ea373b3fb490f636e72d88e6 = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_29452ed03d83b5f67d7c18da27bea5b6 = $(`<div id="html_29452ed03d83b5f67d7c18da27bea5b6" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px"><h4 style="margin:0 0 8px">台中市區＿空域3</h4><p style="margin:2px 0"><b>案名：</b>2026秋季台北新北花蓮台中（高空）</p><p style="margin:2px 0"><b>申請案號：</b>AB2608130010</p><p style="margin:2px 0"><b>有效期限：</b>2026/09/05 ~ 2026/11/04</p><p style="margin:2px 0"><b>高度：</b>0-2000ft</p></div></div>`)[0];
-                popup_518231b61a6077762941a84830ab32c1.setContent(html_29452ed03d83b5f67d7c18da27bea5b6);
+                var html_ebb4f4292713f61a15752190e32d897f = $(`<div id="html_ebb4f4292713f61a15752190e32d897f" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px"><h4 style="margin:0 0 8px">台中市區＿空域3</h4><p style="margin:2px 0"><b>案名：</b>2026秋季台北新北花蓮台中（高空）</p><p style="margin:2px 0"><b>申請案號：</b>AB2608130010</p><p style="margin:2px 0"><b>有效期限：</b>2026/09/05 ~ 2026/11/04</p><p style="margin:2px 0"><b>高度：</b>0-2000ft</p></div></div>`)[0];
+                popup_a2cdfcc9ea373b3fb490f636e72d88e6.setContent(html_ebb4f4292713f61a15752190e32d897f);
             
         
 
-        polygon_9a898bb39b42bb821e58c00b9709a1c6.bindPopup(popup_518231b61a6077762941a84830ab32c1)
+        polygon_31bb8592a84d3016084a90743be431e2.bindPopup(popup_a2cdfcc9ea373b3fb490f636e72d88e6)
         ;
 
         
     
     
-            polygon_9a898bb39b42bb821e58c00b9709a1c6.bindTooltip(
+            polygon_31bb8592a84d3016084a90743be431e2.bindTooltip(
                 `<div>
                      台中市區＿空域3 | AB2608130010 | 0-2000ft
                  </div>`,
@@ -1089,30 +948,30 @@
             );
         
     
-            var polygon_90c2d3f4388a915365b8ddeebdc0d995 = L.polygon(
+            var polygon_a8a0af21667125508defbd56572667d6 = L.polygon(
                 [[24.01195555555556, 121.58003888888885], [24.003658333333338, 121.64330555555554], [23.96625, 121.60796388888886], [23.931769444444445, 121.60177777777774], [23.951872222222217, 121.54802499999997], [24.01195555555556, 121.58003888888885]],
                 {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
-            ).addTo(feature_group_1c581367bd5a02cb129281ca4f4c38bc);
+            ).addTo(feature_group_14b6b333a18676dceb42c8cd038c598b);
         
     
-        var popup_a4d28867d970fada9dc7ca3c1ec01cac = L.popup({
+        var popup_8b36e81fafb502cacf817865e6c7c184 = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_09ba75fa9daa289fafe5cdc145fb0b94 = $(`<div id="html_09ba75fa9daa289fafe5cdc145fb0b94" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px"><h4 style="margin:0 0 8px">花蓮縣花蓮市＿空域4</h4><p style="margin:2px 0"><b>案名：</b>2026秋季台北新北花蓮台中（高空）</p><p style="margin:2px 0"><b>申請案號：</b>AB2608130010</p><p style="margin:2px 0"><b>有效期限：</b>2026/09/05 ~ 2026/11/04</p><p style="margin:2px 0"><b>高度：</b>0-1000ft</p></div></div>`)[0];
-                popup_a4d28867d970fada9dc7ca3c1ec01cac.setContent(html_09ba75fa9daa289fafe5cdc145fb0b94);
+                var html_ac6b2794e1a9b561e0308ce1b60abfa4 = $(`<div id="html_ac6b2794e1a9b561e0308ce1b60abfa4" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px"><h4 style="margin:0 0 8px">花蓮縣花蓮市＿空域4</h4><p style="margin:2px 0"><b>案名：</b>2026秋季台北新北花蓮台中（高空）</p><p style="margin:2px 0"><b>申請案號：</b>AB2608130010</p><p style="margin:2px 0"><b>有效期限：</b>2026/09/05 ~ 2026/11/04</p><p style="margin:2px 0"><b>高度：</b>0-1000ft</p></div></div>`)[0];
+                popup_8b36e81fafb502cacf817865e6c7c184.setContent(html_ac6b2794e1a9b561e0308ce1b60abfa4);
             
         
 
-        polygon_90c2d3f4388a915365b8ddeebdc0d995.bindPopup(popup_a4d28867d970fada9dc7ca3c1ec01cac)
+        polygon_a8a0af21667125508defbd56572667d6.bindPopup(popup_8b36e81fafb502cacf817865e6c7c184)
         ;
 
         
     
     
-            polygon_90c2d3f4388a915365b8ddeebdc0d995.bindTooltip(
+            polygon_a8a0af21667125508defbd56572667d6.bindTooltip(
                 `<div>
                      花蓮縣花蓮市＿空域4 | AB2608130010 | 0-1000ft
                  </div>`,
@@ -1122,39 +981,39 @@
             );
         
     
-            feature_group_1c581367bd5a02cb129281ca4f4c38bc.addTo(map_826579aa27443bb20d0f51eb78a54836);
+            feature_group_14b6b333a18676dceb42c8cd038c598b.addTo(map_f3a8d3d0579e2a7815db9490c023668b);
         
     
-            var feature_group_0e6c409e4472c55dbeff77a7df17ee7f = L.featureGroup(
+            var feature_group_32bca0ddfa5689102cc6d81052595e53 = L.featureGroup(
                 {
 }
             );
         
     
-            var polygon_0b06ea82f92b2fd732ef7250eddc6ca5 = L.polygon(
+            var polygon_37faaf767a9c0c32704de56a39b64bb7 = L.polygon(
                 [[25.067911111111115, 121.51844722222219], [25.067366666666665, 121.54016388888891], [25.06130277777778, 121.55063611111112], [25.06073333333334, 121.58339722222222], [24.994722222222222, 121.58292777777778], [24.996433333333336, 121.5369222222222], [25.067911111111115, 121.51844722222219]],
                 {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
-            ).addTo(feature_group_0e6c409e4472c55dbeff77a7df17ee7f);
+            ).addTo(feature_group_32bca0ddfa5689102cc6d81052595e53);
         
     
-        var popup_bc42345273d163e50e4b9a88fc964527 = L.popup({
+        var popup_55fc6ef3477bfecfc6f9477d512d25cb = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_d0c99d60b3b8651b7971d21f96b94c99 = $(`<div id="html_d0c99d60b3b8651b7971d21f96b94c99" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px"><h4 style="margin:0 0 8px">台北市信義區_空域1（notam已發佈）</h4><p style="margin:2px 0"><b>案名：</b>2026秋季台北新北（高空）</p><p style="margin:2px 0"><b>申請案號：</b>AB2607060016</p><p style="margin:2px 0"><b>有效期限：</b>2026/07/25​ ~ 2026/09/24</p><p style="margin:2px 0"><b>高度：</b>0-2900ft</p></div></div>`)[0];
-                popup_bc42345273d163e50e4b9a88fc964527.setContent(html_d0c99d60b3b8651b7971d21f96b94c99);
+                var html_3002a577744a5474879cfba18f047a40 = $(`<div id="html_3002a577744a5474879cfba18f047a40" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px"><h4 style="margin:0 0 8px">台北市信義區_空域1（notam已發佈）</h4><p style="margin:2px 0"><b>案名：</b>2026秋季台北新北（高空）</p><p style="margin:2px 0"><b>申請案號：</b>AB2607060016</p><p style="margin:2px 0"><b>有效期限：</b>2026/07/25​ ~ 2026/09/24</p><p style="margin:2px 0"><b>高度：</b>0-2900ft</p></div></div>`)[0];
+                popup_55fc6ef3477bfecfc6f9477d512d25cb.setContent(html_3002a577744a5474879cfba18f047a40);
             
         
 
-        polygon_0b06ea82f92b2fd732ef7250eddc6ca5.bindPopup(popup_bc42345273d163e50e4b9a88fc964527)
+        polygon_37faaf767a9c0c32704de56a39b64bb7.bindPopup(popup_55fc6ef3477bfecfc6f9477d512d25cb)
         ;
 
         
     
     
-            polygon_0b06ea82f92b2fd732ef7250eddc6ca5.bindTooltip(
+            polygon_37faaf767a9c0c32704de56a39b64bb7.bindTooltip(
                 `<div>
                      台北市信義區_空域1（notam已發佈） | AB2607060016 | 0-2900ft
                  </div>`,
@@ -1164,30 +1023,30 @@
             );
         
     
-            var polygon_54ddc3fa23c5666027e6217c70193ce2 = L.polygon(
+            var polygon_e8efb4e81c73fa3c3cec63856a071998 = L.polygon(
                 [[25.083230555555556, 121.50768611111108], [25.080861111111112, 121.531675], [25.05156111111111, 121.53120277777779], [25.04394166666667, 121.50176388888892], [25.05451666666667, 121.50717222222224], [25.065116666666672, 121.51038888888887], [25.083230555555556, 121.50768611111108]],
                 {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
-            ).addTo(feature_group_0e6c409e4472c55dbeff77a7df17ee7f);
+            ).addTo(feature_group_32bca0ddfa5689102cc6d81052595e53);
         
     
-        var popup_23d45da7fe4d49303c2c4f774df5c604 = L.popup({
+        var popup_0973d6beeddcf28fd6b88257a2532e2d = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_207704649b440a254133a973e82bce62 = $(`<div id="html_207704649b440a254133a973e82bce62" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px"><h4 style="margin:0 0 8px">台北市大同區_空域2</h4><p style="margin:2px 0"><b>案名：</b>2026秋季台北新北（高空）</p><p style="margin:2px 0"><b>申請案號：</b>AB2607060016</p><p style="margin:2px 0"><b>有效期限：</b>2026/07/25​ ~ 2026/09/24</p><p style="margin:2px 0"><b>高度：</b>0-2000ft</p></div></div>`)[0];
-                popup_23d45da7fe4d49303c2c4f774df5c604.setContent(html_207704649b440a254133a973e82bce62);
+                var html_b76dd2d557a63e297b88d4ffaec22846 = $(`<div id="html_b76dd2d557a63e297b88d4ffaec22846" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px"><h4 style="margin:0 0 8px">台北市大同區_空域2</h4><p style="margin:2px 0"><b>案名：</b>2026秋季台北新北（高空）</p><p style="margin:2px 0"><b>申請案號：</b>AB2607060016</p><p style="margin:2px 0"><b>有效期限：</b>2026/07/25​ ~ 2026/09/24</p><p style="margin:2px 0"><b>高度：</b>0-2000ft</p></div></div>`)[0];
+                popup_0973d6beeddcf28fd6b88257a2532e2d.setContent(html_b76dd2d557a63e297b88d4ffaec22846);
             
         
 
-        polygon_54ddc3fa23c5666027e6217c70193ce2.bindPopup(popup_23d45da7fe4d49303c2c4f774df5c604)
+        polygon_e8efb4e81c73fa3c3cec63856a071998.bindPopup(popup_0973d6beeddcf28fd6b88257a2532e2d)
         ;
 
         
     
     
-            polygon_54ddc3fa23c5666027e6217c70193ce2.bindTooltip(
+            polygon_e8efb4e81c73fa3c3cec63856a071998.bindTooltip(
                 `<div>
                      台北市大同區_空域2 | AB2607060016 | 0-2000ft
                  </div>`,
@@ -1197,30 +1056,30 @@
             );
         
     
-            var polygon_bd0f13ebd9184e594da31300668b197e = L.polygon(
+            var polygon_bbdabe8f8e447854a1cbb0e9b3c0cfb7 = L.polygon(
                 [[25.069844444444445, 121.50409444444445], [25.053983333333335, 121.49516666666669], [25.047997222222225, 121.50134722222225], [25.02065, 121.42650277777776], [25.111458333333335, 121.41651666666667], [25.09529166666666, 121.4881861111111], [25.069844444444445, 121.50409444444445]],
                 {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
-            ).addTo(feature_group_0e6c409e4472c55dbeff77a7df17ee7f);
+            ).addTo(feature_group_32bca0ddfa5689102cc6d81052595e53);
         
     
-        var popup_6aa2a505c9344ed901b79855bedd16ca = L.popup({
+        var popup_e04601340f5dc9b30696bc52465e2eb2 = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_776c990ccc2edcce5b4c15e9546d5992 = $(`<div id="html_776c990ccc2edcce5b4c15e9546d5992" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px"><h4 style="margin:0 0 8px">新北市三重區_空域3</h4><p style="margin:2px 0"><b>案名：</b>2026秋季台北新北（高空）</p><p style="margin:2px 0"><b>申請案號：</b>AB2607060016</p><p style="margin:2px 0"><b>有效期限：</b>2026/07/25​ ~ 2026/09/24</p><p style="margin:2px 0"><b>高度：</b>0-2000ft</p></div></div>`)[0];
-                popup_6aa2a505c9344ed901b79855bedd16ca.setContent(html_776c990ccc2edcce5b4c15e9546d5992);
+                var html_f6086f2496a20e33724a0ca96d2f1b6b = $(`<div id="html_f6086f2496a20e33724a0ca96d2f1b6b" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px"><h4 style="margin:0 0 8px">新北市三重區_空域3</h4><p style="margin:2px 0"><b>案名：</b>2026秋季台北新北（高空）</p><p style="margin:2px 0"><b>申請案號：</b>AB2607060016</p><p style="margin:2px 0"><b>有效期限：</b>2026/07/25​ ~ 2026/09/24</p><p style="margin:2px 0"><b>高度：</b>0-2000ft</p></div></div>`)[0];
+                popup_e04601340f5dc9b30696bc52465e2eb2.setContent(html_f6086f2496a20e33724a0ca96d2f1b6b);
             
         
 
-        polygon_bd0f13ebd9184e594da31300668b197e.bindPopup(popup_6aa2a505c9344ed901b79855bedd16ca)
+        polygon_bbdabe8f8e447854a1cbb0e9b3c0cfb7.bindPopup(popup_e04601340f5dc9b30696bc52465e2eb2)
         ;
 
         
     
     
-            polygon_bd0f13ebd9184e594da31300668b197e.bindTooltip(
+            polygon_bbdabe8f8e447854a1cbb0e9b3c0cfb7.bindTooltip(
                 `<div>
                      新北市三重區_空域3 | AB2607060016 | 0-2000ft
                  </div>`,
@@ -1230,30 +1089,30 @@
             );
         
     
-            var polygon_991f70b2a563148dc8472d73b7cd599a = L.polygon(
+            var polygon_e97fd04b806647dac84cdb78e640a8f0 = L.polygon(
                 [[25.21488333333333, 121.41969444444442], [25.21485, 121.42138611111112], [25.214752777777772, 121.4230777777778], [25.214594444444447, 121.42476111111108], [25.214369444444447, 121.4264361111111], [25.214083333333335, 121.42809999999999], [25.213733333333334, 121.42974722222225], [25.21332222222222, 121.43137777777777], [25.212847222222223, 121.4329888888889], [25.212313888888886, 121.434575], [25.211719444444444, 121.43613611111114], [25.211066666666664, 121.43766944444448], [25.210358333333335, 121.43916944444445], [25.209591666666665, 121.44063611111113], [25.20877222222222, 121.44206388888887], [25.20789722222222, 121.44345555555554], [25.206972222222223, 121.4448027777778], [25.20599444444444, 121.44610833333333], [25.204969444444448, 121.44736666666668], [25.20389722222222, 121.44857500000003], [25.202780555555556, 121.44973611111112], [25.20162222222222, 121.45084166666668], [25.200419444444446, 121.45189444444446], [25.199180555555554, 121.45288888888886], [25.197905555555554, 121.45382500000001], [25.196594444444443, 121.45470277777777], [25.195252777777778, 121.45551944444448], [25.193880555555555, 121.45627222222224], [25.192480555555555, 121.45695833333335], [25.191055555555554, 121.45758333333335], [25.189608333333332, 121.45813888888891], [25.188141666666667, 121.45863055555557], [25.186658333333334, 121.45905000000002], [25.185158333333334, 121.45940277777781], [25.183647222222223, 121.45968333333336], [25.18212777777778, 121.4598972222222], [25.180600000000002, 121.46003888888886], [25.179069444444444, 121.46010833333331], [25.177538888888893, 121.46010833333331], [25.176008333333336, 121.46003888888886], [25.174480555555558, 121.4598972222222], [25.172961111111114, 121.45968333333336], [25.17145, 121.45940277777781], [25.169950000000004, 121.45905000000002], [25.16846666666667, 121.45863055555557], [25.167000000000005, 121.45813888888891], [25.165552777777773, 121.45758333333335], [25.16412777777777, 121.45695833333335], [25.16272777777778, 121.45627222222224], [25.161352777777775, 121.45551944444448], [25.16001111111111, 121.45470277777777], [25.1587, 121.45382500000001], [25.157425, 121.45288888888886], [25.156183333333335, 121.45189444444446], [25.154983333333334, 121.45084166666668], [25.153822222222225, 121.44973611111112], [25.152705555555553, 121.44857500000003], [25.151633333333333, 121.44736666666668], [25.15060833333333, 121.44610833333333], [25.149630555555557, 121.4448027777778], [25.148702777777775, 121.44345555555554], [25.147830555555554, 121.44206388888887], [25.147008333333336, 121.44063611111113], [25.146241666666665, 121.43916944444445], [25.145530555555556, 121.43766944444448], [25.144877777777776, 121.43613611111114], [25.144286111111107, 121.434575], [25.14375, 121.4329888888889], [25.143277777777776, 121.43137777777777], [25.142863888888886, 121.42974722222225], [25.142513888888885, 121.42809999999999], [25.142227777777773, 121.4264361111111], [25.142002777777776, 121.42476111111108], [25.141844444444448, 121.4230777777778], [25.141747222222225, 121.42138611111112], [25.14171388888889, 121.41969444444442], [25.141747222222225, 121.41800000000002], [25.141844444444448, 121.41631111111111], [25.142002777777776, 121.41462777777777], [25.142227777777773, 121.41295277777775], [25.142513888888885, 121.41128888888886], [25.142863888888886, 121.40964166666666], [25.143277777777776, 121.40801111111114], [25.14375, 121.40640000000002], [25.144286111111107, 121.40481388888891], [25.144877777777776, 121.40325277777778], [25.145530555555556, 121.40171944444444], [25.146241666666665, 121.40021944444446], [25.147008333333336, 121.39875277777779], [25.147830555555554, 121.39732500000004], [25.148702777777775, 121.39593333333337], [25.149630555555557, 121.39458333333334], [25.15060833333333, 121.39328055555558], [25.151633333333333, 121.39202222222224], [25.152705555555553, 121.39081111111109], [25.153822222222225, 121.38965277777778], [25.154983333333334, 121.38854722222223], [25.156183333333335, 121.38749444444444], [25.157425, 121.38649999999998], [25.1587, 121.38556388888891], [25.16001111111111, 121.38468611111115], [25.161352777777775, 121.38386944444443], [25.16272777777778, 121.38311666666665], [25.16412777777777, 121.38242777777776], [25.165552777777773, 121.38180555555554], [25.167000000000005, 121.38124722222221], [25.16846666666667, 121.38075833333332], [25.169950000000004, 121.38033888888887], [25.17145, 121.3799861111111], [25.172961111111114, 121.37970277777775], [25.174480555555558, 121.37949166666664], [25.176008333333336, 121.37934999999997], [25.177538888888893, 121.37927777777774], [25.179069444444444, 121.37927777777774], [25.180600000000002, 121.37934999999997], [25.18212777777778, 121.37949166666664], [25.183647222222223, 121.37970277777775], [25.185158333333334, 121.3799861111111], [25.186658333333334, 121.38033888888887], [25.188141666666667, 121.38075833333332], [25.189608333333332, 121.38124722222221], [25.191055555555554, 121.38180555555554], [25.192480555555555, 121.38242777777776], [25.193880555555555, 121.38311666666665], [25.195252777777778, 121.38386944444443], [25.196594444444443, 121.38468611111115], [25.197905555555554, 121.38556388888891], [25.199180555555554, 121.38649999999998], [25.200419444444446, 121.38749444444444], [25.20162222222222, 121.38854722222223], [25.202780555555556, 121.38965277777778], [25.20389722222222, 121.39081111111109], [25.204969444444448, 121.39202222222224], [25.20599444444444, 121.39328055555558], [25.206972222222223, 121.39458333333334], [25.20789722222222, 121.39593333333337], [25.20877222222222, 121.39732500000004], [25.209591666666665, 121.39875277777779], [25.210358333333335, 121.40021944444446], [25.211066666666664, 121.40171944444444], [25.211719444444444, 121.40325277777778], [25.212313888888886, 121.40481388888891], [25.212847222222223, 121.40640000000002], [25.21332222222222, 121.40801111111114], [25.213733333333334, 121.40964166666666], [25.214083333333335, 121.41128888888886], [25.214369444444447, 121.41295277777775], [25.214594444444447, 121.41462777777777], [25.214752777777772, 121.41631111111111], [25.21485, 121.41800000000002], [25.21488333333333, 121.41969444444442]],
                 {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
-            ).addTo(feature_group_0e6c409e4472c55dbeff77a7df17ee7f);
+            ).addTo(feature_group_32bca0ddfa5689102cc6d81052595e53);
         
     
-        var popup_365559e9412b4f62169c649dde93f62b = L.popup({
+        var popup_2685819907631540ee3b05b86a2d9cc3 = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_26ab5e785d971a1c3791b6d9d12c4419 = $(`<div id="html_26ab5e785d971a1c3791b6d9d12c4419" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px"><h4 style="margin:0 0 8px">新北市淡水區_空域4（notam已發佈）</h4><p style="margin:2px 0"><b>案名：</b>2026秋季台北新北（高空）</p><p style="margin:2px 0"><b>申請案號：</b>AB2607060016</p><p style="margin:2px 0"><b>有效期限：</b>2026/07/25​ ~ 2026/09/24</p><p style="margin:2px 0"><b>高度：</b>0-1700ft</p></div></div>`)[0];
-                popup_365559e9412b4f62169c649dde93f62b.setContent(html_26ab5e785d971a1c3791b6d9d12c4419);
+                var html_7e3bd5b0e564ca813b14845d0487e3e0 = $(`<div id="html_7e3bd5b0e564ca813b14845d0487e3e0" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px"><h4 style="margin:0 0 8px">新北市淡水區_空域4（notam已發佈）</h4><p style="margin:2px 0"><b>案名：</b>2026秋季台北新北（高空）</p><p style="margin:2px 0"><b>申請案號：</b>AB2607060016</p><p style="margin:2px 0"><b>有效期限：</b>2026/07/25​ ~ 2026/09/24</p><p style="margin:2px 0"><b>高度：</b>0-1700ft</p></div></div>`)[0];
+                popup_2685819907631540ee3b05b86a2d9cc3.setContent(html_7e3bd5b0e564ca813b14845d0487e3e0);
             
         
 
-        polygon_991f70b2a563148dc8472d73b7cd599a.bindPopup(popup_365559e9412b4f62169c649dde93f62b)
+        polygon_e97fd04b806647dac84cdb78e640a8f0.bindPopup(popup_2685819907631540ee3b05b86a2d9cc3)
         ;
 
         
     
     
-            polygon_991f70b2a563148dc8472d73b7cd599a.bindTooltip(
+            polygon_e97fd04b806647dac84cdb78e640a8f0.bindTooltip(
                 `<div>
                      新北市淡水區_空域4（notam已發佈） | AB2607060016 | 0-1700ft
                  </div>`,
@@ -1263,39 +1122,255 @@
             );
         
     
-            feature_group_0e6c409e4472c55dbeff77a7df17ee7f.addTo(map_826579aa27443bb20d0f51eb78a54836);
+            feature_group_32bca0ddfa5689102cc6d81052595e53.addTo(map_f3a8d3d0579e2a7815db9490c023668b);
         
     
-            var feature_group_0331ba56692eddf6b36b70698c2296cf = L.featureGroup(
+            var feature_group_593d41bb2987c9bd2ca564e7ff4071ce = L.featureGroup(
                 {
 }
             );
         
     
-            var polygon_53c71fd31cf7c79d4262dada3d1c8906 = L.polygon(
-                [[25.071319444444445, 121.27817499999998], [25.09230833333333, 121.30907499999998], [25.081922222222225, 121.33953611111113], [25.072905555555554, 121.34022222222222], [25.062136111111112, 121.35328888888891], [25.042452777777775, 121.29918055555557], [25.071319444444445, 121.27817499999998]],
-                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
-            ).addTo(feature_group_0331ba56692eddf6b36b70698c2296cf);
+            var polygon_a26ce2275f7f932fb4857b09333d79f7 = L.polygon(
+                [[24.699108333333335, 121.57395277777776], [24.97764722222222, 121.92688888888891], [24.98573888888889, 121.9612222222222], [24.705972222222222, 121.847925], [24.699108333333335, 121.57395277777776]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_593d41bb2987c9bd2ca564e7ff4071ce);
         
     
-        var popup_c664917a2d74b3f93c6761fb3bf05228 = L.popup({
+        var popup_478175f6c7b18bccc556eb447d2f5274 = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_a1c897afd77a082e0efc65927b38a289 = $(`<div id="html_a1c897afd77a082e0efc65927b38a289" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px"><h4 style="margin:0 0 8px">桃園市蘆竹區＿空域1（飛豬空拍）</h4><p style="margin:2px 0"><b>案名：</b>統帥高爾夫球場球道維護與影像監測（飛豬空拍）</p><p style="margin:2px 0"><b>申請案號：</b>AB2605020006</p><p style="margin:2px 0"><b>有效期限：</b>2026/05/20 ~ 2026/08/19</p><p style="margin:2px 0"><b>高度：</b>0-200ft</p></div></div>`)[0];
-                popup_c664917a2d74b3f93c6761fb3bf05228.setContent(html_a1c897afd77a082e0efc65927b38a289);
+                var html_dbc8c2f71317202f9ad4268d5bbf8153 = $(`<div id="html_dbc8c2f71317202f9ad4268d5bbf8153" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px"><h4 style="margin:0 0 8px">宜蘭西北＿空域1</h4><p style="margin:2px 0"><b>案名：</b>2026秋季宜蘭屏東</p><p style="margin:2px 0"><b>申請案號：</b>AB2608170013</p><p style="margin:2px 0"><b>有效期限：</b>2026/08/22 ~ 2026/11/21</p><p style="margin:2px 0"><b>高度：</b>0-400ft</p></div></div>`)[0];
+                popup_478175f6c7b18bccc556eb447d2f5274.setContent(html_dbc8c2f71317202f9ad4268d5bbf8153);
             
         
 
-        polygon_53c71fd31cf7c79d4262dada3d1c8906.bindPopup(popup_c664917a2d74b3f93c6761fb3bf05228)
+        polygon_a26ce2275f7f932fb4857b09333d79f7.bindPopup(popup_478175f6c7b18bccc556eb447d2f5274)
         ;
 
         
     
     
-            polygon_53c71fd31cf7c79d4262dada3d1c8906.bindTooltip(
+            polygon_a26ce2275f7f932fb4857b09333d79f7.bindTooltip(
+                `<div>
+                     宜蘭西北＿空域1 | AB2608170013 | 0-400ft
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var polygon_fda9bc1adfd4807c65534ce7a9632e46 = L.polygon(
+                [[24.71565277777778, 121.58083055555555], [24.724386111111112, 121.92483888888887], [24.509950000000003, 121.92087499999998], [24.60925, 121.5384138888889], [24.71565277777778, 121.58083055555555]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_593d41bb2987c9bd2ca564e7ff4071ce);
+        
+    
+        var popup_ffb2ac5c4a3b1fed844cbe467a393813 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_402deca35473da8173728eaef1e96c78 = $(`<div id="html_402deca35473da8173728eaef1e96c78" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px"><h4 style="margin:0 0 8px">宜蘭溪南＿空域2</h4><p style="margin:2px 0"><b>案名：</b>2026秋季宜蘭屏東</p><p style="margin:2px 0"><b>申請案號：</b>AB2608170013</p><p style="margin:2px 0"><b>有效期限：</b>2026/08/22 ~ 2026/11/21</p><p style="margin:2px 0"><b>高度：</b>0-400ft</p></div></div>`)[0];
+                popup_ffb2ac5c4a3b1fed844cbe467a393813.setContent(html_402deca35473da8173728eaef1e96c78);
+            
+        
+
+        polygon_fda9bc1adfd4807c65534ce7a9632e46.bindPopup(popup_ffb2ac5c4a3b1fed844cbe467a393813)
+        ;
+
+        
+    
+    
+            polygon_fda9bc1adfd4807c65534ce7a9632e46.bindTooltip(
+                `<div>
+                     宜蘭溪南＿空域2 | AB2608170013 | 0-400ft
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var polygon_79ac25a85d6e815b275cb545307ff195 = L.polygon(
+                [[22.577058333333333, 120.52254999999998], [22.588719444444447, 120.6319361111111], [22.524674999999995, 120.63090833333334], [22.53371111111111, 120.6022388888889], [22.530030555555552, 120.56152499999999], [22.50946111111111, 120.52003055555558], [22.577058333333333, 120.52254999999998]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_593d41bb2987c9bd2ca564e7ff4071ce);
+        
+    
+        var popup_8b7871367974a3b69764743746bc3818 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_7b48d06bf69ab68f828e1b3f655aa026 = $(`<div id="html_7b48d06bf69ab68f828e1b3f655aa026" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px"><h4 style="margin:0 0 8px">屏東潮州＿空域3</h4><p style="margin:2px 0"><b>案名：</b>2026秋季宜蘭屏東</p><p style="margin:2px 0"><b>申請案號：</b>AB2608170013</p><p style="margin:2px 0"><b>有效期限：</b>2026/08/22 ~ 2026/11/21</p><p style="margin:2px 0"><b>高度：</b>0-400ft</p></div></div>`)[0];
+                popup_8b7871367974a3b69764743746bc3818.setContent(html_7b48d06bf69ab68f828e1b3f655aa026);
+            
+        
+
+        polygon_79ac25a85d6e815b275cb545307ff195.bindPopup(popup_8b7871367974a3b69764743746bc3818)
+        ;
+
+        
+    
+    
+            polygon_79ac25a85d6e815b275cb545307ff195.bindTooltip(
+                `<div>
+                     屏東潮州＿空域3 | AB2608170013 | 0-400ft
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            feature_group_593d41bb2987c9bd2ca564e7ff4071ce.addTo(map_f3a8d3d0579e2a7815db9490c023668b);
+        
+    
+            var feature_group_a016b365ff272ff2c6f897f2bfc39e98 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var polygon_1090fbda5db88505ccbc0fa8ef28815c = L.polygon(
+                [[25.200558333333337, 121.79250555555556], [25.14058888888889, 121.81482222222225], [25.12225, 121.74238055555557], [25.130952777777775, 121.7303638888889], [25.14897777777778, 121.73190833333337], [25.16808888888889, 121.70049444444446], [25.200558333333337, 121.79250555555556]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_a016b365ff272ff2c6f897f2bfc39e98);
+        
+    
+        var popup_66af2664880cb7c5c17c13c2efd7ea89 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_5d99ed08dcdf2374eb2c45ab0e5cc350 = $(`<div id="html_5d99ed08dcdf2374eb2c45ab0e5cc350" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px"><h4 style="margin:0 0 8px">基隆市＿空域1</h4><p style="margin:2px 0"><b>案名：</b>2026秋季我們的海、河與湖系列拍攝</p><p style="margin:2px 0"><b>申請案號：</b>AB2608210015</p><p style="margin:2px 0"><b>有效期限：</b>2026/09/04 ~ 2026/12/03</p><p style="margin:2px 0"><b>高度：</b>0-400ft</p></div></div>`)[0];
+                popup_66af2664880cb7c5c17c13c2efd7ea89.setContent(html_5d99ed08dcdf2374eb2c45ab0e5cc350);
+            
+        
+
+        polygon_1090fbda5db88505ccbc0fa8ef28815c.bindPopup(popup_66af2664880cb7c5c17c13c2efd7ea89)
+        ;
+
+        
+    
+    
+            polygon_1090fbda5db88505ccbc0fa8ef28815c.bindTooltip(
+                `<div>
+                     基隆市＿空域1 | AB2608210015 | 0-400ft
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var polygon_3fff95d8caa7d6607f6b179dcb048c67 = L.polygon(
+                [[25.13901388888889, 121.80845277777776], [25.14398611111111, 121.92724166666669], [25.036094444444448, 121.94749722222222], [25.027694444444446, 121.90767222222226], [25.122227777777777, 121.80707777777776], [25.13901388888889, 121.80845277777776]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_a016b365ff272ff2c6f897f2bfc39e98);
+        
+    
+        var popup_9f810859142fa59c9f22edd433507201 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_4eabd2c4ecf74851a91b5a072b9cf4d8 = $(`<div id="html_4eabd2c4ecf74851a91b5a072b9cf4d8" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px"><h4 style="margin:0 0 8px">新北市瑞芳區＿空域2</h4><p style="margin:2px 0"><b>案名：</b>2026秋季我們的海、河與湖系列拍攝</p><p style="margin:2px 0"><b>申請案號：</b>AB2608210015</p><p style="margin:2px 0"><b>有效期限：</b>2026/09/04 ~ 2026/12/03</p><p style="margin:2px 0"><b>高度：</b>0-400ft</p></div></div>`)[0];
+                popup_9f810859142fa59c9f22edd433507201.setContent(html_4eabd2c4ecf74851a91b5a072b9cf4d8);
+            
+        
+
+        polygon_3fff95d8caa7d6607f6b179dcb048c67.bindPopup(popup_9f810859142fa59c9f22edd433507201)
+        ;
+
+        
+    
+    
+            polygon_3fff95d8caa7d6607f6b179dcb048c67.bindTooltip(
+                `<div>
+                     新北市瑞芳區＿空域2 | AB2608210015 | 0-400ft
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var polygon_5840af2c36e57a701beea2d7002d0df9 = L.polygon(
+                [[23.904761111111114, 120.74748333333332], [24.00829722222222, 120.78868055555556], [24.003280555555556, 121.00840833333334], [23.76721111111111, 120.94248888888889], [23.791719444444446, 120.75503611111108], [23.904761111111114, 120.74748333333332]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_a016b365ff272ff2c6f897f2bfc39e98);
+        
+    
+        var popup_339416e70fffc4a13028059f14413b9e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_3533752657955549680a7ef9577022c4 = $(`<div id="html_3533752657955549680a7ef9577022c4" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px"><h4 style="margin:0 0 8px">南投縣魚池鄉＿空域3</h4><p style="margin:2px 0"><b>案名：</b>2026秋季我們的海、河與湖系列拍攝</p><p style="margin:2px 0"><b>申請案號：</b>AB2608210015</p><p style="margin:2px 0"><b>有效期限：</b>2026/09/04 ~ 2026/12/03</p><p style="margin:2px 0"><b>高度：</b>0-400ft</p></div></div>`)[0];
+                popup_339416e70fffc4a13028059f14413b9e.setContent(html_3533752657955549680a7ef9577022c4);
+            
+        
+
+        polygon_5840af2c36e57a701beea2d7002d0df9.bindPopup(popup_339416e70fffc4a13028059f14413b9e)
+        ;
+
+        
+    
+    
+            polygon_5840af2c36e57a701beea2d7002d0df9.bindTooltip(
+                `<div>
+                     南投縣魚池鄉＿空域3 | AB2608210015 | 0-400ft
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            feature_group_a016b365ff272ff2c6f897f2bfc39e98.addTo(map_f3a8d3d0579e2a7815db9490c023668b);
+        
+    
+            var feature_group_2b0b009aa4ebb67399a81c76790c5a83 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var polygon_06c479074b79df3590619155bbefe318 = L.polygon(
+                [[25.071319444444445, 121.27817499999998], [25.09230833333333, 121.30907499999998], [25.081922222222225, 121.33953611111113], [25.072905555555554, 121.34022222222222], [25.062136111111112, 121.35328888888891], [25.042452777777775, 121.29918055555557], [25.071319444444445, 121.27817499999998]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_2b0b009aa4ebb67399a81c76790c5a83);
+        
+    
+        var popup_311d837a9be8645c0146c572527b492d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_0fc7d1af5baf7dede0d8b163f0917516 = $(`<div id="html_0fc7d1af5baf7dede0d8b163f0917516" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px"><h4 style="margin:0 0 8px">桃園市蘆竹區＿空域1（飛豬空拍）</h4><p style="margin:2px 0"><b>案名：</b>統帥高爾夫球場球道維護與影像監測（飛豬空拍）</p><p style="margin:2px 0"><b>申請案號：</b>AB2605020006</p><p style="margin:2px 0"><b>有效期限：</b>2026/05/20 ~ 2026/08/19</p><p style="margin:2px 0"><b>高度：</b>0-200ft</p></div></div>`)[0];
+                popup_311d837a9be8645c0146c572527b492d.setContent(html_0fc7d1af5baf7dede0d8b163f0917516);
+            
+        
+
+        polygon_06c479074b79df3590619155bbefe318.bindPopup(popup_311d837a9be8645c0146c572527b492d)
+        ;
+
+        
+    
+    
+            polygon_06c479074b79df3590619155bbefe318.bindTooltip(
                 `<div>
                      桃園市蘆竹區＿空域1（飛豬空拍） | AB2605020006 | 0-200ft
                  </div>`,
@@ -1305,34 +1380,35 @@
             );
         
     
-            feature_group_0331ba56692eddf6b36b70698c2296cf.addTo(map_826579aa27443bb20d0f51eb78a54836);
+            feature_group_2b0b009aa4ebb67399a81c76790c5a83.addTo(map_f3a8d3d0579e2a7815db9490c023668b);
         
     
-            var layer_control_8b597b8f58049d74ce317ebbdb99a612_layers = {
+            var layer_control_b734457b787f02c9c0ec65ae280cfc61_layers = {
                 base_layers : {
-                    "openstreetmap" : tile_layer_324dca2c7fd5e5b9ea1261661fd39536,
+                    "openstreetmap" : tile_layer_8e595eba8d844ebcea22d192be02928e,
                 },
                 overlays :  {
-                    "2026 \u590f\u5b63\u6c34\u8cc7\u6e90\u4e2d\u5fc3\u7d00\u9304 \u5f70\u5316 \uff08\u98db\u8c6c\u7a7a\u62cd\uff09" : feature_group_84d4bcf2052dc4c93b8cc5edc2000f5a,
-                    "2026\u590f\u5b63\u53f0\u4e2d\u5609\u7fa9\uff08\u9ad8\u7a7a\uff09" : feature_group_e396f92ceda185a3a6c389b19680cc6e,
-                    "2026\u590f\u5b63\u53f0\u5357\u9ad8\u96c4\uff08\u9ad8\u7a7a\uff09" : feature_group_a0c056eceff5680f18c644d64278c30d,
-                    "2026\u590f\u5b63\u65b0\u5317\u5f70\u5316\u9ad8\u96c4" : feature_group_0e87049fc4ec457de470fd6525014768,
-                    "2026\u590f\u5b63\u9ad8\u96c4\u5c4f\u6771\u53f0\u6771\uff08\u9ad8\u7a7a\uff09" : feature_group_fcd55d8e1e205ae3725082a69a7e1b66,
-                    "2026\u79cb\u5b63\u53f0\u5317\u53f0\u4e2d\u53f0\u5609\u7fa9\uff08\u9ad8\u7a7a\uff09" : feature_group_3787b1df44dff6b65c8197992a3309a1,
-                    "2026\u79cb\u5b63\u53f0\u5317\u65b0\u5317\u82b1\u84ee\u53f0\u4e2d\uff08\u9ad8\u7a7a\uff09" : feature_group_1c581367bd5a02cb129281ca4f4c38bc,
-                    "2026\u79cb\u5b63\u53f0\u5317\u65b0\u5317\uff08\u9ad8\u7a7a\uff09" : feature_group_0e6c409e4472c55dbeff77a7df17ee7f,
-                    "\u7d71\u5e25\u9ad8\u723e\u592b\u7403\u5834\u7403\u9053\u7dad\u8b77\u8207\u5f71\u50cf\u76e3\u6e2c\uff08\u98db\u8c6c\u7a7a\u62cd\uff09" : feature_group_0331ba56692eddf6b36b70698c2296cf,
+                    "2026 \u590f\u5b63\u6c34\u8cc7\u6e90\u4e2d\u5fc3\u7d00\u9304 \u5f70\u5316 \uff08\u98db\u8c6c\u7a7a\u62cd\uff09" : feature_group_6f4f50befc2f5c0533ad044ad179047c,
+                    "2026\u590f\u5b63\u53f0\u5357\u9ad8\u96c4\uff08\u9ad8\u7a7a\uff09" : feature_group_29c9779c29dc582ad0613eb42b6df891,
+                    "2026\u590f\u5b63\u65b0\u5317\u5f70\u5316\u9ad8\u96c4" : feature_group_f20c84ac17b245c9846fbcf888ccfc5e,
+                    "2026\u590f\u5b63\u9ad8\u96c4\u5c4f\u6771\u53f0\u6771\uff08\u9ad8\u7a7a\uff09" : feature_group_27479f46dfea0f136e2294a15e0fa51b,
+                    "2026\u79cb\u5b63\u53f0\u5317\u53f0\u4e2d\u53f0\u5609\u7fa9\uff08\u9ad8\u7a7a\uff09" : feature_group_af2fcc91f9aa061d9d70b17fa016b6fa,
+                    "2026\u79cb\u5b63\u53f0\u5317\u65b0\u5317\u82b1\u84ee\u53f0\u4e2d\uff08\u9ad8\u7a7a\uff09" : feature_group_14b6b333a18676dceb42c8cd038c598b,
+                    "2026\u79cb\u5b63\u53f0\u5317\u65b0\u5317\uff08\u9ad8\u7a7a\uff09" : feature_group_32bca0ddfa5689102cc6d81052595e53,
+                    "2026\u79cb\u5b63\u5b9c\u862d\u5c4f\u6771" : feature_group_593d41bb2987c9bd2ca564e7ff4071ce,
+                    "2026\u79cb\u5b63\u6211\u5011\u7684\u6d77\u3001\u6cb3\u8207\u6e56\u7cfb\u5217\u62cd\u651d" : feature_group_a016b365ff272ff2c6f897f2bfc39e98,
+                    "\u7d71\u5e25\u9ad8\u723e\u592b\u7403\u5834\u7403\u9053\u7dad\u8b77\u8207\u5f71\u50cf\u76e3\u6e2c\uff08\u98db\u8c6c\u7a7a\u62cd\uff09" : feature_group_2b0b009aa4ebb67399a81c76790c5a83,
                 },
             };
-            let layer_control_8b597b8f58049d74ce317ebbdb99a612 = L.control.layers(
-                layer_control_8b597b8f58049d74ce317ebbdb99a612_layers.base_layers,
-                layer_control_8b597b8f58049d74ce317ebbdb99a612_layers.overlays,
+            let layer_control_b734457b787f02c9c0ec65ae280cfc61 = L.control.layers(
+                layer_control_b734457b787f02c9c0ec65ae280cfc61_layers.base_layers,
+                layer_control_b734457b787f02c9c0ec65ae280cfc61_layers.overlays,
                 {
   "position": "topright",
   "collapsed": true,
   "autoZIndex": true,
 }
-            ).addTo(map_826579aa27443bb20d0f51eb78a54836);
+            ).addTo(map_f3a8d3d0579e2a7815db9490c023668b);
 
         
 </script>
